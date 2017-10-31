@@ -2,7 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
-	<link rel="stylesheet" type="text/css" href="Daftar_Properti.css">
+	<link rel="stylesheet" type="text/css" href="../Final.css">
 	
 	<!-- JS Dropdown -->
 	<script>
@@ -35,13 +35,12 @@
 
 </head>
 <body class="container-fluid" style="margin: 0"px>
-	
 	<!-- Upper Task Bar -->
-	<nav cl>
-	<ul style="background-color: #062F4f; width: 100% ; margin: 0px">
-	  <li style="margin: 11px; margin-left: 20; float: left;"><img src="house.png" style="height: 42px; width: 42px"></li>
-	  <li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
-	    <button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
+	<nav>
+	<ul class="nav-bar">
+	  <li class="logo"><img src="../Pictures/house.png"></li>
+	  <li class="dropdown">
+	    <button href="javascript:void(0)" class="dropbtn">Menu</button> 
 		    <div class="dropdown-content">
 		      <a href="#">| Jual</a>
 		      <a href="#">Rumah</a>
@@ -54,26 +53,33 @@
 		      <a href="#">Villa</a>
 		    </div>
 		 </li>
-		<li style="width: 40%; float: left;"><input type="text" name="search" placeholder="Search.."></li>
-		<li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
-			<button class="dropbtn" style="font-size: 13px">Sign-Up / Login</button>
+		<li><input type="text" name="search" placeholder="Search.."></li>
+		<li class="login">
+			<button class="dropbtn">Sign-Up / Login</button>
 		</li>
 	</ul>
 	</nav>
 
-	<!-- Form -->
-
+	<!-- Form Row 1 -->
 	<div class="row">
 		<div class="col-1"></div>
 		<form class="col-10" action="/action_page.php">
+			<br><br><br>
 			<h2>Daftar Properti</h2>
-	  		Nama Properti<br>
-	  		<input id="NamaProperti" type="text" value="Nama Properti">
-	  		<br>
-	  		Deskripsi<br>
-	  		<input id="Deskripsi" type="text" value="Deskripsi Properti">
+	  		<div class="row">
+	  			<div class="col-6">
+			  		<label>Nama Properti</label><br>
+			  		<input id="NamaProperti" type="text" value="Nama Properti">
+	  			</div>
+	  			<div class="col-6">
+			  		<label>Deskripsi</label><br>
+			  		<input id="Deskripsi" type="text" value="Deskripsi Properti">
+	  			</div>
+	  		</div>
 	  	</form>
 	  </div>
+
+	<!-- Form Row 2 -->
 	<div class="row">
 		<div class="col-1"></div>
 		<form class="col-10" action="/action_page.php"> 	

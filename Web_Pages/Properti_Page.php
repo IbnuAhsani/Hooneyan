@@ -2,7 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
-	<link rel="stylesheet" type="text/css" href="Daftar_Properti.css">
+	<link rel="stylesheet" type="text/css" href="../Final.css">
 	
 	<!-- JS Dropdown -->
 	<script>
@@ -39,7 +39,7 @@
 	<!-- Upper Task Bar -->
 	<nav class="row polaroid">
 	<ul style="background-color: #062F4f; width: 100% ; margin: 0px">
-	  <li style="margin: 11px; margin-left: 20; float: left;"><img src="house.png" style="height: 42px; width: 42px"></li>
+	  <li style="margin: 11px; margin-left: 20; float: left;"><img src="../Pictures/house.png" style="height: 42px; width: 42px"></li>
 	  <li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
 	    <button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
 		    <div class="dropdown-content">
@@ -73,17 +73,17 @@
 			<div class="row">
 				<div class="mySlides fade polaroid">
 					<div class="numbertext">1 / 3</div>
-					<img src="rumah1.jpg" style="width:100%">
+					<img src="../Pictures/rumah1.jpg" style="width:100%">
 				</div>
 
 				<div class="mySlides fade polaroid">
 					<div class="numbertext">2 / 3</div>
-					<img src="rumah2.jpg" style="width:100%">
+					<img src="../Pictures/rumah2.jpg" style="width:100%">
 				</div>
 
 				<div class="mySlides fade polaroid">
 					<div class="numbertext">3 / 3</div>
-					<img src="rumah3.jpg" style="width:100%">
+					<img src="../Pictures/rumah3.jpg" style="width:100%">
 				</div>	
 			</div>
 			<div class="row" style="text-align:center; height: 10px">
@@ -130,7 +130,7 @@
 		<div class="col-3 round1 polaroid" style="height: 310px">
 			<form action="/action_page.php" style="text-align: center; margin: 0 auto ">
 				<!-- <img src="Profile_pic.png"> -->
-				<img src="Profile_pic.png" height="144px" width="144px">
+				<img src="../Pictures/Profile_pic.png" height="144px" width="144px">
 				<h1>Nama Agen</h1>
 				<br>
 			  	<input type="submit" value="Kontak">
