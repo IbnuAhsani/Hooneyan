@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="../Final.css"/>
+</head>
+<body class="login_page">
+	<div class="container">
+		<form class="form-signin">
+			<h1 class="form-signin-heading text-muted">Selamat Datang di Hooneyan</h1>
+			<input type="text" class="form-control" placeholder="Masukkan Email Anda" required="" autofocus="">
+			<input type="password" class="form-control" placeholder="Masukkan Password Anda" required="">
+			<p>Lupa Password?</p>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+		</form>
+	</div>
+</body>
+</html>
