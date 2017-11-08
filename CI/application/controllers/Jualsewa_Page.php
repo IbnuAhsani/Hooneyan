@@ -20,6 +20,7 @@ class Jualsewa_Page extends CI_Controller {
   */ 
  public function index() 
  { 
-  $this->load->view('Web_Pages/Jualsewa_Page');
+    $this->load->helper('url');
+    $this->load->view('Web_Pages/Jualsewa_Page');
  }
 }

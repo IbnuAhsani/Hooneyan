@@ -20,6 +20,7 @@ class Profile_Page extends CI_Controller {
   */ 
  public function index() 
  { 
-  $this->load->view('Web_Pages/Profile_Page');
+    $this->load->helper('url');
+    $this->load->view('Web_Pages/Profile_Page');
  }
 }

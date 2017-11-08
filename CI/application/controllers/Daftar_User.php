@@ -19,7 +19,8 @@ class Daftar_User extends CI_Controller {
   * @see https://codeigniter.com/user_guide/general/urls.html 
   */ 
  public function index() 
- { 
-  $this->load->view('Web_Pages/Daftar_User');
- }
+  { 
+    $this->load->helper('url');
+    $this->load->view('Web_Pages/Daftar_User');
+  }
 }

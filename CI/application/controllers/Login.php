@@ -20,6 +20,7 @@ class Login extends CI_Controller {
   */ 
  public function index() 
  { 
-  $this->load->view('Web_Pages/Login');
+    $this->load->helper('url');
+    $this->load->view('Web_Pages/Login');
  }
 }

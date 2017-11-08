@@ -19,7 +19,8 @@ class Daftar_Properti extends CI_Controller {
   * @see https://codeigniter.com/user_guide/general/urls.html 
   */ 
  public function index() 
- { 
-  $this->load->view('Web_Pages/Daftar_Properti');
- }
+  { 
+    $this->load->helper('url');
+    $this->load->view('Web_Pages/Daftar_Properti');
+  }
 }
