@@ -2,7 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Jual Sewa</title>
-	<link rel="stylesheet" type="text/css" href="../Final.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assests/Final.css">
 
 	<!-- JS Dropdown -->
 	<script>
@@ -39,7 +39,7 @@
 	<!-- Upper Task Bar -->
 	<nav cl>
 	<ul style="background-color: #062F4f; width: 100% ; margin: 0px">
-	  <li style="margin: 11px; margin-left: 20; float: left;"><img src="../Pictures/house.png" style="height: 42px; width: 42px"></li>
+	  <li style="margin: 11px; margin-left: 20; float: left;"><img src="<?php echo base_url(); ?>/assests/pictures/house.png" style="height: 42px; width: 42px"></li>
 	  <li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
 	    <button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button>
 		    <div class="dropdown-content">
@@ -157,7 +157,7 @@
 	<div class="row" style="margin: 2%;" >
 		<div class="col-12" style="display: flex;">
 			<div class="col-5" style="height: 100%">
-				<img class="img" src="../Pictures/rumah1.jpg" alt="Gambar Properti">
+				<img class="img" src="<?php echo base_url(); ?>/assests/pictures/rumah1.jpg" alt="Gambar Properti">
 			</div>
 			<div class="col-4">
 				<ul style="color: #062F4f;">
@@ -180,7 +180,7 @@
 	<div class="row" style="margin: 2%;" >
 		<div class="col-12" style="display: flex;">
 			<div class="col-5" style="height: 100%">
-				<img class="img" src="../Pictures/rumah2.jpg" alt="Gambar Properti">
+				<img class="img" src="<?php echo base_url(); ?>/assests/pictures/rumah2.jpg" alt="Gambar Properti">
 			</div>
 			<div class="col-4">
 				<ul style="color: #062F4f;">
@@ -202,7 +202,7 @@
 	<div class="row" style="margin: 2%;" >
 		<div class="col-12" style="display: flex;">
 			<div class="col-5" style="height: 100%">
-				<img class="img" src="../Pictures/rumah3.jpg" alt="Gambar Properti">
+				<img class="img" src="<?php echo base_url(); ?>/assests/pictures/rumah3.jpg" alt="Gambar Properti">
 			</div>
 			<div class="col-4">
 				<ul style="color: #062F4f;">

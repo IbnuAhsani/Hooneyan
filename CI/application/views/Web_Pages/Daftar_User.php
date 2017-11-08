@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Daftar</title>
-	<link rel="stylesheet" href="../Final.css"/>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>/assests/Final.css"/>
 </head>
 <body class="login_page">
 	<div class="container">
