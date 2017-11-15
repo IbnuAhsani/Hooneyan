@@ -2,8 +2,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assests/Final.css">
-	
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
+
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button, 
@@ -39,7 +39,7 @@
 	<!-- Upper Task Bar -->
 	<nav cl>
 	<ul style="background-color: #062F4f; width: 100% ; margin: 0px">
-	  <li style="margin: 11px; margin-left: 20; float: left;"><img src="<?php echo base_url(); ?>/assests/pictures/house.png" style="height: 42px; width: 42px"></li>
+	  <li style="margin: 11px; margin-left: 20; float: left;"><img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></li>
 	  <li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
 	    <button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
 		    <div class="dropdown-content">
@@ -68,7 +68,7 @@
 	<div class="row">
 		<div class="col-1" ></div>
 		<div class="col-2">
-			<img class="img" src="<?php echo base_url(); ?>/assests/pictures/Profile_pic.png" alt="Profile Picture">
+			<img class="img" src="<?php echo base_url(); ?>/assets/pictures/Profile_pic.png" alt="Profile Picture">
 		</div>
 		<div class="col-2">
 			<ul style="color: #062F4f; margin-top: 54%">
@@ -80,7 +80,7 @@
 		</div>
 		<div class="col-4"></div>
 		<div class="col-2" style="height: 30%; color: #062F4f;">
- 			<img class="img" src="<?php echo base_url(); ?>/assests/pictures/logo.jpg" alt="Logo Picture">
+ 			<img class="img" src="<?php echo base_url(); ?>/assets/pictures/logo.jpg" alt="Logo Picture">
  		</div>
 		<div class="col-1"></div>
 	</div>
@@ -105,7 +105,7 @@
 	<div class="row" style="margin: 2%;">
 		<div class="col-6" style="display: flex;">
 			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assests/pictures/rumah1.jpg" alt="Gambar Properti">
+				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="Gambar Properti">
 			</div>
 			<div class="col-7">
 				<ul style="color: #062F4f;">
@@ -121,7 +121,7 @@
 		</div>
 		<div class="col-6" style="display: flex;">
 			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assests/pictures/rumah2.jpg" alt="Gambar Properti">
+				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="Gambar Properti">
 			</div>
 			<div class="col-7">
 				<ul style="color: #062F4f;">
@@ -141,7 +141,7 @@
 	<div class="row" style="margin: 2%;">
 		<div class="col-6" style="display: flex;">
 			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assests/pictures/rumah2.jpg" alt="Gambar Properti">
+				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="Gambar Properti">
 			</div>
 			<div class="col-7">
 				<ul style="color: #062F4f;">
@@ -157,7 +157,7 @@
 		</div>
 		<div class="col-6" style="display: flex;">
 			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assests/pictures/rumah3.jpg" alt="Gambar Properti">
+				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="Gambar Properti">
 			</div>
 			<div class="col-7">
 				<ul style="color: #062F4f;">
@@ -178,7 +178,7 @@
 	<div class="row" style="margin: 2%;">
 		<div class="col-6" style="display: flex;">
 			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assests/pictures/rumah3.jpg" alt="Gambar Properti">
+				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="Gambar Properti">
 			</div>
 			<div class="col-7">
 				<ul style="color: #062F4f;">
@@ -194,7 +194,7 @@
 		</div>
 		<div class="col-6" style="display: flex;">
 			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assests/pictures/rumah1.jpg" alt="Gambar Properti">
+				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="Gambar Properti">
 			</div>
 			<div class="col-7">
 				<ul style="color: #062F4f;">

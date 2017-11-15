@@ -2,7 +2,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assests/Final.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
+
 	
 	<!-- JS Dropdown -->
 	<script>
@@ -38,7 +39,7 @@
 	<!-- Upper Task Bar -->
 	<nav>
 	<ul class="nav-bar">
-	  <li class="logo"><img src="<?php echo base_url(); ?>/assests/pictures/house.png"></li>
+	  <li class="logo"><img src="<?php echo base_url(); ?>/assets/pictures/house.png"></li>
 	  <li class="dropdown">
 	    <button href="javascript:void(0)" class="dropbtn">Menu</button> 
 		    <div class="dropdown-content">
