@@ -1,3 +1,12 @@
+<?php
+$email=$this->session->userdata('email');
+
+if(!$email){
+
+  redirect('Login');
+}
+
+ ?>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -56,7 +65,7 @@
 		 </li>
 		<li style="width: 40%; float: left;"><input type="text" name="search" placeholder="Search.."></li>
 		<li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
-			<button class="dropbtn" style="font-size: 13px">Sign-Up / Login</button>
+			<button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
 		</li>
 	</ul>
 	</nav>

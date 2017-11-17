@@ -1,8 +1,17 @@
+<?php
+$email=$this->session->userdata('email');
+
+if(!$email){
+
+  redirect('Login');
+}
+
+ ?>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/Final.css") ?>">
 
 	
 	<!-- JS Dropdown -->
@@ -56,7 +65,7 @@
 		 </li>
 		<li><input type="text" name="search" placeholder="Search.."></li>
 		<li class="login">
-			<button class="dropbtn">Sign-Up / Login</button>
+			<button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
 		</li>
 	</ul>
 	</nav>

@@ -1,3 +1,12 @@
+<?php
+$email=$this->session->userdata('email');
+
+if(!$email){
+
+  redirect('Login');
+}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +15,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="jquery.cycle2.min.js"></script>
+  <script type="text/javascript" src = "<?php echo base_url(); ?>/assets/js/jquery.cycle2.min.js"></script>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
 
 </head>
@@ -31,8 +40,9 @@
           </div>
        </li>
       <li style="width: 40%; float: left;"><input type="text" name="search" placeholder="Search.."></li>
+	 
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
-         <button class="dropbtn" style="font-size: 13px">Sign-Up / Login</button>
+         <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
       </li>
    </ul>
    </nav>
