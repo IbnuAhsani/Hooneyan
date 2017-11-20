@@ -3,10 +3,10 @@
 @-ms-viewport {
   width: device-width;
 }
-
+/*
 *{
   border: 1px solid red !important;
-}
+}*/
 
 /*=============== .css Umum ======================*/
 /*Nav Bar*/
@@ -98,14 +98,11 @@ li.dropdown {
 /**/
 
 /*Search Bar*/
-input[type=text] {
+.search1{
     width: 100%;
     height: 6%;
-    /*-webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;*/
     margin-top: 15px;
     margin-bottom: 15px;
-   
     float: left;
 }
 /**/
@@ -149,7 +146,7 @@ input[type=text] {
 
 /*======= .css untuk Page Daftar dan Login ========*/
   body.login_page{
-    padding-top: 120px;
+    padding-top: 30px;
     padding-bottom: 40px;
     background-image: url('Pictures/Rumah.jpg');
     background-repeat: no-repeat;

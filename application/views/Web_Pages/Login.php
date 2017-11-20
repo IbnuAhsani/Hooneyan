@@ -10,9 +10,9 @@
 			<h1 class="form-signin-heading text-muted">Selamat Datang di Hooneyan</h1>
 			<input type="text" class="form-control" placeholder="Masukkan Email Anda" name="email" required="" autofocus>
 			<input type="password" class="form-control" placeholder="Masukkan Password Anda" name="password" required>
-			<p>Lupa Password?</p>
+			<p style="color: white">Lupa Password?</p>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
-			<p>Belum punya akun? klik <a href="http://localhost/CI/index.php/Daftar_user">disini<a></p>
+			<p style="color: white">Belum punya akun? Klik <a href="<?php echo base_url('/index.php/Daftar_user') ?>" style="color: white;"><u>disini</u><a></p>
 		</form>
 	</div>
 </body>
