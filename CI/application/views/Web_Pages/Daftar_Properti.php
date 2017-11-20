@@ -46,29 +46,30 @@ if(!$email){
 </head>
 <body class="container-fluid" style="margin: 0"px>
 	<!-- Upper Task Bar -->
-	<nav>
-	<ul class="nav-bar">
-	  <li class="logo"><img src="<?php echo base_url(); ?>/assets/pictures/house.png"></li>
-	  <li class="dropdown">
-	    <button href="javascript:void(0)" class="dropbtn">Menu</button> 
-		    <div class="dropdown-content">
-		      <a href="#">| Jual</a>
-		      <a href="#">Rumah</a>
-		      <a href="#">Ruko</a>
-		      <a href="#">Apartemen</a>
-		      <a href="#">| Sewa</a>
-		      <a href="#">Rumah</a>
-		      <a href="#">Apartemen</a>
-		      <a href="#">Ruko</a>
-		      <a href="#">Villa</a>
-		    </div>
-		 </li>
-		<li><input type="text" name="search" placeholder="Search.."></li>
-		<li class="login">
-			<button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
-		</li>
-	</ul>
-	</nav>
+   <nav cl>
+   <ul style="background-color: #062F4f; width: 100% ; margin: 0px">
+      <li style="margin: 11px; margin-left: 20; float: left;"><a href="http://localhost/CI/index.php/Homepage"><img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></a></li>
+     <li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
+       <button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
+          <div class="dropdown-content">
+            <a href="#">| Jual</a>
+            <a href="http://localhost/CI/index.php/JualSewa_Page">Rumah</a>
+            <a href="http://localhost/CI/index.php/JualSewa_Page">Ruko</a>
+            <a href="http://localhost/CI/index.php/JualSewa_Page">Apartemen</a>
+            <a href="#">| Sewa</a>
+            <a href="http://localhost/CI/index.php/JualSewa_Page">Rumah</a>
+            <a href="http://localhost/CI/index.php/JualSewa_Page">Apartemen</a>
+            <a href="http://localhost/CI/index.php/JualSewa_Page">Ruko</a>
+            <a href="http://localhost/CI/index.php/JualSewa_Page">Villa</a>
+          </div>
+       </li>
+      <li style="width: 40%; float: left;"><input type="text" name="search" placeholder="Search.."></li>
+	 
+      <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
+         <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
+      </li>
+   </ul>
+   </nav>
 
 	<!-- Form Row 1 -->
 	<div class="row">
@@ -79,11 +80,11 @@ if(!$email){
 	  		<div class="row">
 	  			<div class="col-6">
 			  		<label>Nama Properti</label><br>
-			  		<input id="NamaProperti" type="text" value="Nama Properti">
+			  		<input id="NamaProperti" type="textarea" value="Nama Properti">
 	  			</div>
 	  			<div class="col-6">
 			  		<label>Deskripsi</label><br>
-			  		<input id="Deskripsi" type="text" value="Deskripsi Properti">
+			  		<input id="Deskripsi" type="textarea" value="Deskripsi Properti">
 	  			</div>
 	  		</div>
 	  	</form>
@@ -114,33 +115,33 @@ if(!$email){
 			<div class="row">
 				<div class="col-6">
 	  				Luas Bangunan<br>
-	  				<input id="LuasBangunan" type="text" value="Satuan m2">
+	  				<input id="LuasBangunan" type="textarea" value="Satuan m2">
 				</div>
 				<div class="col-6">
 	  				Luas Tanah<br>
-	  				<input id="Luas Tanah" type="text" value="Satuan m2">
+	  				<input id="Luas Tanah" type="textarea" value="Satuan m2">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-6">
 	  				Jumlah Kamar<br>
-	  				<input id="JumlahKamar" type="text" value="Masukkan dalam Angka">
+	  				<input id="JumlahKamar" type="textarea" value="Masukkan dalam Angka">
 				</div>
 				<div class="col-6">
 	  				Jumlah Kamar Mandi<br>
-	  				<input id="JumlahKamarMandi" type="text" value="Masukkan dalam Angka">
+	  				<input id="JumlahKamarMandi" type="textarea" value="Masukkan dalam Angka">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-6">
 	  				Daya Listrik<br>
-	  				<input id="DayaListrik" type="text" value="Satuan Watt">
+	  				<input id="DayaListrik" type="textarea" value="Satuan Watt">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-6">
 	  				Jumlah Lantai<br>
-	  				<input id="Jumlah Lantai" type="text" value="Masukkan dalam Angka">
+	  				<input id="Jumlah Lantai" type="textarea" value="Masukkan dalam Angka">
 				</div>
 				<div class="col-6">
 	  				Kondisi Properti<br>
