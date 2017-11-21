@@ -67,9 +67,16 @@ if(!$email){
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
          <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
       </li>
+<<<<<<< HEAD
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
          <a href="<?php echo base_url();?>/index.php/Daftar_Properti"><button class="dropbtn" style="font-size: 13px">Tambah Properti</button></a>
       </li>
+||||||| merged common ancestors
+=======
+      <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
+         <button class="dropbtn" style="font-size: 13px"><a href="<?php echo base_url(); ?>/index.php/Daftar_Properti">Tambah Properti</button></a>
+      </li>
+>>>>>>> 876964478240edbf4e5a5eae2e356a04a296e8e7
    </ul>
    </nav>
 

@@ -78,52 +78,10 @@ if(!$email){
 				<option value="sewa">Sewa</option>
 				</select>
 			<input name="search" type="text" size="50" placeholder="Search..." />
-			<input type="submit" name="" value="cari">
+			<input type="submit" name="" value="Cari">
 		</form>
 	</center>
-	<!-- lokasi populer -->
-	<div class="container" align="center">
-<div class="content-bordered-box">
 
-
-				<!-- RIGHT COLUMN - POPULAR LOCATION ITEMS -->
-				<div class="col-md-10 border-right">
-						<div class="sub-area">
-
-								<div class="sub-area-title">
-										<h3>Lokasi populer</h3>
-								</div>
-
-								<!-- Start sub area small -->
-								<div class="sub-area-lists list-small" id="lokasi">
-
-										<ul>
-												<li><a href="lokasi1.html" >Lokasi 1</a></li>
-												<li><a href="lokasi2.html" >Lokasi 2</a></li>
-												<li><a href="lokasi3.html" >Lokasi 3</a></li>
-												<li><a href="lokasi4.html" >Lokasi 4</a></li>
-												<li><a href="lokasi5.html" >Lokasi 5</a></li>
-										</ul>
-
-										<ul>
-											<li><a href="lokasi6.html" >Lokasi 6</a></li>
-											<li><a href="lokasi7.html" >Lokasi 7</a></li>
-											<li><a href="lokasi8.html" >Lokasi 8</a></li>
-											<li><a href="lokasi9.html" >Lokasi 9</a></li>
-											<li><a href="lokasi10.html" >Lokasi 10</a></li>
-										</ul>
-
-																</div>
-
-				</div>
-				<!-- END RIGHT COLUMN - POPULAR LOCATION ITEMS -->
-
-		</div>
-
-</div>
-
-</div>
-</div>
 	<!-- Spacing -->
 	<div class="row spacing"></div>
 	<div class="container" id="body">
