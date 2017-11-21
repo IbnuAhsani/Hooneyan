@@ -24,22 +24,21 @@ if(!$email){
    <!-- Upper Task Bar -->
    <nav cl>
    <ul style="background-color: #062F4f; width: 100% ; margin: 0px">
-      <li style="margin: 11px; margin-left: 20; float: left;"><a href="http://localhost/CI/index.php/Homepage"><img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></a></li>
+      <li style="margin: 11px; margin-left: 20; float: left;"><a href="<?php echo base_url(); ?>/index.php/Homepage"><img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></a></li>
      <li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
        <button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
           <div class="dropdown-content">
             <a href="#">| Jual</a>
-            <a href="http://localhost/CI/index.php/JualSewa_Page">Rumah</a>
-            <a href="http://localhost/CI/index.php/JualSewa_Page">Ruko</a>
-            <a href="http://localhost/CI/index.php/JualSewa_Page">Apartemen</a>
+            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Rumah</a>
+            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Ruko</a>
+            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Apartemen</a>
             <a href="#">| Sewa</a>
-            <a href="http://localhost/CI/index.php/JualSewa_Page">Rumah</a>
-            <a href="http://localhost/CI/index.php/JualSewa_Page">Apartemen</a>
-            <a href="http://localhost/CI/index.php/JualSewa_Page">Ruko</a>
-            <a href="http://localhost/CI/index.php/JualSewa_Page">Villa</a>
+            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Rumah</a>
+            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Apartemen</a>
+            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Ruko</a>
+            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Villa</a>
           </div>
        </li>
-      <li style="width: 40%; float: left;"><input type="text" class="search1" name="search" placeholder="Search.."></li>
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
          <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
       </li>
@@ -65,7 +64,7 @@ if(!$email){
    <!-- Grey Line -->
    <div class="row" style="height: 15%; background-color: #D9D9D9">
      <div class="col-sm-2"></div>
-     <div class="col-sm-8">
+     <div class="col-sm-6">
          <form>
             <span><input type="text" class="search rounded" placeholder="Search..."></span>
          </form>
