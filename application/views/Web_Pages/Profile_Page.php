@@ -67,6 +67,9 @@ if(!$email){
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
          <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
       </li>
+      <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
+         <button class="dropbtn" style="font-size: 13px"><a href="<?php echo base_url(); ?>/index.php/Daftar_Properti">Tambah Properti</button></a>
+      </li>
    </ul>
    </nav>
 

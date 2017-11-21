@@ -42,6 +42,9 @@ if(!$email){
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
          <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
       </li>
+      <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
+         <button class="dropbtn" style="font-size: 13px"><a href="<?php echo base_url(); ?>/index.php/Profile_Page">My Profile</button></a>
+      </li>
    </ul>
    </nav>
 
@@ -63,7 +66,7 @@ if(!$email){
 
    <!-- Grey Line -->
    <div class="row" style="height: 15%; background-color: #D9D9D9">
-     <div class="col-sm-2"></div>
+     <div class="col-sm-4"></div>
      <div class="col-sm-6">
          <form>
             <span><input type="text" class="search rounded" placeholder="Search..."></span>
