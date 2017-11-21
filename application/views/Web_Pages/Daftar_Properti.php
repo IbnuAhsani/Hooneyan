@@ -1,19 +1,16 @@
 <?php
-$email=$this->session->userdata('email');
+	$email=$this->session->userdata('email');
 
-if(!$email){
-
-  redirect('Login');
-}
-
+	if(!$email)
+		{
+		  redirect('Login');
+		}
  ?>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Daftar Properti</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/Final.css") ?>">
-
-	
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button, 
@@ -22,7 +19,6 @@ if(!$email){
 		{
 		    document.getElementById("myDropdown").classList.toggle("show");
 		}
-
 	// Close the dropdown if the user clicks outside of it
 	window.onclick = function(event) 
 		{
@@ -46,7 +42,6 @@ if(!$email){
 </head>
 <body class="container-fluid" style="margin: 0"px>
 	<!-- Upper Task Bar -->
-   <nav cl>
    <ul style="background-color: #062F4f; width: 100% ; margin: 0px">
       <li style="margin: 11px; margin-left: 20; float: left;"><a href="<?php echo base_url(); ?>/index.php/Homepage"><img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></a></li>
      <li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
@@ -63,7 +58,7 @@ if(!$email){
             <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Villa</a>
           </div>
        </li>
-            <li style="width: 40%; float: left;"><input type="text" class="search1" name="search" placeholder="Search.."></li>
+      <li style="width: 40%; float: left;"><input type="text" class="search1" name="search" placeholder="Search.."></li>
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
          <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
       </li>
@@ -163,6 +158,5 @@ if(!$email){
 	</div>
 	</form> 
 	<div class="col-1"></div>
-	</div>
 </body>
 </html>
