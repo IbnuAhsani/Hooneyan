@@ -23,4 +23,8 @@ class Profile_Page extends CI_Controller {
     $this->load->helper('url');
     $this->load->view('Web_Pages/Profile_Page');
  }
+ public function tambah_properti()
+ {
+    $this->load->view('Web_Pages/Daftar_Properti');
+ }
 }
