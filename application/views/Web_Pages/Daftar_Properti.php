@@ -108,6 +108,20 @@
 			</div>
 			<div class="row">
 				<div class="col-6">
+	  				Kondisi Properti<br>
+	  				<select name="mydropdown">
+					<option name="kondisi_properti" value="Bagus">Bagus</option>
+					<option name="kondisi_properti" value="Layak">Layak</option>
+					<option name="kondisi_properti" value="Kurang">Kurang</option>
+					</select>
+				</div>
+				<div class="col-6">
+	  				Lokasi Properti<br>
+	  				<input type="textarea" id="LokasiProperti" name="lokasi_properti" placeholder="Kabupaten">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
 	  				Luas Bangunan<br>
 	  				<input type="textarea" id="LuasBangunan" name="luas_properti" placeholder="Satuan m2">
 				</div>
@@ -118,15 +132,9 @@
 			</div>
 			<div class="row">
 				<div class="col-6">
-	  				Jumlah Kamar<br>
-	  				<input type="textarea" id="JumlahKamar" name="jumlah_ktidur" placeholder="Masukkan dalam Angka">
+	  				Jumlah Lantai<br>
+	  				<input type="number" id="Jumlah Lantai" name="jumlah_lantai" placeholder="Masukkan dalam Angka">
 				</div>
-				<div class="col-6">
-	  				Jumlah Kamar Mandi<br>
-	  				<input type="textarea" id="JumlahKamarMandi" name="jumlah_kmandi" placeholder="Masukkan dalam Angka">
-				</div>
-			</div>
-			<div class="row">
 				<div class="col-6">
 	  				Daya Listrik<br>
 	  				<input type="textarea" id="DayaListrik" name="daya_listrik" placeholder="Satuan Watt">
@@ -134,16 +142,22 @@
 			</div>
 			<div class="row">
 				<div class="col-6">
-	  				Jumlah Lantai<br>
-	  				<input type="textarea" id="Jumlah Lantai" name="jumlah_lantai" placeholder="Masukkan dalam Angka">
+	  				Jumlah Kamar<br>
+	  				<input type="number" id="JumlahKamar" name="jumlah_ktidur" placeholder="Masukkan dalam Angka">
 				</div>
 				<div class="col-6">
-	  				Kondisi Properti<br>
-	  				<select name="mydropdown">
-					<option name="kondisi_properti" value="Bagus">Bagus</option>
-					<option name="kondisi_properti" value="Layak">Layak</option>
-					<option name="kondisi_properti" value="Kurang">Kurang</option>
-					</select>
+	  				Jumlah Kamar Mandi<br>
+	  				<input type="number" id="JumlahKamarMandi" name="jumlah_kmandi" placeholder="Masukkan dalam Angka">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+	  				Jumlah Garasi<br>
+	  				<input type="number" id="JumlahGarasi" name="jumlah_garasi" placeholder="Masukkan dalam Angka">
+				</div>
+				<div class="col-6">
+	  				Harga Properti<br>
+	  				<input type="textarea" id="HargaProperti" name="harga_properti" placeholder="Rp.100000000">
 				</div>
 			</div>
 			<div class="row">
