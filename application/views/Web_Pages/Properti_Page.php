@@ -77,22 +77,22 @@ if(!$email){
 	<div class="row" style="height: 1100px">
 		<div class="col-1"></div>
 		<!-- Left Colomn -->
-		<div class="col-7">
+		<div class="col-7"> 
 			<!-- Carousel -->
 			<div class="row">
 				<div class="mySlides fade polaroid">
 					<div class="numbertext">1 / 3</div>
-					<img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" style="width:100%">
+					<img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" style="height:480px; width:720px">
 				</div>
 
 				<div class="mySlides fade polaroid">
 					<div class="numbertext">2 / 3</div>
-					<img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" style="width:100%">
+					<img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" style="height:480px; width:720px">
 				</div>
 
 				<div class="mySlides fade polaroid">
 					<div class="numbertext">3 / 3</div>
-					<img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" style="width:100%">
+					<img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" style="height:480px; width:720px">
 				</div>	
 			</div>
 			<div class="row" style="text-align:center; height: 10px">
@@ -174,8 +174,19 @@ if(!$email){
 	}
 	</script>	
 	<!-- Footer -->
-	<div class="row Footer">
-		<p style="margin-left: 100px">Footer</p>
-	</div>
+  <div class="footer">
+      <h5>About Us</h5>
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/fb.png" alt="facebook" style="width:50px;height:50px;">
+        </div>
+        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/twit.png" alt="twitter" style="width:50px;height:50px;;">
+        </div>
+        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/wa.png" alt="whatsapp" style="width:50px;height:50px;;">
+        </div>                
+        <div class="col-sm-2"><img src="<?php echo base_url(); ?>/assets/pictures/ig.png" alt="instagram" style="width:50px;height:50px;;">
+        </div>
+      </div>
+  </div>   
 </body>
 </html>

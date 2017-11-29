@@ -82,34 +82,50 @@ if(!$email){
    <h2 style="margin-left:30px;">Terpopuler</h2>
   <br>
   <div class="row" id="kiri">
+
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="rumah1" style="width:304px;height:228px;">
       <br>
-      <h3>Meikarta</h3>
-      <h5>Cikarang, Bekasi</h5>
+      <h3><font color="black">Meikarta</font></h3>
+      <h5><font color="black">Cikarang, Bekasi</font></h5>
+    </a>
     </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="rumah2" style="width:304px;height:228px;">
       <br>
-      <h3>Griya Bandung Indah</h3>
-      <h5>Ciwastra, Bandung</h5>
+      <h3><font color="black">Griya Bandung Indah</font></h3>
+      <h5><font color="black">Ciwastra, Bandung</font></h5>
+    </a>
     </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4 "><img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="rumah3" style="width:304px;height:228px;">
       <br>
-      <h3>Margahayu</h3>
-      <h5>Buah Batu, Bandung</h5>
+      <h3><font color="black">Margahayu</font></h3>
+      <h5><font color="black">Buah Batu, Bandung</font></h5>
+    </a>
     </div>
   </div>
   <div class="row" id="kiri">
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="rumah2" style="width:304px;height:228px;">
       <br>
-      <h3>Legok Hangseur Residence</h3>
+      <h3><font color="black">Griya Bandung Indah</font></h3>
+      <h5><font color="black">Ciwastra, Bandung</font></h5>
+    </a>
     </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="rumah3" style="width:304px;height:228px;">
       <br>
-      <h3>Griya Bandung Indah</h3>
+      <h3><font color="black">Margahayu</font></h3>
+      <h5><font color="black">Buah Batu, Bandung</font></h5>
+    </a>
     </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="rumah1" style="width:304px;height:228px;">
       <br>
-      <h3>Margahayu</h3>
+      <h3><font color="black">Meikarta</font></h3>
+      <h5><font color="black">Cikarang, Bekasi</font></h5>
+    </a>
     </div>
   </div>
 
@@ -121,31 +137,49 @@ if(!$email){
   <!-- Iklan Terbaru -->
   <h2 id="kiri">Terbaru</h2><br>
   <div class="row" style=" margin-left:30px;">
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="rumah1" style="width:304px;height:228px;">
       <br>
-      <h3>Legok Hangseur Residence</h3>
+      <h3><font color="black">Meikarta</font></h3>
+      <h5><font color="black">Cikarang, Bekasi</font></h5>
+    </a>
     </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="rumah2" style="width:304px;height:228px;">
       <br>
-      <h3>Griya Bandung Indah</h3>
+      <h3><font color="black">Griya Bandung Indah</font></h3>
+      <h5><font color="black">Ciwastra, Bandung</font></h5>
+    </a>
     </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="rumah3" style="width:304px;height:228px;">
       <br>
-      <h3>Margahayu</h3>
+      <h3><font color="black">Margahayu</font></h3>
+      <h5><font color="black">Buah Batu, Bandung</font></h5>
+    </a>
     </div>
   </div>
   <div class="row" id="kiri">
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="rumah2" style="width:304px;height:228px;">
       <br>
-      <h3>Legok Hangseur Residence</h3>
+      <h3><font color="black">Griya Bandung Indah</font></h3>
+      <h5><font color="black">Ciwastra, Bandung</font></h5>
+    </a>
     </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="rumah3" style="width:304px;height:228px;">
       <br>
-      <h3>Griya Bandung Indah</h3>
+      <h3><font color="black">Margahayu</font></h3>
+      <h5><font color="black">Buah Batu, Bandung</font></h5>
+    </a>
     </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
     <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="rumah1" style="width:304px;height:228px;">
       <br>
-      <h3>Margahayu</h3>
+      <h3><font color="black">Meikarta</font></h3>
+      <h5><font color="black">Cikarang, Bekasi</font></h5>
+    </a>
     </div>
   </div>
 
@@ -153,8 +187,19 @@ if(!$email){
    <div class="row spacing"></div>
 
    <!-- Footer -->
-   <div class="footer">
-      <p>Footer</p>
-   </div>    
+  <div class="footer">
+      <h5>About Us</h5>
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/fb.png" alt="facebook" style="width:50px;height:50px;">
+        </div>
+        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/twit.png" alt="twitter" style="width:50px;height:50px;;">
+        </div>
+        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/wa.png" alt="whatsapp" style="width:50px;height:50px;;">
+        </div>                
+        <div class="col-sm-2"><img src="<?php echo base_url(); ?>/assets/pictures/ig.png" alt="instagram" style="width:50px;height:50px;;">
+        </div>
+      </div>
+  </div>    
 </body>
 </html>

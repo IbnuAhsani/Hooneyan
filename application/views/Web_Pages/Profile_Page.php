@@ -63,7 +63,7 @@ if(!$email){
             <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Villa</a>
           </div>
        </li>
-       <li style="width: 40%; float: left;"><input type="text" class="search1" name="search" placeholder="Search.."></li>
+            <li style="width: 40%; float: left;"><input type="text" class="search1" name="search" placeholder="Search.."></li>
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
          <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
       </li>
@@ -226,8 +226,19 @@ if(!$email){
 	<div class="row spacing"></div>
 
 	<!-- Footer -->
-	<div class="Footer">
-		<p>Footer</p>
-	</div>
+  <div class="footer">
+      <h5>About Us</h5>
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/fb.png" alt="facebook" style="width:50px;height:50px;">
+        </div>
+        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/twit.png" alt="twitter" style="width:50px;height:50px;;">
+        </div>
+        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/wa.png" alt="whatsapp" style="width:50px;height:50px;;">
+        </div>                
+        <div class="col-sm-2"><img src="<?php echo base_url(); ?>/assets/pictures/ig.png" alt="instagram" style="width:50px;height:50px;;">
+        </div>
+      </div>
+  </div>   
 </body>
 </html>

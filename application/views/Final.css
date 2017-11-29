@@ -105,7 +105,7 @@ input[type=text] {
     transition: width 0.4s ease-in-out;*/
     margin-top: 15px;
     margin-bottom: 15px;
-    width: 40%; 
+    width: 720px; 
     float: left;
 }
 /**/
@@ -250,13 +250,13 @@ input[type=text] {
 }*/
 
 .carousel-size-homepage{
-  width: 1920px;
+  width: 1080px;
   height: 600px
 }
 
 .cycle-slideshow {
-  width: 100%;
-  max-width: 1920px;
+  width: 1080px;
+  height: 720px;
   display: block;
   position: relative;
   margin: 20px auto;
