@@ -31,7 +31,7 @@ class Login extends CI_Controller {
       {
         $this->session->set_userdata('id_user',$data['id_user']);
         $this->session->set_userdata('email',$data['email']);
-        $this->session->set_userdata('nama_user',$data['nama_user']);
+        $this->session->set_userdata('nama',$data['nama']);
 
 
         $this->load->view('Web_Pages/Homepage.php');

@@ -23,11 +23,11 @@
 					$tgl_lahir = date('Y-m-d', strtotime($rawdate));
 					$user=array(
 						'password'=>md5($this->input->post('password')),
-						'nama_user'=>$this->input->post('nama_user'),
+						'nama'=>$this->input->post('nama'),
 						'tipe_akun'=>$this->input->post('tipe_akun'),
 						'tgl_lahir'=>$tgl_lahir,
 						'email'=>$this->input->post('email'),
-						'no_kontak'=>$this->input->post('no_kontak'),
+						'no_kontak'=>$this->input->post('no_kontak')
 					);
 					print_r($user);
 					$email_check = $this->user_model->email_check($user['email']);
