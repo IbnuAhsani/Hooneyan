@@ -14,7 +14,7 @@
       ?>
 		<form role="form" class="form-signin" method="POST" action="<?php echo base_url('index.php/Daftar_User/register_user'); ?>">
 			<h1 class="form-signin-heading text-muted">Daftar Akun Hooneyan</h1><br>
-			<input type="text" placeholder="Nama Lengkap" name="nama_user" required>
+			<input type="text" placeholder="Nama Lengkap" name="nama" required>
 			<input type="email" placeholder="Email Anda" name="email" required>
 			<input type="password" placeholder="Password" name="password" required>
 			<input type="text" placeholder="Nomor Telpon" name="no_kontak" required>

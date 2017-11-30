@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2017 at 06:18 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.10
+-- Generation Time: 30 Nov 2017 pada 15.54
+-- Versi Server: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,64 +23,82 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `agen`
+-- Struktur dari tabel `agen`
 --
 
 CREATE TABLE `agen` (
-  `id_agen` varchar(20) NOT NULL,
+  `id_agen` int(10) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `nama_agen` varchar(50) NOT NULL,
+  `nama` varchar(50) NOT NULL,
   `tipe_akun` int(11) NOT NULL,
-  `tgl_lahir_agen` date NOT NULL,
-  `email_agen` varchar(100) NOT NULL,
-  `no_kontak_agen` varchar(20) NOT NULL
+  `tgl_lahir` date NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `no_kontak` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `agen`
+--
+
+INSERT INTO `agen` (`id_agen`, `password`, `nama`, `tipe_akun`, `tgl_lahir`, `email`, `no_kontak`) VALUES
+(1, '827ccb0eea8a706c4c34a16891f84e7b', 'Budi', 2, '1989-12-20', 'budi@mail.cc', '08128391023');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `properti`
+-- Struktur dari tabel `properti`
 --
 
 CREATE TABLE `properti` (
-  `id_properti` varchar(20) NOT NULL,
+  `id_properti` int(10) NOT NULL,
   `nama_properti` varchar(100) NOT NULL,
-  `tipe_properti` varchar(30) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `kategori_properti` varchar(30) NOT NULL,
   `lokasi_properti` varchar(100) NOT NULL,
-  `luas_properti` int(10) NOT NULL,
+  `luas_bangunan` int(10) NOT NULL,
   `luas_tanah` int(10) NOT NULL,
   `harga_properti` int(20) NOT NULL,
   `status_properti` varchar(10) NOT NULL,
+  `kondisi_properti` varchar(50) NOT NULL,
   `jumlah_ktidur` int(5) NOT NULL,
   `jumlah_kmandi` int(5) NOT NULL,
   `jumlah_garasi` int(5) NOT NULL,
   `jumlah_lantai` int(5) NOT NULL,
-  `daya_listrik` int(20) NOT NULL
+  `daya_listrik` int(20) NOT NULL,
+  `gambar` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `properti`
+--
+
+INSERT INTO `properti` (`id_properti`, `nama_properti`, `deskripsi`, `kategori_properti`, `lokasi_properti`, `luas_bangunan`, `luas_tanah`, `harga_properti`, `status_properti`, `kondisi_properti`, `jumlah_ktidur`, `jumlah_kmandi`, `jumlah_garasi`, `jumlah_lantai`, `daya_listrik`, `gambar`) VALUES
+(1, 'Rm-12', 'Good', 'rumah', 'Bandung', 100, 120, 200000000, 'jual', 'bagus', 5, 3, 1, 2, 200, ''),
+(2, 'Rm-20', 'Good', 'ruko', 'Sumedang', 120, 150, 300000000, 'sewa', 'layak', 7, 3, 2, 3, 200, '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi`
+-- Struktur dari tabel `transaksi`
 --
 
 CREATE TABLE `transaksi` (
   `no_transaksi` varchar(20) NOT NULL,
-  `id_user` varchar(30) NOT NULL,
-  `id_properti` varchar(20) NOT NULL,
+  `id_user` int(10) NOT NULL,
+  `id_properti` int(10) NOT NULL,
   `harga_properti` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
   `id_user` int(5) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `nama_user` varchar(100) NOT NULL,
+  `nama` varchar(100) NOT NULL,
   `tipe_akun` int(1) NOT NULL,
   `tgl_lahir` date NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -90,15 +106,16 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id_user`, `password`, `nama_user`, `tipe_akun`, `tgl_lahir`, `email`, `no_kontak`) VALUES
+INSERT INTO `user` (`id_user`, `password`, `nama`, `tipe_akun`, `tgl_lahir`, `email`, `no_kontak`) VALUES
 (1, '827ccb0eea8a706c4c34a16891f84e7b', 'Muhammad Affandi', 0, '0000-00-00', 'affandim354@gmail.com', ''),
 (2, '827ccb0eea8a706c4c34a16891f84e7b', 'Asia', 0, '0000-00-00', 'afnd@gmail.com', ''),
 (3, '827ccb0eea8a706c4c34a16891f84e7b', 'Asuie', 0, '0000-00-00', 'aa@g.to', ''),
 (4, 'c1257a2e0fb0b3d8a83eaa0a3d1703c8', 'Ibnu Ahsani', 0, '0000-00-00', 'ibnu.muhari@gmail.com', ''),
-(6, '827ccb0eea8a706c4c34a16891f84e7b', 'Hello World', 1, '2017-05-17', 'hello.world@gmail.com', '12345');
+(6, '827ccb0eea8a706c4c34a16891f84e7b', 'Hello World', 1, '2017-05-17', 'hello.world@gmail.com', '12345'),
+(7, '827ccb0eea8a706c4c34a16891f84e7b', 'Agus', 1, '1994-04-15', 'agus@mail.co', '0891248100');
 
 --
 -- Indexes for dumped tables
@@ -133,12 +150,20 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `agen`
+--
+ALTER TABLE `agen`
+  MODIFY `id_agen` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `properti`
+--
+ALTER TABLE `properti`
+  MODIFY `id_properti` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-COMMIT;
-
+  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
