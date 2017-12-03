@@ -19,6 +19,7 @@
 
 			public function register_user()
 				{
+					$tipe_akun = $this->input->post('tipe_akun'); 
 					$rawdate = htmlentities($_POST['tgl_lahir']);
 					$tgl_lahir = date('Y-m-d', strtotime($rawdate));
 					$user=array(
@@ -33,11 +34,10 @@
 					$email_check = $this->user_model->email_check($user['email']);
 					if($email_check)
 						{
-							$tipe_akun = $this->input->post('tipe_akun'); 
 							if($tipe_akun == 1)
-								$this->user_model->register_user($user);
+								$this->user_model->register_agen($user);
 							else
-								$this->user_model->register_agen($user);								
+								$this->user_model->register_user($user);								
 							$this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
 							redirect('Homepage');
 						}

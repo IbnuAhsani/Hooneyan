@@ -20,8 +20,8 @@
 			<input type="text" placeholder="Nomor Telpon" name="no_kontak" required>
 			<br>
 			<label for="tipe_akun" style="color: white">Tipe Akun</label><br>
-		  <input type="radio" name="tipe_akun" value="1"><span style="color: white">User</span><br>
-		  <input type="radio" name="tipe_akun" value="2"><span style="color: white">Agen</span><br><br>
+		  <input type="radio" name="tipe_akun" value="2"><span style="color: white">User</span><br>
+		  <input type="radio" name="tipe_akun" value="1"><span style="color: white">Agen</span><br><br>
 		  <label for="tgl_lhr" style="color: white">Tanggal Lahir : </label>
 		  <input type="date" name="tgl_lahir"><br><br>		
 			<center><input type="submit" value="Daftar" name="register"></center>

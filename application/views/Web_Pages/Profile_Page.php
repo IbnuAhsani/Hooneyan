@@ -1,11 +1,9 @@
 <?php
-$email=$this->session->userdata('email');
-
-if(!$email){
-
-  redirect('Login');
-}
-
+	$email=$this->session->userdata('email');
+	if(!$email)
+		{
+		  redirect('Login');
+		}
  ?>
 <html>
 <head>
@@ -63,13 +61,18 @@ if(!$email){
             <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
           </div>
        </li>
-            <li style="width: 40%; float: left;"><input type="text" class="search1" name="search" placeholder="Search.."></li>
+      <li style="width: 40%; float: left;"><input type="text" class="search1" name="search" placeholder="Search.."></li>
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
          <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
       </li>
-      <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
-         <button class="dropbtn" style="font-size: 13px"><a href="<?php echo base_url(); ?>index.php/Daftar_Properti">Tambah Properti</button></a>
-      </li>
+      <?php 
+      	$tipe_akun=$this->session->userdata('tipe_akun');
+      	if($tipe_akun == 1):
+	   ?>
+	      <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
+	         <button class="dropbtn" style="font-size: 13px"><a href="<?php echo base_url(); ?>index.php/Daftar_Properti">Tambah Properti</button></a>
+	      </li>
+	   <?php endif; ?>
    </ul>
    </nav>
 
@@ -84,7 +87,11 @@ if(!$email){
 		</div>
 		<div class="col-2">
 			<ul style="color: #062F4f; margin-top: 54%">
-				<li>Nama Agen</li>
+				<li><?php 
+					foreach ($dataUser as $row) {
+						echo $row->nama;
+					}
+				?></li>
 				<li>No Kontak</li>
 				<li>e-mail</li>
 				<li>Alamat</li>
