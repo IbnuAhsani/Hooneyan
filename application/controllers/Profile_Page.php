@@ -32,10 +32,11 @@
 
 		public function name()
 			{
+				$data = array();
 				$tipe_akun = $this->session->userdata('tipe_akun');
 				$nama = $this->session->userdata('nama');
-				$query = $this->m_profile_page->get_name($tipe_akun, $nama);
-				$data['dataUser'] = $query;
+				$data["nama"] = $this->m_profile_page->get_name($tipe_akun, $nama);
+				// $data['dataUser'] = $query;
 				$this->load->view('Web_Pages/Profile_Page', $data);
 			}
 	}

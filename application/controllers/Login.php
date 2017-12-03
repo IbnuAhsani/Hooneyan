@@ -1,5 +1,5 @@
 <?php 
-	defined('BASEPATH') OR exit('No direct script access allowed'); 
+defined('BASEPATH') OR exit('No direct script access allowed'); 
 	class Login extends CI_Controller { 
 
 		public function __construct()
@@ -33,7 +33,7 @@
 				if($tipe_akun == 1)
 					$data=$this->user_model->login_agen($user_login['email'],$user_login['password']);
 				else 
-					$data=$thisx->user_model->login_user($user_login['email'],$user_login['password']);
+					$data=$this->user_model->login_user($user_login['email'],$user_login['password']);
 				if($data)
 					{
 						$this->session->sess_expiration = '360';

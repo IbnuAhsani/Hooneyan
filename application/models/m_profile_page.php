@@ -13,9 +13,9 @@
 				{
 					if($tipe_akun == 1)
 					{
-						// $sql = query("SELECT `email` FROM `agen` WHERE 'nama' == $nama");
-						$query = $this->db->get_where('agen', array('nama' => $nama));
-						return $query->result();
+						// $sql = query("SELECT `email` FROM `agen` WHERE 'nama' == $nama");;
+						$query = $this->db->get_where('agen', array('nama =' => '$nama'))->row();
+						return $query;
 					}
 					else
 					{

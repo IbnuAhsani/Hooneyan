@@ -87,11 +87,7 @@
 		</div>
 		<div class="col-2">
 			<ul style="color: #062F4f; margin-top: 54%">
-				<li><?php 
-					foreach ($dataUser as $row) {
-						echo $row->nama;
-					}
-				?></li>
+				<li><?php echo $nama->nama;?></li>
 				<li>No Kontak</li>
 				<li>e-mail</li>
 				<li>Alamat</li>
