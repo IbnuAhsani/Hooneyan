@@ -9,18 +9,17 @@
 					$this->load->library('session');
 				}	
 
-			public function get_name($tipe_akun, $nama)
+			public function get_data($tipe_akun, $nama)
 				{
 					if($tipe_akun == 1)
 					{
-						// $sql = query("SELECT `email` FROM `agen` WHERE 'nama' == $nama");;
-						$query = $this->db->get_where('agen', array('nama =' => '$nama'))->row();
+						$query = $this->db->get_where('agen', array('id' => $id));
 						return $query;
 					}
 					else
 					{
-						// $sql = query("SELECT `email` FROM `user` WHERE 'nama' == $nama");
-						// return $sql->result();
+						$query = $this->db->get_where('user', array('id' => $id));
+						return $query;
 					}
 				}
 

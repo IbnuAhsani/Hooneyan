@@ -87,9 +87,14 @@
 		</div>
 		<div class="col-2">
 			<ul style="color: #062F4f; margin-top: 54%">
-				<li><?php echo $nama->nama;?></li>
-				<li>No Kontak</li>
-				<li>e-mail</li>
+				<?php
+					$nama=$this->session->userdata('nama');
+					$no_kontak=$this->session->userdata('no_kontak');
+					$email=$this->session->userdata('email');
+				 ?>
+				<li><?php echo $nama ?></li>
+				<li><?php echo $no_kontak ?></li>
+				<li><?php echo $email ?></li>
 				<li>Alamat</li>
 			</ul>
 		</div>

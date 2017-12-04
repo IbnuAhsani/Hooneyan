@@ -30,14 +30,17 @@
 				$this->load->view('Web_Pages/Profile_Page');
 			}
 
-		public function name()
+		public function data()
 			{
-				$data = array();
 				$tipe_akun = $this->session->userdata('tipe_akun');
-				$nama = $this->session->userdata('nama');
-				$data["nama"] = $this->m_profile_page->get_name($tipe_akun, $nama);
-				// $data['dataUser'] = $query;
+				$id = $this->session->userdata('id');
+				$data["row"] = $this->m_profile_page->get_data($tipe_akun, $id);
 				$this->load->view('Web_Pages/Profile_Page', $data);
+
+				// $data = array();
+				// $nama = $this->session->userdata('nama');
+				// // $data['dataUser'] = $query;
+				// $this->load->view('Web_Pages/Profile_Page', $data);
 			}
 	}
 ?>
