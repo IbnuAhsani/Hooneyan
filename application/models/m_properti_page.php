@@ -1,11 +1,11 @@
 <?php
-	class m_profile_page extends CI_model
+	class m_properti_page extends CI_model
 		{
 			 public function __construct()
 				{
 		         parent::__construct();
 		   			$this->load->helper('url');
-		   	 		$this->load->model('m_profile_page');
+		   	 		$this->load->model('m_properti_page');
 					$this->load->library('session');
 				}	
 

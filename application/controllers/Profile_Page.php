@@ -27,7 +27,7 @@
 		public function index() 
 			{ 
 				$this->load->helper('url');
-				$this->load->view('Web_Pages/Profile_Page');
+				redirect(base_url('index.php/Profile_Page/tampil_data'));	
 			}
 
 		public function data()
@@ -36,11 +36,14 @@
 				$id = $this->session->userdata('id');
 				$data["row"] = $this->m_profile_page->get_data($tipe_akun, $id);
 				$this->load->view('Web_Pages/Profile_Page', $data);
+			}
 
-				// $data = array();
-				// $nama = $this->session->userdata('nama');
-				// // $data['dataUser'] = $query;
-				// $this->load->view('Web_Pages/Profile_Page', $data);
+		public function tampil_data()
+			{
+				$id_agen = $this->session->userdata('id');
+				$data["properti"] = $this->m_profile_page->tampilByUser($id_agen);
+				// var_dump($data["properti"]); die();
+				$this->load->view('Web_Pages/Profile_Page', $data);
 			}
 	}
 ?>

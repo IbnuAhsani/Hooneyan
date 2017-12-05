@@ -120,82 +120,42 @@
 	<div class="row">
 		<h1 style="color: #062F4f; margin-left: 9%">Iklan Tayang</h1>
 	</div>
-
-	<!-- Iklan Row 1 -->
-	<div class="row" style="margin: 2%;">
-		<div class="col-6" style="display: flex;">
-			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="Gambar Properti">
-			</div>
-			<div class="col-7">
-				<ul style="color: #062F4f;">
-					<li><h4>Nama Properti</h4></li>
-					<li></li><li></li>
-					<li><h5>Harga Properti</h5></li>
-					<li>Tipe Properti</li>
-					<li>Status Jual</li>
-					<li>Lokasi Jual</li>
-					<li>Fitur Properti</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-6" style="display: flex;">
-			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="Gambar Properti">
-			</div>
-			<div class="col-7">
-				<ul style="color: #062F4f;">
-					<li><h4>Nama Properti</h4></li>
-					<li></li><li></li>
-					<li><h5>Harga Properti</h5></li>
-					<li>Tipe Properti</li>
-					<li>Status Jual</li>
-					<li>Lokasi Jual</li>
-					<li>Fitur Properti</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<!-- Iklan Row 2 -->
-	<div class="row" style="margin: 2%;">
-		<div class="col-6" style="display: flex;">
-			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="Gambar Properti">
-			</div>
-			<div class="col-7">
-				<ul style="color: #062F4f;">
-					<li><h4>Nama Properti</h4></li>
-					<li></li><li></li>
-					<li><h5>Harga Properti</h5></li>
-					<li>Tipe Properti</li>
-					<li>Status Jual</li>
-					<li>Lokasi Jual</li>
-					<li>Fitur Properti</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-6" style="display: flex;">
-			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="Gambar Properti">
-			</div>
-			<div class="col-7">
-				<ul style="color: #062F4f;">
-					<li><h4>Nama Properti</h4></li>
-					<li></li><li></li>
-					<li><h5>Harga Properti</h5></li>
-					<li>Tipe Properti</li>
-					<li>Status Jual</li>
-					<li>Lokasi Jual</li>
-					<li>Fitur Properti</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
+	<?php  
+		if($properti->result() == NULL)
+			{ ?>
+				<center>
+					<h1>Properti Anda Kosong</h1>
+				</center>
+			<?php }
+		else
+			{
+			foreach ($properti->result() as $prop) 
+				{ ?>
+				<!-- Iklan Row 1 -->
+				<div class="row" style="margin: 2%;">
+					<div class="col-2"></div>
+					<div class="col-6" style="display: flex;">
+						<div class="col-5" style="height: 100%">
+							<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="Gambar Properti">
+						</div>
+						<div class="col-7">
+							<ul style="color: #062F4f;">
+								<li></li>
+								<li><h4><a href=""><?php echo $prop->nama_properti;?></a></h4></li>
+								<li></li><li></li>
+								<li><h5>Rp.<?php echo $prop->harga_properti;?></h5></li>
+								<li>Tipe Properti: <?php echo $prop->tipe_properti;?></li>
+								<li>Status Jual: <?php echo $prop->status_properti;?></li>
+								<li>Lokasi: <?php echo $prop->lokasi_properti;?></li>
+							</ul>
+						</div>
+						</div>
+					<div class="col-2"></div>
+				</div>
+	<?php } }?>
 
 	<!-- Iklan Row 3 -->
-	<div class="row" style="margin: 2%;">
+	<!-- <div class="row" style="margin: 2%;">
 		<div class="col-6" style="display: flex;">
 			<div class="col-5" style="height: 100%">
 				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="Gambar Properti">
@@ -228,7 +188,7 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
 	<!-- Spacing -->
 	<div class="row spacing"></div>

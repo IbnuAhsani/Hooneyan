@@ -62,11 +62,21 @@ if(!$email){
             <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Ruko</a>
             <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Villa</a>
           </div>
-       </li>
-            <li style="width: 40%; float: left;"><input type="text" class="search1" name="search" placeholder="Search.."></li>
-      <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
-         <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
-      </li>
+       <?php
+				$email=$this->session->userdata('email');
+				if(!$email){
+			?>
+			<li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
+				<button class="dropbtn" style="font-size: 13px"><a href="<?php echo base_url(); ?>index.php/Login">Sign-In</button></a>
+			</li>
+			<?php }else{ ?>
+			<li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
+				<button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
+			</li>
+			<li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
+				<button class="dropbtn" style="font-size: 13px"><a href="<?php echo base_url(); ?>index.php/Profile_Page">My Profile</button></a>
+			</li>
+			<?php } ?>
    </ul>
    </nav>
 

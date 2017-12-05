@@ -1,19 +1,15 @@
 <?php
-$email=$this->session->userdata('email');
-
-if(!$email){
-
-  redirect('Login');
-}
-
+	$email=$this->session->userdata('email');
+	if(!$email)
+		{
+		  redirect('Login');
+		}
  ?>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Daftar Properti</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/Final.css") ?>">
-
-	
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button, 
@@ -83,25 +79,25 @@ if(!$email){
 	  			</div>
 	  			<div class="col-6">
 			  		<label>Deskripsi</label><br>
-			  		<input name="deskripsi" type="textarea" placeholder="Deskripsi Properti">
+			  		<input name="desc_properti" type="textarea" placeholder="Deskripsi Properti">
 	  			</div>
 	  		</div>
 
 			<div class="row">
 				<div class="col-6">
 	  				Kategori Properti<br>
-	  				<select name="kategori_properti">
-					<option value="rumah">Rumah</option>
-					<option value="ruko">Ruko</option>
-					<option value="apartemen">Apartemen</option>
-					<option value="villa">Villa</option>
+	  				<select name="tipe_properti">
+					<option value="Rumah">Rumah</option>
+					<option value="Ruko">Ruko</option>
+					<option value="Apartemen">Apartemen</option>
+					<option value="Villa">Villa</option>
 					</select>
 				</div>
 				<div class="col-6">
 	  				Opsi Properti<br>
 	  				<select name="status_properti">
-					<option value="jual">Jual</option>
-					<option value="sewa">Sewa</option>
+					<option value="Jual">Jual</option>
+					<option value="Sewa">Sewa</option>
 					</select>
 				</div>
 			</div>
@@ -109,9 +105,9 @@ if(!$email){
 				<div class="col-6">
 	  				Kondisi Properti<br>
 	  				<select name="kondisi_properti">
-					<option value="bagus">Bagus</option>
-					<option value="layak">Layak</option>
-					<option value="kurang">Kurang</option>
+					<option value="Bagus">Bagus</option>
+					<option value="Layak">Layak</option>
+					<option value="Kurang">Kurang</option>
 					</select>
 				</div>
 				<div class="col-6">
@@ -122,7 +118,7 @@ if(!$email){
 			<div class="row">
 				<div class="col-6">
 	  				Luas Bangunan<br>
-	  				<input name="luas_bangunan" type="textarea" placeholder="Satuan m2">
+	  				<input name="luas_properti" type="textarea" placeholder="Satuan m2">
 				</div>
 				<div class="col-6">
 	  				Luas Tanah<br>
@@ -136,7 +132,7 @@ if(!$email){
 				</div>
 				<div class="col-6">
 	  				Daya Listrik<br>
-	  				<input type="textarea" name="daya_listrik" placeholder="Satuan Watt">
+	  				<input type="textarea" name="daya_listrik" placeholder="Satuan kiloWatt">
 				</div>
 			</div>
 			<div class="row">
@@ -163,7 +159,7 @@ if(!$email){
 			<div class="row">
 				<div class="col-6">
 				    Gambar Properti<br>
-					<input type=file name='fupload' size=40> 
+					<input type=file name='gambar' size=40> 
 					<br>Tipe gambar harus JPG/JPEG
 				</div>
 				<div class="col-6">
@@ -173,8 +169,8 @@ if(!$email){
 		</form>	
 
 	</div>
-<div class="col-1"></div>
-<div class="col-1"></div>
+	<div class="col-1"></div>
+	<div class="col-1"></div>
 
 	   <!-- Footer -->
   <div class="footer">
