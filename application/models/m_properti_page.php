@@ -62,5 +62,11 @@
 					$this->db->limit(6);
 					return $properti = $this->db->get();
 				}
+
+			public function pilih($id_properti)
+				{
+					$query = $this->db->get_where('properti', array('id_properti' => $id_properti));
+					return $query;
+				}	
 		}
 ?>

@@ -44,7 +44,6 @@ if(!$email){
 
 </head>
 <body class="container-fluid" style="margin: 0"px>
-	
 	<!-- Upper Task Bar -->
    <nav cl>
    <ul style="background-color: #062F4f; width: 100% ; margin: 0px">
@@ -88,42 +87,46 @@ if(!$email){
 		<div class="col-1"></div>
 		<!-- Left Colomn -->
 		<div class="col-7"> 
-			
+		<?php 
+			foreach ($properti->result() as $prop) 
+				{ ?>
 			<div class="row">
-				<img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" style="height:480px; width:720px">
+			<?php 
+			  	echo"<img src='".base_url("gambar/".$prop->gambar)."' style=width:785px;height:400px; >";		
+			?>
 			</div>
 
 			<br>
 			 <div style="padding:20px;border: 1px solid black;">
 				<div class="row" style="height: 90px">
-					<div class="col-12">Nama Properti: asa</div>
+					<div class="col-12">Nama Properti: <?php echo $prop->nama_properti;?></div>
 				</div>
 				<div class="row" style="height: 120px">
-					<div class="col-6">Lokasi</div>
-					<div class="col-6">Harga</div>
+					<div class="col-6">Lokasi: <?php echo $prop->lokasi_properti;?></div>
+					<div class="col-6">Harga: Rp.<?php echo $prop->harga_properti;?></div>
 				</div>
 				<div class="row" style="height: 90px">
 					<div class="col-12">
-						<p>Deskripsi: </p>
+						<p>Deskripsi: <?php echo $prop->desc_properti;?></p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-6">
-						<p>Luas Bangunan</p>
-						<p>Luas Tanah</p>
-						<p>Kamar Tidur</p>
-						<p>Kamar Mandi</p>
+						<p>Luas Bangunan: <?php echo $prop->luas_properti;?></p>
+						<p>Luas Tanah: <?php echo $prop->luas_tanah;?></p>
+						<p>Kamar Tidur: <?php echo $prop->jumlah_ktidur;?></p>
+						<p>Kamar Mandi: <?php echo $prop->jumlah_kmandi;?></p>
 					</div>
 					<div class="col-6">
-						<p>Daya Listrik</p>
-						<p>Jumlah Lantai</p>
-						<p>Kondisi</p>
+						<p>Daya Listrik: <?php echo $prop->daya_listrik;?></p>
+						<p>Jumlah Lantai: <?php echo $prop->jumlah_lantai;?></p>
+						<p>Kondisi: <?php echo $prop->kondisi_properti;?></p>
 					</div>
 				</div>
 				<br><br>
 			</div>			
 		</div>
-
+		<?php } ?>
 		<!-- Right Colomn -->
 		<div class="col-3 round1 polaroid" style="height: 310px">
 			<form action="/action_page.php" style="text-align: center; margin: 0 auto ">

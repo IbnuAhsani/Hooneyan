@@ -132,31 +132,34 @@
 			foreach ($properti->result() as $prop) 
 				{ ?>
 				<!-- Iklan Row 1 -->
-				<div class="row" style="margin: 2%;">
-					<div class="col-2"></div>
-					<div class="col-8" style="display: flex;">
-						<div class="col-5" style="height: 100%">
-							<?php
-								foreach ($properti->result() as $data)
-									{ 
-								   	echo"  <img src='".base_url("gambar/".$data->gambar)."' style=width:300px;height:180px; >";
-									}
+				<form action="<?php echo base_url('index.php/Properti_Page/get_data'); ?>" method="post">
+					<div class="row" style="margin: 2%;">
+						<div class="col-2"></div>
+						<div class="col-8" style="display: flex;">
+							<div class="col-5" style="height: 100%">
+							<?php 
+						   	echo"<img src='".base_url("gambar/".$prop->gambar)."' style=width:300px;height:180px; >";		
 							?>
+							</div>
+							<div class="col-7">
+								<ul style="color: #062F4f;">
+									<li></li>
+									 <input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+									<li><h4><input type="submit" value="<?php echo $prop->nama_properti;?>"></h4></li>
+									<li></li><li></li>
+									<li><h5>Rp.<?php echo $prop->harga_properti;?></h5></li>
+									<li>Tipe Properti: <?php echo $prop->kategori_properti;?></li>
+									<li>Status Jual: <?php echo $prop->status_properti;?></li>
+									<li>Lokasi: <?php echo $prop->lokasi_properti;?></li>
+								</ul>
+							</div>
+							</div>
+						<div class="col-2">
+							<a href="<?php echo base_url()."index.php/Profile_Page/edit_data/".$prop->id_properti;?>" class="btn-xs btn-info" role="button"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+	                  <!-- <a href="<?php echo base_url()."index.php/Profile_Page/delete_data/".$prop->id_properti;?>" class="btn-xs btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span> Hapus</a> -->
 						</div>
-						<div class="col-7">
-							<ul style="color: #062F4f;">
-								<li></li>
-								<li><h4><a href=""><?php echo $prop->nama_properti;?></a></h4></li>
-								<li></li><li></li>
-								<li><h5>Rp.<?php echo $prop->harga_properti;?></h5></li>
-								<li>Tipe Properti: <?php echo $prop->kategori_properti;?></li>
-								<li>Status Jual: <?php echo $prop->status_properti;?></li>
-								<li>Lokasi: <?php echo $prop->lokasi_properti;?></li>
-							</ul>
-						</div>
-						</div>
-					<div class="col-2"></div>
-				</div>
+					</div>
+				</form>
 	<?php } }?>
 
 	<!-- Iklan Row 3 -->
