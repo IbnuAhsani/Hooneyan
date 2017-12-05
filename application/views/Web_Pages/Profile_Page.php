@@ -110,7 +110,7 @@
 
 	<!-- Grey Line -->
 	<div class="row" style="height: 15%; background-color: #D9D9D9">
-		<div class="hr" style="margin-top: 3%"><hr></div>
+		<div class="hr" style="margin: 1%;"><hr></div>
 	</div>
 
 	<!-- Spacing -->
@@ -134,9 +134,14 @@
 				<!-- Iklan Row 1 -->
 				<div class="row" style="margin: 2%;">
 					<div class="col-2"></div>
-					<div class="col-6" style="display: flex;">
+					<div class="col-8" style="display: flex;">
 						<div class="col-5" style="height: 100%">
-							<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="Gambar Properti">
+							<?php
+								foreach ($properti->result() as $data)
+									{ 
+								   	echo"  <img src='".base_url("gambar/".$data->gambar)."' style=width:300px;height:180px; >";
+									}
+							?>
 						</div>
 						<div class="col-7">
 							<ul style="color: #062F4f;">
@@ -189,11 +194,8 @@
 			</div>
 		</div>
 	</div> -->
-	
 	<!-- Spacing -->
 	<div class="row spacing"></div>
-
-
    <!-- Footer -->
   <div class="footer" align="center">
       <h3>About Us</h3>
@@ -201,9 +203,6 @@
 			140810160054 - Ibnu Ahsani<br>
 			140810160004 - Ahsan Nurrijal<br>
 			140810179001 - Muhammad Affandi
-
   </div>    
-    
-
 </body>
 </html>

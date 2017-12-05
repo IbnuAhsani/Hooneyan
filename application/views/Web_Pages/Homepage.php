@@ -69,25 +69,13 @@
    <!-- Spacing -->
    <div class="row spacing"></div>
 
-   <!-- Grey Line -->
-   <div class="row" style="height: 15%; background-color: #D9D9D9">
-     <div class="col-sm-4"></div>
-     <div class="col-sm-6">
-         <form>
-            <span><input type="text" class="search rounded" placeholder="Search..."></span>
-         </form>
-     <div class="col-sm-2"></div>
-    </div>
-   </div>
+  <!-- Grey Line -->
+  <div class="row" style="height: 15%; background-color: #D9D9D9">
+    <div class="hr" style="margin-top: 3%"><hr></div>
+  </div>
 
    <!-- Spacing -->
    <div class="row spacing"></div>
-   
-
-   <!-- Grey Line -->
-   <div class="row" style="height: 15%;">
-      <div class="hr" style="margin-top: 3%"><hr></div>
-   </div>
 
   <!-- Iklan Terbaru -->
   <h2 id="kiri">Terbaru</h2><br>
