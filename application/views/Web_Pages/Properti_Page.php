@@ -88,36 +88,15 @@ if(!$email){
 		<div class="col-1"></div>
 		<!-- Left Colomn -->
 		<div class="col-7"> 
-			<!-- Carousel -->
+			
 			<div class="row">
-				<div class="mySlides fade polaroid">
-					<div class="numbertext">1 / 3</div>
-					<img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" style="height:480px; width:720px">
-				</div>
-
-				<div class="mySlides fade polaroid">
-					<div class="numbertext">2 / 3</div>
-					<img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" style="height:480px; width:720px">
-				</div>
-
-				<div class="mySlides fade polaroid">
-					<div class="numbertext">3 / 3</div>
-					<img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" style="height:480px; width:720px">
-				</div>	
+				<img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" style="height:480px; width:720px">
 			</div>
-			<div class="row" style="text-align:center; height: 10px">
-				<div class="col-4"></div>
-				<div class="col-4">
-					<span class="dot"></span> 
-					<span class="dot"></span> 
-					<span class="dot"></span> 
-				</div>
-				<div class="col-4"></div>				
-			</div>
+
 			<br>
-			<div class="round1 polaroid">
+			 <div style="padding:20px;border: 1px solid black;">
 				<div class="row" style="height: 90px">
-					<div class="col-12">Nama Properti</div>
+					<div class="col-12">Nama Properti: asa</div>
 				</div>
 				<div class="row" style="height: 120px">
 					<div class="col-6">Lokasi</div>
@@ -130,15 +109,15 @@ if(!$email){
 				</div>
 				<div class="row">
 					<div class="col-6">
-						<h4>Luas Bangunan</h4>
-						<h4>Luas Tanah</h4>
-						<h4>Kamar Tidur</h4>
-						<h4>Kamar Mandi</h4>
+						<p>Luas Bangunan</p>
+						<p>Luas Tanah</p>
+						<p>Kamar Tidur</p>
+						<p>Kamar Mandi</p>
 					</div>
 					<div class="col-6">
-						<h4>Daya Listrik</h4>
-						<h4>Jumlah Lantai</h4>
-						<h4>Kondisi</h4>
+						<p>Daya Listrik</p>
+						<p>Jumlah Lantai</p>
+						<p>Kondisi</p>
 					</div>
 				</div>
 				<br><br>
@@ -161,42 +140,14 @@ if(!$email){
 	</div>
 	
 
-	<!-- Script JS Carousel -->
-	<script>
-	var slideIndex = 0;
-	showSlides();
+   <!-- Footer -->
+  <div class="footer" align="center">
+      <h3>About Us</h5>
+			Copyright &copy; 2017 <br>
+			140810160054 - Ibnu Ahsani<br>
+			140810160004 - Ahsan Nurrijal<br>
+			1408101790001 - Muhammad Affandi
 
-	function showSlides() {
-	    var i;
-	    var slides = document.getElementsByClassName("mySlides");
-	    var dots = document.getElementsByClassName("dot");
-	    for (i = 0; i < slides.length; i++) {
-	       slides[i].style.display = "none";  
-	    }
-	    slideIndex++;
-	    if (slideIndex > slides.length) {slideIndex = 1}    
-	    for (i = 0; i < dots.length; i++) {
-	        dots[i].className = dots[i].className.replace(" active", "");
-	    }
-	    slides[slideIndex-1].style.display = "block";  
-	    dots[slideIndex-1].className += " active";
-	    setTimeout(showSlides, 2000); // Change image every 2 seconds
-	}
-	</script>	
-	<!-- Footer -->
-  <div class="footer">
-      <h5>About Us</h5>
-      <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/fb.png" alt="facebook" style="width:50px;height:50px;">
-        </div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/twit.png" alt="twitter" style="width:50px;height:50px;;">
-        </div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/wa.png" alt="whatsapp" style="width:50px;height:50px;;">
-        </div>                
-        <div class="col-sm-2"><img src="<?php echo base_url(); ?>/assets/pictures/ig.png" alt="instagram" style="width:50px;height:50px;;">
-        </div>
-      </div>
   </div>   
 </body>
 </html>

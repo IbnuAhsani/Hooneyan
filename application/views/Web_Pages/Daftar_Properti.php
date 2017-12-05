@@ -1,15 +1,19 @@
 <?php
-	$email=$this->session->userdata('email');
-	if(!$email)
-		{
-		  redirect('Login');
-		}
+$email=$this->session->userdata('email');
+
+if(!$email){
+
+  redirect('Login');
+}
+
  ?>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Daftar Properti</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/Final.css") ?>">
+
+	
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button, 
@@ -44,7 +48,7 @@
 	<!-- Upper Task Bar -->
    <nav cl>
    <ul style="background-color: #062F4f; width: 100% ; margin: 0px">
-      <li style="margin: 11px; margin-left: 20; float: left;"><a href="<?php echo base_url(); ?>/index.php/Homepage"><img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></a></li>
+      <li style="margin: 11px; margin-left: 20; float: left;"><a href="<?php echo base_url(); ?>index.php/Homepage"><img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></a></li>
      <li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
        <button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
           <div class="dropdown-content">
@@ -69,7 +73,7 @@
 	<!-- Form Row 1 -->
 	<div class="row">
 		<div class="col-1"></div>
-		<form class="col-10" action="<?php echo base_url('index.php/Daftar_Properti/register_properti'); ?>" method="post">
+		<form class="col-10" action="<?php echo base_url('index.php/Daftar_Properti/tambah_properti'); ?>" method="post"  enctype="multipart/form-data">
 			<br><br><br>
 			<h2>Daftar Properti</h2>
 	  		<div class="row">
@@ -79,25 +83,25 @@
 	  			</div>
 	  			<div class="col-6">
 			  		<label>Deskripsi</label><br>
-			  		<input name="desc_properti" type="textarea" placeholder="Deskripsi Properti">
+			  		<input name="desc_properti" type="textarea" placeholder="Deskripsi Properti" >
 	  			</div>
 	  		</div>
 
 			<div class="row">
 				<div class="col-6">
 	  				Kategori Properti<br>
-	  				<select name="tipe_properti">
-					<option value="Rumah">Rumah</option>
-					<option value="Ruko">Ruko</option>
-					<option value="Apartemen">Apartemen</option>
-					<option value="Villa">Villa</option>
+	  				<select name="kategori_properti">
+					<option value="rumah">Rumah</option>
+					<option value="ruko">Ruko</option>
+					<option value="apartemen">Apartemen</option>
+					<option value="villa">Villa</option>
 					</select>
 				</div>
 				<div class="col-6">
 	  				Opsi Properti<br>
 	  				<select name="status_properti">
-					<option value="Jual">Jual</option>
-					<option value="Sewa">Sewa</option>
+					<option value="jual">Jual</option>
+					<option value="sewa">Sewa</option>
 					</select>
 				</div>
 			</div>
@@ -105,9 +109,9 @@
 				<div class="col-6">
 	  				Kondisi Properti<br>
 	  				<select name="kondisi_properti">
-					<option value="Bagus">Bagus</option>
-					<option value="Layak">Layak</option>
-					<option value="Kurang">Kurang</option>
+					<option value="bagus">Bagus</option>
+					<option value="layak">Layak</option>
+					<option value="kurang">Kurang</option>
 					</select>
 				</div>
 				<div class="col-6">
@@ -117,7 +121,7 @@
 			</div>
 			<div class="row">
 				<div class="col-6">
-	  				Luas Bangunan<br>
+	  				Luas Properti<br>
 	  				<input name="luas_properti" type="textarea" placeholder="Satuan m2">
 				</div>
 				<div class="col-6">
@@ -132,7 +136,7 @@
 				</div>
 				<div class="col-6">
 	  				Daya Listrik<br>
-	  				<input type="textarea" name="daya_listrik" placeholder="Satuan kiloWatt">
+	  				<input type="textarea" name="daya_listrik" placeholder="Satuan Watt">
 				</div>
 			</div>
 			<div class="row">
@@ -159,33 +163,27 @@
 			<div class="row">
 				<div class="col-6">
 				    Gambar Properti<br>
-					<input type=file name='gambar' size=40> 
-					<br>Tipe gambar harus JPG/JPEG
+					<input type=file name='gambar' > 
+					
 				</div>
 				<div class="col-6">
-	  				<input type="submit" value="Daftarkan">
+	  				<input type="submit" name="submit" value="Daftarkan">
 				</div>
 			</div>
 		</form>	
 
 	</div>
-	<div class="col-1"></div>
-	<div class="col-1"></div>
+<div class="col-1"></div>
+<div class="col-1"></div>
 
-	   <!-- Footer -->
-  <div class="footer">
-      <h5>About Us</h5>
-      <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/fb.png" alt="facebook" style="width:50px;height:50px;">
-        </div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/twit.png" alt="twitter" style="width:50px;height:50px;">
-        </div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/wa.png" alt="whatsapp" style="width:50px;height:50px;">
-        </div>                
-        <div class="col-sm-2"><img src="<?php echo base_url(); ?>/assets/pictures/ig.png" alt="instagram" style="width:50px;height:50px;">
-        </div>
-      </div>
+   <!-- Footer -->
+  <div class="footer" align="center">
+      <h3>About Us</h5>
+			Copyright &copy; 2017 <br>
+			140810160054 - Ibnu Ahsani<br>
+			140810160004 - Ahsan Nurrijal<br>
+			1408101790001 - Muhammad Affandi
+
   </div>    
 </body>
 </html>

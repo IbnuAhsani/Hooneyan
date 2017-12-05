@@ -58,9 +58,12 @@
      <!-- Untuk membuat tanda panah di kanan slider -->
      <span class="cycle-pager"></span>
      <!-- Untuk membuat tanda bulat atau link pada slider -->
-     <img class="home_page carousel-size-homepage" src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="Gambar Pertama">
-     <img class="home_page carousel-size-homepage" src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="Gambar Kedua">
-     <img class="home_page carousel-size-homepage" src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="Gambar Ketiga">
+	 <?php
+	foreach ($properti->result() as $data){ 
+   echo"  <img class='home_page carousel-size-homepage' src='".base_url("gambar/".$data->gambar)."' >";
+	}
+
+?>
    </div>
 
    <!-- Spacing -->
@@ -80,56 +83,6 @@
    <!-- Spacing -->
    <div class="row spacing"></div>
    
-   <!-- Iklan Terpopuler -->
-   <h2 style="margin-left:30px;">Terpopuler</h2>
-  <br>
-  <div class="row" id="kiri">
-
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="rumah1" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Meikarta</font></h3>
-      <h5><font color="black">Cikarang, Bekasi</font></h5>
-    </a>
-    </div>
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="rumah2" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Griya Bandung Indah</font></h3>
-      <h5><font color="black">Ciwastra, Bandung</font></h5>
-    </a>
-    </div>
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4 "><img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="rumah3" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Margahayu</font></h3>
-      <h5><font color="black">Buah Batu, Bandung</font></h5>
-    </a>
-    </div>
-  </div>
-  <div class="row" id="kiri">
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="rumah2" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Griya Bandung Indah</font></h3>
-      <h5><font color="black">Ciwastra, Bandung</font></h5>
-    </a>
-    </div>
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="rumah3" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Margahayu</font></h3>
-      <h5><font color="black">Buah Batu, Bandung</font></h5>
-    </a>
-    </div>
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="rumah1" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Meikarta</font></h3>
-      <h5><font color="black">Cikarang, Bekasi</font></h5>
-    </a>
-    </div>
-  </div>
 
    <!-- Grey Line -->
    <div class="row" style="height: 15%;">
@@ -139,69 +92,38 @@
   <!-- Iklan Terbaru -->
   <h2 id="kiri">Terbaru</h2><br>
   <div class="row" style=" margin-left:30px;">
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="rumah1" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Meikarta</font></h3>
-      <h5><font color="black">Cikarang, Bekasi</font></h5>
-    </a>
+  <?php
+if( ! empty($properti)){ // Jika data pada database tidak sama dengan empty (alias ada datanya)
+	foreach ($properti->result() as $data){ 
+		echo "  <div class='row' style=' margin-left:30px;'>";
+   echo" <a href='Properti_Page' style='text-decoration:none'>";
+   echo"  <div class='col-sm-4'><img src='".base_url("gambar/".$data->gambar)."' alt='rumah' style='width:304px;height:228px;'>";
+   echo"   <br>";
+   echo"   <h3><font color='black'>".$data->nama_properti."</font></h3>";
+   echo"   <h5><font color='black'>".$data->lokasi_properti."</font></h5>";
+   echo" </a>
     </div>
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="rumah2" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Griya Bandung Indah</font></h3>
-      <h5><font color="black">Ciwastra, Bandung</font></h5>
-    </a>
-    </div>
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="rumah3" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Margahayu</font></h3>
-      <h5><font color="black">Buah Batu, Bandung</font></h5>
-    </a>
-    </div>
+   
+  </div>";
+	}
+}else{ // Jika data tidak ada
+	echo "<p>Data tidak ada</p>";
+}
+?>
   </div>
-  <div class="row" id="kiri">
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="rumah2" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Griya Bandung Indah</font></h3>
-      <h5><font color="black">Ciwastra, Bandung</font></h5>
-    </a>
-    </div>
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="rumah3" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Margahayu</font></h3>
-      <h5><font color="black">Buah Batu, Bandung</font></h5>
-    </a>
-    </div>
-    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
-    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="rumah1" style="width:304px;height:228px;">
-      <br>
-      <h3><font color="black">Meikarta</font></h3>
-      <h5><font color="black">Cikarang, Bekasi</font></h5>
-    </a>
-    </div>
-  </div>
+
 
    <!-- Spacing -->
    <div class="row spacing"></div>
 
    <!-- Footer -->
-  <div class="footer">
-      <h5>About Us</h5>
-      <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/fb.png" alt="facebook" style="width:50px;height:50px;">
-        </div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/twit.png" alt="twitter" style="width:50px;height:50px;">
-        </div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/wa.png" alt="whatsapp" style="width:50px;height:50px;">
-        </div>                
-        <div class="col-sm-2"><img src="<?php echo base_url(); ?>/assets/pictures/ig.png" alt="instagram" style="width:50px;height:50px;">
-        </div>
-      </div>
+  <div class="footer" align="center">
+      <h3>About Us</h5>
+			Copyright &copy; 2017 <br>
+			140810160054 - Ibnu Ahsani<br>
+			140810160004 - Ahsan Nurrijal<br>
+			1408101790001 - Muhammad Affandi
+
   </div>    
 </body>
 </html>
