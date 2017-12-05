@@ -44,12 +44,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$this->session->set_userdata('tgl_lahir',$data['tgl_lahir']);
 						$this->session->set_userdata('email',$data['email']);
 						$this->session->set_userdata('no_kontak',$data['no_kontak']);
-						$this->load->view('Web_Pages/Homepage.php');
+						redirect('Homepage');
 					}
 				else
 					{
 						$this->session->set_flashdata('error_msg', 'Error occured,Try again.');
-						$this->load->view("Web_Pages/Login");
+						redirect('Login');
 					}
 			}
 
