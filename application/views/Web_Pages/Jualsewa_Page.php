@@ -174,20 +174,14 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
-	<div class="footer">
-      <h5>About Us</h5>
-      <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/fb.png" alt="facebook" style="width:50px;height:50px;">
-        </div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/twit.png" alt="twitter" style="width:50px;height:50px;;">
-        </div>
-        <div class="col-sm-3"><img src="<?php echo base_url(); ?>/assets/pictures/wa.png" alt="whatsapp" style="width:50px;height:50px;;">
-        </div>                
-        <div class="col-sm-2"><img src="<?php echo base_url(); ?>/assets/pictures/ig.png" alt="instagram" style="width:50px;height:50px;;">
-        </div>
-      </div>
+   <!-- Footer -->
+  <div class="footer" align="center">
+      <h3>About Us</h3>
+			Copyright &copy; 2017 <br>
+			140810160054 - Ibnu Ahsani<br>
+			140810160004 - Ahsan Nurrijal<br>
+			1408101790001 - Muhammad Affandi
+
   </div>   
 </body>
 </html>
