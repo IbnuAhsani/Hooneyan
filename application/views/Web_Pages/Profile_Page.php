@@ -144,7 +144,7 @@
 								<li><h4><a href=""><?php echo $prop->nama_properti;?></a></h4></li>
 								<li></li><li></li>
 								<li><h5>Rp.<?php echo $prop->harga_properti;?></h5></li>
-								<li>Tipe Properti: <?php echo $prop->tipe_properti;?></li>
+								<li>Tipe Properti: <?php echo $prop->kategori_properti;?></li>
 								<li>Status Jual: <?php echo $prop->status_properti;?></li>
 								<li>Lokasi: <?php echo $prop->lokasi_properti;?></li>
 							</ul>

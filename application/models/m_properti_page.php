@@ -43,8 +43,9 @@
 	}
 	
 	// Fungsi untuk menyimpan data ke database
-	public function save($upload){
+	public function save($upload, $id_agen){
 		$data = array(
+			'id_agen'=> $id_agen,
 			'nama_properti'=>$this->input->post('nama_properti'),
             'desc_properti'=>$this->input->post('desc_properti'),
             'kategori_properti'=>$this->input->post('kategori_properti'),
