@@ -173,6 +173,7 @@ if(!$email){
 		</form>	
 
 	</div>
+
 <div class="col-1"></div>
 <div class="col-1"></div>
 
@@ -183,6 +184,8 @@ if(!$email){
 			140810160054 - Ibnu Ahsani<br>
 			140810160004 - Ahsan Nurrijal<br>
 			1408101790001 - Muhammad Affandi
+
+
 
   </div>    
 </body>

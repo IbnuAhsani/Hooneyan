@@ -22,6 +22,7 @@
 					$query = $this->db->get_where('properti', array('id_agen' => $id));
 					return $query;
 				}
+
 				
 						// Fungsi untuk melakukan proses upload file
 	public function upload(){
@@ -75,5 +76,6 @@
 		
 		
             }
+
 		}
 ?>

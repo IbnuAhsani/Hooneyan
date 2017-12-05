@@ -92,6 +92,7 @@
   <!-- Iklan Terbaru -->
   <h2 id="kiri">Terbaru</h2><br>
   <div class="row" style=" margin-left:30px;">
+<<<<<<< HEAD
   <?php
 if( ! empty($properti)){ // Jika data pada database tidak sama dengan empty (alias ada datanya)
 	foreach ($properti->result() as $data){ 
@@ -102,6 +103,62 @@ if( ! empty($properti)){ // Jika data pada database tidak sama dengan empty (ali
    echo"   <h3><font color='black'>".$data->nama_properti."</font></h3>";
    echo"   <h5><font color='black'>".$data->lokasi_properti."</font></h5>";
    echo" </a>
+||||||| merged common ancestors
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
+    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="rumah1" style="width:304px;height:228px;">
+      <br>
+      <h3><font color="black">Meikarta</font></h3>
+      <h5><font color="black">Cikarang, Bekasi</font></h5>
+    </a>
+    </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
+    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="rumah2" style="width:304px;height:228px;">
+      <br>
+      <h3><font color="black">Griya Bandung Indah</font></h3>
+      <h5><font color="black">Ciwastra, Bandung</font></h5>
+    </a>
+    </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
+    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="rumah3" style="width:304px;height:228px;">
+      <br>
+      <h3><font color="black">Margahayu</font></h3>
+      <h5><font color="black">Buah Batu, Bandung</font></h5>
+    </a>
+    </div>
+  </div>
+  <div class="row" id="kiri">
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
+    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="rumah2" style="width:304px;height:228px;">
+      <br>
+      <h3><font color="black">Griya Bandung Indah</font></h3>
+      <h5><font color="black">Ciwastra, Bandung</font></h5>
+    </a>
+    </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
+    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="rumah3" style="width:304px;height:228px;">
+      <br>
+      <h3><font color="black">Margahayu</font></h3>
+      <h5><font color="black">Buah Batu, Bandung</font></h5>
+    </a>
+    </div>
+    <a href="<?php echo base_url(); ?>/index.php/Properti_Page" style="text-decoration:none">
+    <div class="col-sm-4"><img src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="rumah1" style="width:304px;height:228px;">
+      <br>
+      <h3><font color="black">Meikarta</font></h3>
+      <h5><font color="black">Cikarang, Bekasi</font></h5>
+    </a>
+=======
+  <?php
+if( ! empty($properti)){ // Jika data pada database tidak sama dengan empty (alias ada datanya)
+	foreach ($properti->result() as $data){ 
+		echo "  <div class='row' style=' margin-left:30px;'>";
+   echo" <a href='<?php echo base_url(); ?>/index.php/Properti_Page' style='text-decoration:none'>";
+   echo"  <div class='col-sm-4'><img src='".base_url("gambar/".$data->gambar)."' alt='rumah' style='width:304px;height:228px;'>";
+   echo"   <br>";
+   echo"   <h3><font color='black'>".$data->nama_properti."</font></h3>";
+   echo"   <h5><font color='black'>".$data->lokasi_properti."</font></h5>";
+   echo" </a>
+>>>>>>> 28ee12cff64d8741ee2d6fa5072073deeea822e4
     </div>
    
   </div>";
