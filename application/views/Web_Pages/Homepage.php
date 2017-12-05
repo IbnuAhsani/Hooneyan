@@ -122,7 +122,7 @@ if( ! empty($properti)){ // Jika data pada database tidak sama dengan empty (ali
 			Copyright &copy; 2017 <br>
 			140810160054 - Ibnu Ahsani<br>
 			140810160004 - Ahsan Nurrijal<br>
-			1408101790001 - Muhammad Affandi
+			140810179001 - Muhammad Affandi
 
   </div>    
 </body>

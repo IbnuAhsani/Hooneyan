@@ -174,14 +174,14 @@
 		</div>
 	</div>
 
+
    <!-- Footer -->
   <div class="footer" align="center">
       <h3>About Us</h3>
 			Copyright &copy; 2017 <br>
 			140810160054 - Ibnu Ahsani<br>
 			140810160004 - Ahsan Nurrijal<br>
-			1408101790001 - Muhammad Affandi
-
+			140810179001 - Muhammad Affandi
   </div>   
 </body>
 </html>

@@ -144,7 +144,7 @@
 								<li><h4><a href=""><?php echo $prop->nama_properti;?></a></h4></li>
 								<li></li><li></li>
 								<li><h5>Rp.<?php echo $prop->harga_properti;?></h5></li>
-								<li>Tipe Properti: <?php echo $prop->tipe_properti;?></li>
+								<li>Tipe Properti: <?php echo $prop->kategori_properti;?></li>
 								<li>Status Jual: <?php echo $prop->status_properti;?></li>
 								<li>Lokasi: <?php echo $prop->lokasi_properti;?></li>
 							</ul>
@@ -193,15 +193,17 @@
 	<!-- Spacing -->
 	<div class="row spacing"></div>
 
+
    <!-- Footer -->
   <div class="footer" align="center">
       <h3>About Us</h3>
 			Copyright &copy; 2017 <br>
 			140810160054 - Ibnu Ahsani<br>
 			140810160004 - Ahsan Nurrijal<br>
-			1408101790001 - Muhammad Affandi
+			140810179001 - Muhammad Affandi
 
   </div>    
-  </div>    
+    
+
 </body>
 </html>
