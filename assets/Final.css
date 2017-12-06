@@ -247,13 +247,13 @@ li.dropdown {
 }*/
 
 .carousel-size-homepage{
-  width: 1920px;
+  width: 1200px;
   height: 600px
 }
 
 .cycle-slideshow {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1200px;
   display: block;
   position: relative;
   margin: 20px auto;
