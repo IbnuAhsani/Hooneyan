@@ -61,7 +61,6 @@
             <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
           </div>
        </li>
-      <li style="width: 40%; float: left;"><input type="text" class="search1" name="search" placeholder="Search.."></li>
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
          <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
       </li>
@@ -110,7 +109,7 @@
 
 	<!-- Grey Line -->
 	<div class="row" style="height: 15%; background-color: #D9D9D9">
-		<div class="hr" style="margin: 1%;"><hr></div>
+		<div class="hr" style="margin: 3%;"><hr></div>
 	</div>
 
 	<!-- Spacing -->
@@ -154,10 +153,7 @@
 								</ul>
 							</div>
 							</div>
-						<div class="col-2">
-							<a href="<?php echo base_url()."index.php/Profile_Page/edit_data/".$prop->id_properti;?>" class="btn-xs btn-info" role="button"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
-	                  <!-- <a href="<?php echo base_url()."index.php/Profile_Page/delete_data/".$prop->id_properti;?>" class="btn-xs btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span> Hapus</a> -->
-						</div>
+						<div class="col-2"></div>
 					</div>
 				</form>
 	<?php } }?>
