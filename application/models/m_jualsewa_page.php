@@ -55,5 +55,14 @@
 					$this->db->where('id_properti,',$id_properti);
 					$this->db->update('properti', $data);
 				}
+			public function jualsewa()
+			{
+				$this->db->select('*');
+				$this->db->from('properti');
+				$this->db->order_by('id_properti');
+				return $properti = $this->db->get();
+			}
+
+			
 		}
 ?>

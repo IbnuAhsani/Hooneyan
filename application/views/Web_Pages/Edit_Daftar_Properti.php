@@ -53,14 +53,14 @@ if(!$email){
        <button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
           <div class="dropdown-content">
             <a href="#">| Jual</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Rumah</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Ruko</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Apartemen</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
             <a href="#">| Sewa</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Rumah</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Apartemen</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Ruko</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Villa</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
           </div>
        </li>
             <li style="width: 40%; float: left;"><input type="text" class="search1" name="search" placeholder="Search.."></li>
@@ -179,12 +179,10 @@ if(!$email){
 
    <!-- Footer -->
   <div class="footer" align="center">
-      <h3>About Us</h3>
-			Copyright &copy; 2017 <br>
-			140810160054 - Ibnu Ahsani<br>
-			140810160004 - Ahsan Nurrijal<br>
+			Copyright &copy; 2017 <br><br>
+			140810160054 - Ibnu Ahsani |
+			140810160004 - Ahsan Nurrijal |
 			140810179001 - Muhammad Affandi
-
   </div>    
 </body>
 </html>

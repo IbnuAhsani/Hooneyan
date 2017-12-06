@@ -43,14 +43,14 @@
        <button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
           <div class="dropdown-content">
             <a href="#">| Jual</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Rumah</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Ruko</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Apartemen</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
             <a href="#">| Sewa</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Rumah</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Apartemen</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Ruko</a>
-            <a href="<?php echo base_url(); ?>/index.php/JualSewa_Page">Villa</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
+            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
           </div>
        </li>
       	<?php
@@ -71,7 +71,7 @@
    </ul>
    </nav>
 	<center>
-		<h1>Jual Rumah</h1>
+		<h1>Sewa Jual Properti</h1>
 	</center>
 	<!-- Spacing -->
 	<div class="container" id="body">
@@ -103,63 +103,30 @@
 					<button type="reset" name="reset_filter"> Reset Filter</button>
 				</div>
 			</div>
-			<!-- Row 1 -->
+
+				<?php 
+				foreach ($properti->result() as $j)
+				{
+	 ?>
 			<div class="row" style="margin: 2%;" >
 				<div class="col-12" style="display: flex;">
 					<div class="col-5" style="height: 100%">
-						<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="Gambar Properti">
+						<?php	echo "<img class='img' src='".base_url("gambar/".$j->gambar)."' alt='properti'>";?>
 					</div>
 					<div class="col-4">
 						<ul style="color: #062F4f;">
-							<li><h4>Nama Properti</h4></li>
+							<li><h4>Nama Properti : <?php echo $j->nama_properti;?></h4></li>
 							<li></li><li></li>
-							<li><h5>Harga Properti</h5></li>
-							<li>Tipe Properti</li>
-							<li>Status Jual</li>
-							<li>Lokasi Jual</li>
-							<li>Fitur Properti</li>
+							<li><h5>Harga Properti : <?php echo $j->harga_properti;?></h5></li>
+							<li>Kategori Properti : <?php echo $j->kategori_properti;?></li>
+							<li>Status : <?php echo $j->status_properti;?></li>
+							<li>Lokasi : <?php echo $j->lokasi_properti;?></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<!-- Row 2 -->
-			<div class="row" style="margin: 2%;" >
-				<div class="col-12" style="display: flex;">
-					<div class="col-5" style="height: 100%">
-						<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah2.jpg" alt="Gambar Properti">
-					</div>
-					<div class="col-4">
-						<ul style="color: #062F4f;">
-							<li><h4>Nama Properti</h4></li>
-							<li></li><li></li>
-							<li><h5>Harga Properti</h5></li>
-							<li>Tipe Properti</li>
-							<li>Status Jual</li>
-							<li>Lokasi Jual</li>
-							<li>Fitur Properti</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- Row 3 -->
-			<div class="row" style="margin: 2%;" >
-				<div class="col-12" style="display: flex;">
-					<div class="col-5" style="height: 100%">
-						<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="Gambar Properti">
-					</div>
-					<div class="col-4">
-						<ul style="color: #062F4f;">
-							<li><h4>Nama Properti</h4></li>
-							<li></li><li></li>
-							<li><h5>Harga Properti</h5></li>
-							<li>Tipe Properti</li>
-							<li>Status Jual</li>
-							<li>Lokasi Jual</li>
-							<li>Fitur Properti</li>
-						</ul>
-					</div>
-				</div>
-				</div>
+			<?php } ?> 
+			
 			<!-- Spacing -->
 			<div class="row spacing"></div>
 			<div align="center">
@@ -177,11 +144,10 @@
 
    <!-- Footer -->
   <div class="footer" align="center">
-      <h3>About Us</h3>
-			Copyright &copy; 2017 <br>
-			140810160054 - Ibnu Ahsani<br>
-			140810160004 - Ahsan Nurrijal<br>
+			Copyright &copy; 2017 <br><br>
+			140810160054 - Ibnu Ahsani |
+			140810160004 - Ahsan Nurrijal |
 			140810179001 - Muhammad Affandi
-  </div>   
+  </div>  
 </body>
 </html>
