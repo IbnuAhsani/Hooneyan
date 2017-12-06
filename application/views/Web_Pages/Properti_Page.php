@@ -12,7 +12,7 @@ if(!$email){
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-	
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button, 
@@ -83,7 +83,7 @@ if(!$email){
 	<br>
 
 	<!-- Parent Div -->
-	<div class="row" style="height: 1100px">
+	<div class="row" style="height: 880px">
 		<div class="col-1"></div>
 		<!-- Left Colomn -->
 		<div class="col-7"> 
@@ -98,14 +98,14 @@ if(!$email){
 
 			<br>
 			 <div style="padding:20px;border: 1px solid black;">
-				<div class="row" style="height: 90px">
+				<div class="row" style="height: 50px">
 					<div class="col-12">Nama Properti: <?php echo $prop->nama_properti;?></div>
 				</div>
-				<div class="row" style="height: 120px">
+				<div class="row" style="height: 50px">
 					<div class="col-6">Lokasi: <?php echo $prop->lokasi_properti;?></div>
 					<div class="col-6">Harga: Rp.<?php echo $prop->harga_properti;?></div>
 				</div>
-				<div class="row" style="height: 90px">
+				<div class="row" style="height: 70px">
 					<div class="col-12">
 						<p>Deskripsi: <?php echo $prop->desc_properti;?></p>
 					</div>
@@ -123,7 +123,7 @@ if(!$email){
 						<p>Kondisi: <?php echo $prop->kondisi_properti;?></p>
 					</div>
 				</div>
-				<br><br>
+				<br><br><br>
 			</div>			
 		</div>
 		<?php } ?>
