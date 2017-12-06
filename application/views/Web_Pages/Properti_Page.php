@@ -128,22 +128,20 @@ if(!$email){
 		</div>
 		<?php } ?>
 		<!-- Right Colomn -->
-		<div class="col-3 round1 polaroid" style="height: 310px">
+		<div class="col-3 round1 polaroid" style="height: 250px">
+			<?php 
+				foreach ($agen->result() as $ag) 
+					{ ?>
 			<form action="/action_page.php" style="text-align: center; margin: 0 auto ">
 				<!-- <img src="Profile_pic.png"> -->
 				<img src="<?php echo base_url(); ?>/assets/pictures/Profile_pic.png" height="144px" width="144px">
-				<h1>Nama Agen</h1>
-				<br>
-			  	<input type="submit" value="Kontak">
-			  	<br>
-			  <input type="submit" value="Book">
-			</form> 
+				<h4><?php echo $ag->nama;?></h4>
+				<h3><?php echo $ag->no_kontak;?></h3>
+			</form>
+			<?php } ?> 
 		</div>
 		<div class="col-1"></div>
 	</div>
-	
-
-
   <div class="footer" align="center">
       <h3>About Us</h3>
 			Copyright &copy; 2017 <br>

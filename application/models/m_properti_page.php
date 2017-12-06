@@ -68,5 +68,11 @@
 					$query = $this->db->get_where('properti', array('id_properti' => $id_properti));
 					return $query;
 				}	
+
+			public function pilih_agen($id_agen)
+				{
+					$query = $this->db->get_where('agen', array('id' => $id_agen));
+					return $query;
+				}	
 		}
 ?>

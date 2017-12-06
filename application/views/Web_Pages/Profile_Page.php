@@ -144,6 +144,7 @@
 								<ul style="color: #062F4f;">
 									<li></li>
 									 <input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+									 <input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">
 									<li><h4><input type="submit" value="<?php echo $prop->nama_properti;?>"></h4></li>
 									<li></li><li></li>
 									<li><h5>Rp.<?php echo $prop->harga_properti;?></h5></li>

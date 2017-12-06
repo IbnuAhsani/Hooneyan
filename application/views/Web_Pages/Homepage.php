@@ -80,11 +80,12 @@
 						// Jika data pada database tidak sama dengan empty (alias ada datanya)
 						foreach ($properti->result() as $prop)
 							{
-								echo "<form action='http://localhost/Hooneyan/index.php/Homepage/get_data' method='post'>"; 
+								echo "<form action='http://localhost/Hooneyan/index.php/Properti_Page/get_data' method='post'>"; 
 								echo "<div class='row' style=' margin-left:30px;'>";
 							  echo " 	<div class='col-sm-4'><img src='".base_url("gambar/".$prop->gambar)."' alt='rumah' style='width:304px;height:228px;'>";
 							  echo "   	<br>";
 							  echo "		<input type='hidden' name='id_properti' value='".$prop->id_properti."'>";
+							  echo "		<input type='hidden' name='id_agen' value='".$prop->id_agen."'>";							  
  							  echo "   	<h3><font color='black'><input type='submit' value='".$prop->nama_properti."'></font></h3>";
 							  echo "   	<h5><font color='black'>".$prop->lokasi_properti."</font></h5>";
 							  echo " 	</div>
