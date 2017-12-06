@@ -1,12 +1,3 @@
-<?php
-$email=$this->session->userdata('email');
-
-if(!$email){
-
-  redirect('Login');
-}
-
- ?>
 <html>
 <head>
 	<meta charset="UTF-8">

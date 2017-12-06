@@ -1,3 +1,10 @@
+<?php
+	$email=$this->session->userdata('email');
+	if($email)
+		{
+		  redirect('Homepage');
+		}
+ ?>
 <html>
 <head>
 	<title>Login</title>
