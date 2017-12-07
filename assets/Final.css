@@ -10,6 +10,7 @@
 
 /*=============== .css Umum ======================*/
 /*Nav Bar*/
+
 ul.nav-bar{
     list-style-type: none;
     margin: 0;
@@ -30,9 +31,8 @@ ul{
 
 /*Logo Div*/
 li.logo{
-  margin: 11px; 
-  margin-left: 20; 
-  float: left;
+  font-family: 'Pacifico', cursive;
+  color: white;
 }
 
 /*Login/Sign-up Button*/
@@ -247,7 +247,7 @@ li.dropdown {
 }*/
 
 .carousel-size-homepage{
-  width: 1200px;
+  width: 1000px;
   height: 600px
 }
 
@@ -258,25 +258,6 @@ li.dropdown {
   position: relative;
   margin: 20px auto;
   overflow: hidden;
-}
-
-.cycle-prev,
-.cycle-next {
-  font-size: 200%;
-  color: #fff;
-  display: block;
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-  margin-top: -16px;
-}
-
-.cycle-prev {
-  left: 42px;
-}
-
-.cycle-next {
-  right: 62px;
 }
 
 .cycle-pager {
@@ -313,7 +294,6 @@ li.dropdown {
 
 /*=============== .css Properti Page ===============*/
 * {box-sizing:border-box}
-body {font-family: Verdana,sans-serif;}
 .mySlides {display:none}
 
 /* Slideshow container */

@@ -86,11 +86,19 @@
 			  	echo"<img src='".base_url("gambar/".$prop->gambar)."' style=width:785px;height:400px; >";		
 			?>
 			</div>
-
 			<br>
 			 <div style="padding:20px;border: 1px solid black;">
 				<div class="row" style="height: 50px">
-					<div class="col-12">Nama Properti: <?php echo $prop->nama_properti;?></div>
+					<div class="col-6">Nama Properti: <?php echo $prop->nama_properti;?></div>
+					<?php if($prop->isBooked == 0) {?>
+						<div class="col-6">Status Properti: <b style="color: green">Available</b></div>
+					<?php }else{ 
+							if($prop->id_booker != 0 && $prop->konfirmasi == 0) {?>
+								<div class="col-6">Status Properti: <b style="color: orange">Waiting For Confirmation</b></div>
+					<?php }else{  ?>
+								<div class="col-6">Status Properti: <b style="color: red">Booked</b></div>
+					<?php }
+							} ?>
 				</div>
 				<div class="row" style="height: 50px">
 					<div class="col-6">Lokasi: <?php echo $prop->lokasi_properti;?></div>
@@ -117,25 +125,53 @@
 				<br><br><br>
 			</div>			
 		</div>
-		<?php } ?>
 		<!-- Right Colomn -->
-		<div class="col-3 round1 polaroid" style="height: 250px">
+		<div class="col-3 round1 polaroid" style="height: 280px">
 			<?php 
 				foreach ($agen->result() as $ag) 
 					{ ?>
-			<form action="/action_page.php" style="text-align: center; margin: 0 auto ">
+			<form action="<?php echo base_url('index.php/Properti_Page/book_properti'); ?>" style="text-align: center; margin: 0 auto " method="post">
 				<!-- <img src="Profile_pic.png"> -->
 				<img src="<?php echo base_url(); ?>/assets/pictures/Profile_pic.png" height="144px" width="144px">
+				<?php 
+					foreach ($properti->result() as $prop) 
+				{ ?>
+					<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+				<?php } ?>
+					<input type="hidden" name="id_agen" value="<?php echo $ag->id;?>">
+					<input type="hidden" name="id_booker" value="<?php echo $this->session->userdata('id');?>">
 				<h4><?php echo $ag->nama;?></h4>
 				<h3><?php echo $ag->no_kontak;?></h3>
+				<?php 
+				if($this->session->userdata('id') != $ag->id)
+					{
+						if($prop->isBooked == 0) {?>
+							<input type="submit" name="book" value="Book">
+						<?php }else{ ?>
+							<input type="hidden" value="Book">
+						<?php }
+					}
+				else
+					{	?>
+						<input type="hidden" value="Book">
+					<?php
+					} 
+				if($this->session->userdata('id') == $ag->id && $prop->isBooked != 0)
+					{	?>
+						<input type="submit" name="confirm" value="Confirm">
+						<input type="submit" name="deny" value="Deny">
+					<?php
+					}
+				?>
 			</form>
 			<?php } ?> 
+		<?php } ?>
 		</div>
 		<div class="col-1"></div>
 	</div>
    <!-- Footer -->
   <div class="footer" align="center">
-			Copyright &copy; 2017 <br><br>
+			<br>Copyright &copy; 2017<br><br>
 			140810160054 - Ibnu Ahsani |
 			140810160004 - Ahsan Nurrijal |
 			140810179001 - Muhammad Affandi

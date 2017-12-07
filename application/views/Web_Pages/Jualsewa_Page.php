@@ -77,33 +77,6 @@
 	<div class="container" id="body">
 		<div class="content-bordered-box row-centered">
 			<!-- dropdown -->
-			<div class="row" >
-				<div class="down">
-					<select id="" name="harga">
-						<option value="" disabled selected>Harga</option>
-						<option value="50">&gt; Rp.50.000.000,-</option>
-						<option value="100">&gt; Rp.100.000.000,-</option>
-						<option value="150">&gt; Rp.150.000.000,-</option>
-						<option value="200">&gt; Rp.200.000.000,-</option>
-					</select>
-					<select id="" name="luas_bangunan">
-						<option value="" disabled selected>Luas Bangunan</option>
-						<option value="50">50m2</option>
-						<option value="100">100m2</option>
-						<option value="150">150m2</option>
-						<option value="200">200m2</option>
-					</select>
-					<select id="" name="luas_tanah">
-						<option value="" disabled selected>Luas Tanah</option>
-						<option value="50">50m2</option>
-						<option value="100">100m2</option>
-						<option value="150">150m2</option>
-						<option value="200">200m2</option>
-					</select>
-					<button type="reset" name="reset_filter"> Reset Filter</button>
-				</div>
-			</div>
-
 				<?php 
 				foreach ($properti->result() as $j)
 				{
@@ -129,15 +102,6 @@
 			
 			<!-- Spacing -->
 			<div class="row spacing"></div>
-			<div align="center">
-				<a href="#" >1</a>&nbsp
-				<a href="#" >2</a>&nbsp
-				<a href="#" >3</a>&nbsp
-				<a href="#" >4</a>&nbsp
-				<a href="#" >...</a>&nbsp
-				<a href="#" >Last</a>&nbsp
-				<a href="#" >Selanjutnya</a>&nbsp
-			</div>
 		</div>
 	</div>
 

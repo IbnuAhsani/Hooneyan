@@ -74,5 +74,28 @@
 					$query = $this->db->get_where('agen', array('id' => $id_agen));
 					return $query;
 				}	
+
+			public function book($id_properti, $id_booker)
+				{
+					$this->db->set('isBooked', 1, FALSE);
+					$this->db->set('id_booker', $id_booker, FALSE);
+					$this->db->where('id_properti', $id_properti);
+					$this->db->update('properti');
+				}
+
+			public function confirm($id_properti)
+				{
+					$this->db->set('konfirmasi', 1, FALSE);
+					$this->db->where('id_properti', $id_properti);
+					$this->db->update('properti');
+				}
+
+			public function deny($id_properti)
+				{
+					$this->db->set('isBooked', 0, FALSE);
+					$this->db->set('id_booker', 0, FALSE);
+					$this->db->where('id_properti', $id_properti);
+					$this->db->update('properti');
+				}
 		}
 ?>

@@ -8,15 +8,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src = "<?php echo base_url(); ?>/assets/js/jquery.cycle2.min.js"></script>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 <body class="container-fluid" style="margin: 0"px>   
    <!-- Upper Task Bar -->
 	<nav cl>
 		<ul style="background-color: #062F4f; width: 100% ; margin: 0px">
-			<li style="margin: 11px; margin-left: 20; float: left;"><a href="<?php echo base_url(); ?>index.php/Homepage">
-				<img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></a>
-			</li>
+			<li style="margin: 11px; margin-left: 20; float: left;"><a href="<?php echo base_url(); ?>index.php/Homepage"><img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></a></li>
 			<li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
 				<button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
 				<div class="dropdown-content">
@@ -50,10 +48,6 @@
 	</nav>
    <!-- SlideShow -->
    <div class="cycle-slideshow">
-     <span class="cycle-prev">&#9001;</span>
-     <!-- Untuk membuat tanda panah di kiri slider -->
-     <span class="cycle-next">&#9002;</span>
-     <!-- Untuk membuat tanda panah di kanan slider -->
      <span class="cycle-pager"></span>
      <!-- Untuk membuat tanda bulat atau link pada slider -->
 		 <?php
@@ -82,16 +76,22 @@
 							{
 								echo "<form action='http://localhost/Hooneyan/index.php/Properti_Page/get_data' method='post'>"; 
 								echo "<div class='row' style=' margin-left:30px;'>";
-							  echo " 	<div class='col-sm-4'><img src='".base_url("gambar/".$prop->gambar)."' alt='rumah' style='width:304px;height:228px;'>";
-							  echo "   	<br>";
-							  echo "		<input type='hidden' name='id_properti' value='".$prop->id_properti."'>";
-							  echo "		<input type='hidden' name='id_agen' value='".$prop->id_agen."'>";							  
- 							  echo "   	<h3><font color='black'><input type='submit' value='".$prop->nama_properti."'></font></h3>";
-							  echo "   	<h5><font color='black'>".$prop->lokasi_properti."</font></h5>";
-							  echo " 	</div>
+							  echo " 	<div class='col-sm-4'>";
+							  echo "		<img src='".base_url("gambar/".$prop->gambar)."' alt='rumah' style='width: 304px; height: 228px;'>";
+							  echo "   		<br>";
+							  echo "			<input type='hidden' name='id_properti' value='".$prop->id_properti."'>";
+							  echo "			<input type='hidden' name='id_agen' value='".$prop->id_agen."'>";
+ 							  echo "   		<h3><input type='submit' value='".$prop->nama_properti."'></h3>";
+							  echo "   		<h3>".$prop->lokasi_properti."</h3>";
+							  if($prop->isBooked == 0){
+							  	echo "   		<h3 style='color: green'>Available</h3>";							  	
+							  }
+							  else{
+							  	echo "   		<h3 style='color: orange'>Waiting For Confirmation</h3>";
+							  }
+							  echo " 		</div>
 							  			</div>
-  										</form>
-							  			";
+  										</form>";
 							}
 					}
 				else
