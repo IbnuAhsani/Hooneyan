@@ -121,11 +121,33 @@
 	</div>
 	<?php  
 		if($properti->result() == NULL)
-			{ ?>
-				<center>
-					<h1>Properti Anda Kosong</h1>
-				</center>
-			<?php }
+			{ 
+				if($this->session->userdata('tipe_akun') == 2)
+					{?>
+						<form action="<?php echo base_url('index.php/Profile_Page/change_account'); ?>" method="post">
+							<center>
+								<h3>Anda tidak punya Properti karena Anda terdaftar sebagai 'User'</h3>
+								<h3>Klik Tombol di Bawah untuk mengganti Akun menjadi 'Agen'</h3>
+								<input type="hidden" name="id" value="<?php echo $this->session->userdata('id');?>">
+								<h3>Password: <?php echo $this->session->userdata('password');?></h3>
+								<input type="hidden" name="password" value="<?php echo $this->session->userdata('password');?>">
+								<input type="hidden" name="nama" value="<?php echo $this->session->userdata('nama');?>">
+								<input type="hidden" name="email" value="<?php echo $this->session->userdata('email');?>">
+								<input type="hidden" name="tgl_lahir" value="<?php echo $this->session->userdata('tgl_lahir');?>">
+								<input type="hidden" name="no_kontak" value="<?php echo $this->session->userdata('no_kontak');?>">
+			  				<input type="submit" name="submit" value="Ganti Akun">
+							</center>
+						</form>
+					<?php 
+					}
+				else
+					{ ?>
+						<center>
+							<h1>Properti Anda Kosong</h1>
+						</center>
+					<?php
+					}
+			}
 		else
 			{
 			foreach ($properti->result() as $prop) 
@@ -157,7 +179,8 @@
 						<div class="col-2"></div>
 					</div>
 				</form>
-	<?php } }?>
+	<?php } 
+			}?>
 
 	<!-- Iklan Row 3 -->
 	<!-- <div class="row" style="margin: 2%;">
@@ -198,7 +221,7 @@
 	<div class="row spacing"></div>
    <!-- Footer -->
   <div class="footer" align="center">
-			Copyright &copy; 2017 <br><br>
+			<br>Copyright &copy; 2017 <br><br>
 			140810160054 - Ibnu Ahsani |
 			140810160004 - Ahsan Nurrijal |
 			140810179001 - Muhammad Affandi

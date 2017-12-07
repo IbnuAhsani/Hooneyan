@@ -56,5 +56,23 @@
 					$this->db->where('id_properti,',$id_properti);
 					$this->db->update('properti', $data);
 				}
+
+			public function change_acc($password, $nama, $tgl_lahir, $email, $no_kontak)
+				{
+					$data = array(
+							'password' => $password,
+							'nama' => $nama,
+							'tipe_akun' => 1, 
+							'tgl_lahir' => $tgl_lahir,
+							'email' => $email,
+							'no_kontak' => $no_kontak
+						 );
+					$this->db->insert('agen', $data);
+				}
+
+			public function delete_acc($id)
+				{
+					$this->db->delete('user', array('id' => $id));
+				}
 		}
 ?>

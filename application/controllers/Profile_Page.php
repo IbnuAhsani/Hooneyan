@@ -2,22 +2,6 @@
 	defined('BASEPATH') OR exit('No direct script access allowed'); 
 	class Profile_Page extends CI_Controller { 
 
-		/** 
-		* Index Page for this controller. 
-		* 
-		* Maps to the following URL 
-		*   http://example.com/index.php/welcome 
-		* - or - 
-		*   http://example.com/index.php/welcome/index 
-		* - or - 
-		* Since this controller is set as the default controller in 
-		* config/routes.php, it's displayed at http://example.com/ 
-		* 
-		* So any other public methods not prefixed with an underscore will 
-		* map to /index.php/welcome/<method_name> 
-		* @see https://codeigniter.com/user_guide/general/urls.html 
-		*/ 
-	
 		public function __construct()
 			{
 				parent::__construct();
@@ -76,6 +60,18 @@
 				redirect(base_url('index.php/Profile_Page/tampil_data'));	
 			}
 
-
+		public function change_account()
+			{
+				$id = $this->input->post('id');
+				$password = md5($this->input->post('password'));
+				$nama = $this->input->post('nama');
+				$tgl_lahir = $this->input->post('tgl_lahir');
+				$email = $this->input->post('email');
+				$no_kontak = $this->input->post('no_kontak');
+				$this->m_profile_page->change_acc($password, $nama, $tgl_lahir, $email, $no_kontak);
+				$this->session->sess_destroy();
+				$this->m_profile_page->delete_acc($id);
+				redirect('Homepage', 'refresh');
+			}
 	}
 ?>
