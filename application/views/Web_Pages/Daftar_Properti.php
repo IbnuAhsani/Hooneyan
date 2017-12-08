@@ -91,17 +91,17 @@ if(!$email){
 				<div class="col-6">
 	  				Kategori Properti<br>
 	  				<select name="kategori_properti">
-					<option value="rumah">Rumah</option>
-					<option value="ruko">Ruko</option>
-					<option value="apartemen">Apartemen</option>
-					<option value="villa">Villa</option>
+					<option value="Rumah">Rumah</option>
+					<option value="Ruko">Ruko</option>
+					<option value="Apartemen">Apartemen</option>
+					<option value="Villa">Villa</option>
 					</select>
 				</div>
 				<div class="col-6">
 	  				Opsi Properti<br>
 	  				<select name="status_properti">
-					<option value="jual">Jual</option>
-					<option value="sewa">Sewa</option>
+					<option value="Jual">Jual</option>
+					<option value="Sewa">Sewa</option>
 					</select>
 				</div>
 			</div>
@@ -109,9 +109,9 @@ if(!$email){
 				<div class="col-6">
 	  				Kondisi Properti<br>
 	  				<select name="kondisi_properti">
-					<option value="bagus">Bagus</option>
-					<option value="layak">Layak</option>
-					<option value="kurang">Kurang</option>
+					<option value="Bagus">Bagus</option>
+					<option value="Layak">Layak</option>
+					<option value="Kurang">Kurang</option>
 					</select>
 				</div>
 				<div class="col-6">

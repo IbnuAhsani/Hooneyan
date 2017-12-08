@@ -10,7 +10,9 @@
 
 /*=============== .css Umum ======================*/
 /*Nav Bar*/
-
+.text-logo{
+  font-family: 'Aref Ruqaa', serif;
+}
 ul.nav-bar{
     list-style-type: none;
     margin: 0;
@@ -30,10 +32,6 @@ ul{
 }
 
 /*Logo Div*/
-li.logo{
-  font-family: 'Pacifico', cursive;
-  color: white;
-}
 
 /*Login/Sign-up Button*/
 li.login{
@@ -49,6 +47,7 @@ li img{
   height: 42px; width: 42px;
 }
 
+
 /*Dropdown Button*/
 li a, .dropbtn {
     display: inline-block;
@@ -59,16 +58,15 @@ li a, .dropbtn {
     padding-right: 13px;
     padding-left: 13px;
     text-decoration: none;
-    font-size: 13px
 }
 
 /*Dropdown Button Elements*/
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: #D9D9D9;
+    /*background-color: #D9D9D9;*/
 }
 li.dropdown {
     display: inline-block;
-    margin-top: 16px; 
+    margin-top: 18px; 
     margin-bottom: 15px; 
     margin-left: 30px; 
     margin-right: 80px; 

@@ -7,10 +7,11 @@
  ?>
 <html>
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Courgette|Lobster" rel="stylesheet">
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final3.css">
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button, 
@@ -19,7 +20,6 @@
 		{
 		    document.getElementById("myDropdown").classList.toggle("show");
 		}
-
 	// Close the dropdown if the user clicks outside of it
 	window.onclick = function(event) 
 		{
@@ -38,38 +38,40 @@
 			  }
 		}
 	</script>
-	<!--  -->
-
 </head>
 <body class="container-fluid" style="margin: 0"px>
 	
 	<!-- Upper Task Bar -->
      <nav cl>
    <ul style="background-color: #062F4f; width: 100% ; margin: 0px">
-      <li style="margin: 11px; margin-left: 20; float: left;"><a href="<?php echo base_url(); ?>index.php/Homepage"><img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></a></li>
-     <li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
-       <button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
-          <div class="dropdown-content">
-            <a href="#">| Jual</a>
-            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
-            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
-            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
-            <a href="#">| Sewa</a>
-            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
-            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
-            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
-            <a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
-          </div>
+      <li style="margin: 11px; margin-left: 20; float: left;">
+				<a class="text-logo" href="<?php echo base_url(); ?>index.php/Homepage">
+					Hooneyan
+				</a>
+			</li>
+     <li class="dropdown">
+       <a href="javascript:void(0)" class="dropbtn navbar-button">Menu</a>
+				<div class="dropdown-content">
+					<a class="navbar-list" href="#">| Jual</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
+					<a class="navbar-list" href="#">| Sewa</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
+				</div>
        </li>
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
-         <button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
+				<a class="navbar-button" href="<?php echo base_url(); ?>index.php/Login/user_logout">Sign-Out</a>
       </li>
       <?php 
       	$tipe_akun=$this->session->userdata('tipe_akun');
       	if($tipe_akun == 1):
 	   ?>
 	      <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
-	         <button class="dropbtn" style="font-size: 13px"><a href="<?php echo base_url(); ?>index.php/Daftar_Properti">Tambah Properti</button></a>
+   				<a class="navbar-button" href="<?php echo base_url(); ?>index.php/Daftar_Properti">Tambah Properti</a>
 	      </li>
 	   <?php endif; ?>
    </ul>
@@ -85,16 +87,17 @@
 			<img class="img" src="<?php echo base_url(); ?>/assets/pictures/Profile_pic.png" alt="Profile Picture">
 		</div>
 		<div class="col-2">
-			<ul style="color: #062F4f; margin-top: 54%">
+			<ul class="font-color" style="margin-top: 30%">
 				<?php
 					$nama=$this->session->userdata('nama');
 					$no_kontak=$this->session->userdata('no_kontak');
 					$email=$this->session->userdata('email');
+					$alamat=$this->session->userdata('alamat');
 				 ?>
-				<li><?php echo $nama ?></li>
-				<li><?php echo $no_kontak ?></li>
-				<li><?php echo $email ?></li>
-				<li>Alamat</li>
+				<li><h2><?php echo $nama ?></h2></li>
+				<li style="font-size: 18px"><?php echo $no_kontak ?></li>
+				<li style="font-size: 18px"><?php echo $email ?></li>
+				<li style="font-size: 18px"><?php echo $alamat ?></li>
 			</ul>
 		</div>
 		<div class="col-4"></div>
@@ -117,7 +120,7 @@
 
 	<!-- Teks "Iklan Tayang" -->
 	<div class="row">
-		<h1 style="color: #062F4f; margin-left: 9%">Iklan Tayang</h1>
+		<h1 class="font-color" style="margin-left: 9%"><u>Iklan Tayang</u></h1>
 	</div>
 	<?php  
 		if($properti->result() == NULL)
@@ -126,10 +129,9 @@
 					{?>
 						<form action="<?php echo base_url('index.php/Profile_Page/change_account'); ?>" method="post">
 							<center>
-								<h3>Anda tidak punya Properti karena Anda terdaftar sebagai 'User'</h3>
-								<h3>Klik Tombol di Bawah untuk mengganti Akun menjadi 'Agen'</h3>
+								<h3 class="font-color">Anda tidak punya Properti karena Anda terdaftar sebagai 'User'</h3>
+								<h3 class="font-color">Klik Tombol di Bawah untuk mengganti Akun menjadi 'Agen'</h3>
 								<input type="hidden" name="id" value="<?php echo $this->session->userdata('id');?>">
-								<h3>Password: <?php echo $this->session->userdata('password');?></h3>
 								<input type="hidden" name="password" value="<?php echo $this->session->userdata('password');?>">
 								<input type="hidden" name="nama" value="<?php echo $this->session->userdata('nama');?>">
 								<input type="hidden" name="email" value="<?php echo $this->session->userdata('email');?>">
@@ -143,7 +145,7 @@
 				else
 					{ ?>
 						<center>
-							<h1>Properti Anda Kosong</h1>
+							<h1 class="font-color">Properti Anda Kosong</h1>
 						</center>
 					<?php
 					}
@@ -159,20 +161,28 @@
 						<div class="col-8" style="display: flex;">
 							<div class="col-5" style="height: 100%">
 							<?php 
-						   	echo"<img src='".base_url("gambar/".$prop->gambar)."' style=width:300px;height:180px; >";		
+						   	echo"<img src='".base_url("gambar/".$prop->gambar)."' style=width:300px;height:190px; >";		
 							?>
 							</div>
 							<div class="col-7">
-								<ul style="color: #062F4f;">
+								<ul class="navbar-list">
 									<li></li>
 									 <input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
 									 <input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">
 									<li><h4><input type="submit" value="<?php echo $prop->nama_properti;?>"></h4></li>
-									<li></li><li></li>
-									<li><h5>Rp.<?php echo $prop->harga_properti;?></h5></li>
+									<li><h5 class="navbar-list">Rp.<?php echo $prop->harga_properti;?></h5></li>
 									<li>Tipe Properti: <?php echo $prop->kategori_properti;?></li>
 									<li>Status Jual: <?php echo $prop->status_properti;?></li>
 									<li>Lokasi: <?php echo $prop->lokasi_properti;?></li>
+									<?php if($prop->isBooked == 0) {?>
+										<li>Status Properti: <font style="color: green">Available</font></li>
+									<?php }else{ 
+											if($prop->id_booker != 0 && $prop->konfirmasi == 0) {?>
+										<li>Status Properti: <font style="color: orange">Waiting For Confirmation</font></li>
+									<?php }else{  ?>
+										<li>Status Properti: <font style="color: red">Booked</font></li>
+									<?php }
+											} ?>
 								</ul>
 							</div>
 							</div>
@@ -220,7 +230,7 @@
 	<!-- Spacing -->
 	<div class="row spacing"></div>
    <!-- Footer -->
-  <div class="footer" align="center">
+  <div class="footer font-only" align="center">
 			<br>Copyright &copy; 2017 <br><br>
 			140810160054 - Ibnu Ahsani |
 			140810160004 - Ahsan Nurrijal |

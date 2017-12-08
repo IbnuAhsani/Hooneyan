@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <link href="//fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Courgette|Lobster" rel="stylesheet">
  <title>Hooneyan</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script type="text/javascript" src = "<?php echo base_url(); ?>/assets/js/jquery.cycle2.min.js"></script>
 	  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-	  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final2.css">
+	  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final3.css">
 </head>
 <body class="container-fluid" style="margin: 0"px>   
    <!-- Upper Task Bar -->
@@ -20,18 +20,18 @@
 					Hooneyan
 				</a>
 			</li>
-			<li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
-				<button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn navbar-button">Menu</a>
 				<div class="dropdown-content">
-					<a href="#">| Jual</a>
-					<a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
-					<a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
-					<a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
-					<a href="#">| Sewa</a>
-					<a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
-					<a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
-					<a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
-					<a href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
+					<a class="navbar-list" href="#">| Jual</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
+					<a class="navbar-list" href="#">| Sewa</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
+					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
 				</div>
 			</li>
 			<?php
@@ -39,14 +39,14 @@
 				if(!$email){
 			?>
 			<li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
-				<button class="dropbtn" style="font-size: 13px"><a href="<?php echo base_url(); ?>index.php/Login">Sign-In</button></a>
+				<a class="navbar-button" href="<?php echo base_url(); ?>index.php/Login">Sign-In</a>
 			</li>
 			<?php }else{ ?>
 			<li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
-				<button class="dropbtn" style="font-size: 13px"><?php echo anchor('Login/user_logout','Sign-Out'); ?></button>
+				<a class="navbar-button" href="<?php echo base_url(); ?>index.php/Login/user_logout">Sign-Out</a>
 			</li>
 			<li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
-				<button class="dropbtn" style="font-size: 13px"><a href="<?php echo base_url(); ?>index.php/Profile_Page">My Profile</button></a>
+				<a class="navbar-button" href="<?php echo base_url(); ?>index.php/Profile_Page">My Profile</a>
 			</li>
 			<?php } ?>
 		</ul>
@@ -71,7 +71,7 @@
    <!-- Spacing -->
    <div class="row spacing"></div>
   <!-- Iklan Terbaru -->
-  <h2 id="kiri">Terbaru</h2><br>
+  <h1 class="font-color" id="kiri"><u>Terbaru</u></h1><br>
 	  <div class="row" style=" margin-left:100px;">
 		  <?php
 				if(!empty($properti))
@@ -86,13 +86,13 @@
 							  echo "   		<br>";
 							  echo "			<input type='hidden' name='id_properti' value='".$prop->id_properti."'>";
 							  echo "			<input type='hidden' name='id_agen' value='".$prop->id_agen."'>";
- 							  echo "   		<h3><input type='submit' value='".$prop->nama_properti."'></h3>";
-							  echo "   		<h3>".$prop->lokasi_properti."</h3>";
+ 							  echo "   		<input class='linkButton' type='submit' value='".$prop->nama_properti."'>";
+							  echo "   		<h2 class='font-color'>".$prop->lokasi_properti."</h2>";
 							  if($prop->isBooked == 0){
-							  	echo "   		<h3 style='color: green'>Available</h3>";							  	
+							  	echo "   		<h3 class='font-only' style='color: green'>Available</h3>";							  	
 							  }
 							  else{
-							  	echo "   		<h3 style='color: orange'>Waiting For Confirmation</h3>";
+							  	echo "   		<h3 class='font-only' style='color: orange'>Waiting For Confirmation</h3>";
 							  }
 							  echo " 		</div>
 							  			</div>
@@ -109,11 +109,11 @@
    <!-- Spacing -->
    <div class="row spacing"></div>
    <!-- Footer -->
-  <div class="footer" align="center">
-			Copyright &copy; 2017 <br><br>
+  <div class="footer font-only" align="center">
+			<br>Copyright &copy; 2017 <br><br>
 			140810160054 - Ibnu Ahsani |
 			140810160004 - Ahsan Nurrijal |
-			140810179001 - Muhammad Affandi
+			140810179001 - Muhammad Affandi <br>
   </div>    
 </body>
 </html>
