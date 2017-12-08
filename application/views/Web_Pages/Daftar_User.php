@@ -12,12 +12,15 @@
 	           echo $error_msg;
 	         }
       ?>
-		<form role="form" class="form-signin" method="POST" action="<?php echo base_url('index.php/Daftar_User/register_user'); ?>">
+		<form id="user_data" role="form" class="form-signin" method="POST" action="<?php echo base_url('index.php/Daftar_User/register_user'); ?>">
 			<h1 class="form-signin-heading text-muted">Daftar Akun Hooneyan</h1><br>
 			<input type="text" placeholder="Nama Lengkap" name="nama" required>
 			<input type="email" placeholder="Email Anda" name="email" required>
 			<input type="password" placeholder="Password" name="password" required>
-			<input type="text" placeholder="Nomor Telpon" name="no_kontak" required>
+			<input type="text" placeholder="Nomor Telpon 1" name="no_kontak_1" required>
+			<input type="text" placeholder="Nomor Telpon 2" name="no_kontak_2">
+			<input type="text" placeholder="Nomor Telpon 3" name="no_kontak_3">
+			<textarea rows="4" cols="50" name="alamat" form="user_data" placeholder="Alamat"></textarea>
 			<br>
 			<label for="tipe_akun" style="color: white">Tipe Akun</label><br>
 		  <input type="radio" name="tipe_akun" value="2"><span style="color: white">User</span><br>

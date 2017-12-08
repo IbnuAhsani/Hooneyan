@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hooneyan</title>
+ <link href="//fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+ <title>Hooneyan</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src = "<?php echo base_url(); ?>/assets/js/jquery.cycle2.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	  <script type="text/javascript" src = "<?php echo base_url(); ?>/assets/js/jquery.cycle2.min.js"></script>
+	  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
+	  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final2.css">
 </head>
 <body class="container-fluid" style="margin: 0"px>   
    <!-- Upper Task Bar -->
 	<nav cl>
 		<ul style="background-color: #062F4f; width: 100% ; margin: 0px">
-			<li style="margin: 11px; margin-left: 20; float: left;"><a href="<?php echo base_url(); ?>index.php/Homepage"><img src="<?php echo base_url(); ?>/assets/pictures/house.png" style="height: 42px; width: 42px"></a></li>
+			<li style="margin: 11px; margin-left: 20; float: left;">
+				<a class="text-logo" href="<?php echo base_url(); ?>index.php/Homepage">
+					Hooneyan
+				</a>
+			</li>
 			<li class="dropdown" style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 80px; float: left;">
 				<button href="javascript:void(0)" class="dropbtn" style="font-size: 13px">Menu</button> 
 				<div class="dropdown-content">

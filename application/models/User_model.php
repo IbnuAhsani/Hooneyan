@@ -31,6 +31,11 @@
 					$this->db->insert('agen', $agen);
 				}
 
+			public function register_kontak($kontak)
+				{
+					$this->db->insert('list_kontak', $kontak);
+				}
+
 			public function login_user($email,$pass)
 				{
 					$this->db->select('*');
@@ -77,6 +82,30 @@
 					else
 						{
 							return true;
+						}
+				}
+
+			public function no_kontak_check($no_kontak)
+				{
+					if($no_kontak == NULL)
+						{
+							return true;
+						}
+					else
+						{
+							$this->db->select('*');
+							$this->db->from('list_kontak');
+							$this->db->where('no_kontak',$no_kontak);
+							$query=$this->db->get();
+
+							if($query->num_rows()>0)
+								{
+									return false;
+								}
+							else
+								{
+									return true;
+								}
 						}
 				}
 		}

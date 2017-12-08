@@ -9,6 +9,7 @@
 */
 /*=============== .css Umum ======================*/
 /*Nav Bar*/
+
 ul.nav-bar{
     list-style-type: none;
     margin: 0;
@@ -315,7 +316,6 @@ input[type=text] {
 
 /*=============== .css Properti Page ===============*/
 * {box-sizing:border-box}
-body {font-family: Verdana,sans-serif;}
 .mySlides {display:none}
 
 /* Slideshow container */

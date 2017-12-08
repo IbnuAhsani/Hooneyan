@@ -143,19 +143,23 @@
 				<h4><?php echo $ag->nama;?></h4>
 				<h3><?php echo $ag->no_kontak;?></h3>
 				<?php 
-				if($this->session->userdata('id') != $ag->id)
-					{
-						if($prop->isBooked == 0) {?>
-							<input type="submit" name="book" value="Book">
-						<?php }else{ ?>
-							<input type="hidden" value="Book">
-						<?php }
-					}
-				else
-					{	?>
+				$email=$this->session->userdata('email');
+				if(!$email)
+					{?>
 						<input type="hidden" value="Book">
 					<?php
-					} 
+					}
+				else
+					{
+						if($this->session->userdata('id') != $ag->id)
+							{
+								if($prop->isBooked == 0) {?>
+									<input type="submit" name="book" value="Book">
+								<?php }else{ ?>
+									<input type="hidden" value="Book">
+								<?php }
+							}
+					}	 
 				if($this->session->userdata('id') == $ag->id && $prop->isBooked != 0)
 					{	?>
 						<input type="submit" name="confirm" value="Confirm">
