@@ -34,12 +34,25 @@ ul{
 /*Logo Div*/
 
 /*Login/Sign-up Button*/
+ body.login_page{
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background-image: url('pictures/blurred1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+}
+
 li.login{
   margin-top: 16px; 
   margin-bottom: 15px; 
   margin-left: 30px; 
   margin-right: 15px;
   float: right;
+}
+
+.font-logo{
+  font-family: 'Lobster', cursive;
 }
 
 /*Logo Img*/
@@ -95,16 +108,6 @@ li.dropdown {
 }
 /**/
 
-/*Search Bar*/
-.search1{
-    width: 100%;
-    height: 6%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    float: left;
-}
-/**/
-
 /*Images*/
 .img{
   width: 100%;
@@ -143,13 +146,7 @@ li.dropdown {
 /*=================================================*/
 
 /*======= .css untuk Page Daftar dan Login ========*/
-  body.login_page{
-    padding-top: 30px;
-    padding-bottom: 40px;
-    background-image: url('Pictures/Rumah.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
+
   .btn 
   {
    outline:0;
