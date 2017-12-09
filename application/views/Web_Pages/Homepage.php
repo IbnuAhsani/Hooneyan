@@ -65,7 +65,7 @@
    <!-- Spacing -->
    <div class="row spacing"></div>
   <!-- Grey Line -->
-  <div class="row" style="height: 15%; background-color: #D9D9D9">
+  <div class="row" style="height: 15%;">
     <div class="hr" style="margin-top: 3%"><hr></div>
   </div>
    <!-- Spacing -->
@@ -88,13 +88,19 @@
 							  echo "			<input type='hidden' name='id_agen' value='".$prop->id_agen."'>";
  							  echo "   		<input class='linkButton' type='submit' value='".$prop->nama_properti."'>";
 							  echo "   		<h2 class='font-color'>".$prop->lokasi_properti."</h2>";
-							  if($prop->isBooked == 0){
-							  	echo "   		<h3 class='font-only' style='color: green'>Available</h3>";							  	
-							  }
-							  else{
-							  	echo "   		<h3 class='font-only' style='color: orange'>Waiting For Confirmation</h3>";
-							  }
-							  echo " 		</div>
+							if($prop->isBooked == 0)
+								echo "			<p class='font-color' style='font-size: 25px'>Status Properti: <font style='color: green'>Available</font></p>";
+							else{ 
+										if($prop->id_booker != 0 && $prop->konfirmasi == 0) 
+											{
+												echo "<p class='font-color' style='font-size: 25px'>Status Properti: <font style='color: orange'>Waiting For Confirmation</font></p>";
+											}
+										else
+											{  
+												echo "<p class='font-color' style='font-size: 25px'>Status Properti: <font style='color: red'>Booked</font></p>";
+											}
+									}
+							  echo " 	</div>
 							  			</div>
   										</form>";
 							}

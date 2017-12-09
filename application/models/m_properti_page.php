@@ -94,6 +94,7 @@
 				{
 					$this->db->set('isBooked', 0, FALSE);
 					$this->db->set('id_booker', 0, FALSE);
+					$this->db->set('konfirmasi', 0, FALSE);
 					$this->db->where('id_properti', $id_properti);
 					$this->db->update('properti');
 				}

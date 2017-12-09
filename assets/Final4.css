@@ -25,7 +25,12 @@ a.navbar-button{
 	font-family: 'Courgette', cursive;
 }
 
-.spaced{
+.spaced-col{
 		display: inline-block;
 	  margin-left: 20px;
+  }
+
+.spaced-row{
+		display: inline-block;
+	  margin-top: 20px;
   }
