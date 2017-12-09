@@ -86,24 +86,34 @@
 		<div class="col-2">
 			<img class="img" src="<?php echo base_url(); ?>/assets/pictures/Profile_pic.png" alt="Profile Picture">
 		</div>
-		<div class="col-2">
-			<ul class="font-color" style="margin-top: 30%">
+		<div class="col-4">
+			<ul class="font-color" style="margin-top: 16%">
 				<?php
-					$nama=$this->session->userdata('nama');
-					$no_kontak=$this->session->userdata('no_kontak');
-					$email=$this->session->userdata('email');
-					$alamat=$this->session->userdata('alamat');
+					foreach($user->result() as $us){
 				 ?>
-				<li><h2><?php echo $nama ?></h2></li>
-				<li style="font-size: 18px"><?php echo $no_kontak ?></li>
-				<li style="font-size: 18px"><?php echo $email ?></li>
-				<li style="font-size: 18px"><?php echo $alamat ?></li>
+				<li><h2 style="margin-bottom: 0"><?php echo $us->nama; ?></h2></li>
+				<li style="font-size: 18px"><?php echo $us->email; ?></li>
+				<li style="font-size: 18px">
+					<?php echo $us->alamat; ?>
+				</li>
 			</ul>
 		</div>
-		<div class="col-4"></div>
+		<div class="col-2">
+			<ul class="font-color" style="margin-top: 33%">
+				<li><h2>Nomor Kontak:</h2></li>
+				<?php 
+					foreach($kontak->result() as $kontk){
+				?>
+				<li style="font-size: 18px"><?php echo $kontk->no_kontak; ?></li>
+				<?php } ?>
+			</ul>
+		</div>
 		<div class="col-2" style="height: 30%; color: #062F4f;">
  			<img class="img" src="<?php echo base_url(); ?>/assets/pictures/logo.jpg" alt="Logo Picture">
  		</div>
+ 		<?php 
+ 			} 
+ 		?>
 		<div class="col-1"></div>
 	</div>
 
@@ -165,7 +175,7 @@
 							?>
 							</div>
 							<div class="col-7">
-								<ul class="navbar-list">
+								<ul class="navbar-list" style="width: 100px">
 									<li></li>
 									 <input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
 									 <input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">

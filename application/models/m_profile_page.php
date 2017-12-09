@@ -9,7 +9,7 @@
 					$this->load->library('session');
 				}	
 
-			public function get_data($tipe_akun, $nama)
+			public function get_data_user($tipe_akun, $id)
 				{
 					if($tipe_akun == 1)
 					{
@@ -21,6 +21,12 @@
 						$query = $this->db->get_where('user', array('id' => $id));
 						return $query;
 					}
+				}
+
+			public function get_data_kontak($email)
+				{
+					$query = $this->db->get_where('list_kontak', array('email_agen_user' => $email));
+					return $query;
 				}
 
 			public function tampilByUser($id)
