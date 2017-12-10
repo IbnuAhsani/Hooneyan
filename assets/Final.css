@@ -34,6 +34,9 @@ ul{
 /*Logo Div*/
 
 /*Login/Sign-up Button*/
+
+
+
  body.login_page{
   padding-top: 30px;
   padding-bottom: 40px;
@@ -147,28 +150,13 @@ li.dropdown {
 
 /*======= .css untuk Page Daftar dan Login ========*/
 
-  .btn 
-  {
-   outline:0;
-   border:none;
-   border-top:none;
-   border-bottom:none;
-   border-left:none;
-   border-right:none;
-   box-shadow:inset 2px -3px rgba(0,0,0,0.15);
-  }
-  .btn:focus
-  {
-   outline:0;
-   -webkit-outline:0;
-   -moz-outline:0;
-  }
   .form-signin {
-    max-width: 280px;
+    max-width: 1000px;
     padding: 15px;
     margin: 0 auto;
       margin-top:50px;
   }
+
   .form-signin .form-signin-heading, .form-signin {
     margin-bottom: 10px;
   }
@@ -214,13 +202,6 @@ li.dropdown {
 
 /*============== .css untuk Homepage ===============*/
 /*Homepage*/
-.search{
-  padding: 6px 15px 6px 30px;
-  margin: 3px;
-  width: 500px;
-  margin: 0 auto;
-  /*background: url('./images/search.png') no-repeat 8px 6px;*/
-}
 
 .rounded{
   border-radius: 15px;

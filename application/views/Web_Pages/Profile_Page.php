@@ -11,7 +11,7 @@
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final3.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final4.css">
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button, 
@@ -175,7 +175,7 @@
 								<input type="hidden" name="email" value="<?php echo $this->session->userdata('email');?>">
 								<input type="hidden" name="tgl_lahir" value="<?php echo $this->session->userdata('tgl_lahir');?>">
 								<input type="hidden" name="no_kontak" value="<?php echo $this->session->userdata('no_kontak');?>">
-			  				<input type="submit" name="submit" value="Ganti Akun">
+			  				<input class="button button-blue" type="submit" name="submit" value="Ganti Akun">
 							</center>
 						</form>
 					<?php 

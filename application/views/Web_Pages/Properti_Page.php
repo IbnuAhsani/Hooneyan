@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final3.css"> 
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final4.css"> 
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button, 
@@ -158,7 +158,7 @@
 			</div>			
 		</div>
 		<!-- Right Colomn -->
-		<div class="col-3 round1 polaroid" style="height: 350px">
+		<div class="col-3 round1" style="height: 375px">
 			<?php 
 				foreach ($agen->result() as $ag) 
 					{ ?>
@@ -186,7 +186,7 @@
 						if($this->session->userdata('id') != $ag->id)
 							{
 								if($prop->isBooked == 0) {?>
-									<input type="submit" name="book" value="Book">
+									<input class="button button-blue" type="submit" name="book" value="Book">
 								<?php }else{ ?>
 									<input type="hidden" value="Book">
 								<?php }
@@ -194,8 +194,8 @@
 					}	 
 				if($this->session->userdata('id') == $ag->id && $prop->isBooked != 0)
 					{	?>
-						<input type="submit" name="confirm" value="Confirm">
-						<input type="submit" name="deny" value="Deny">
+						<input class="button button-green" type="submit" name="confirm" value="Confirm">
+						<input class="button button-red" type="submit" name="deny" value="Deny">
 					<?php
 					}
 				?>

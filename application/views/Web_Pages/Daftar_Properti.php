@@ -218,7 +218,7 @@
 							</td>
 							<td class="spaced-col"></td>
 							<td>
-			  				<input type="submit" name="submit" value="Daftarkan">
+			  				<input class="button button-blue" type="submit" name="submit" value="Daftarkan">
 							</td>
 						</tr>
 					</tbody>
