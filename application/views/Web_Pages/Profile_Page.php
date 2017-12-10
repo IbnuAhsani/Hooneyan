@@ -12,35 +12,8 @@
 	<title>Profile Page</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final4.css">
-	<!-- JS Dropdown -->
-	<script>
-	/* When the user clicks on the button, 
-	toggle between hiding and showing the dropdown content */
-	function myFunction() 
-		{
-		    document.getElementById("myDropdown").classList.toggle("show");
-		}
-	// Close the dropdown if the user clicks outside of it
-	window.onclick = function(event) 
-		{
-		  if (!event.target.matches('.dropbtn')) 
-			  {
-			    var dropdowns = document.getElementsByClassName("dropdown-content");
-			    var i;
-			    for (i = 0; i < dropdowns.length; i++) 
-				    {
-				      var openDropdown = dropdowns[i];
-				      if (openDropdown.classList.contains('show')) 
-					      {
-					        openDropdown.classList.remove('show');
-					      }
-				    }
-			  }
-		}
-	</script>
 </head>
 <body class="container-fluid" style="margin: 0"px>
-	
 	<!-- Upper Task Bar -->
      <nav cl>
    <ul style="background-color: #062F4f; width: 100% ; margin: 0px">
@@ -144,18 +117,10 @@
  		?>
 		<div class="col-1"></div>
 	</div>
-
-	<!-- Spacing -->
-	<div class="row spacing"></div>
-
 	<!-- Grey Line -->
-	<div class="row" style="height: 15%; background-color: #D9D9D9">
-		<div class="hr" style="margin: 3%;"><hr></div>
-	</div>
-
-	<!-- Spacing -->
-	<div class="row spacing"></div>
-
+  <div class="row" style="height: 15%;">
+    <div class="hr" style="margin-top: 3%"><hr></div>
+  </div>
 	<!-- Teks "Iklan Tayang" -->
 	<div class="row">
 		<h1 class="font-color" style="margin-left: 9%"><u>Iklan Tayang</u></h1>
@@ -199,7 +164,7 @@
 						<div class="col-8" style="display: flex;">
 							<div class="col-5" style="height: 100%">
 							<?php 
-						   	echo"<img src='".base_url("gambar/".$prop->gambar)."' style=width:300px;height:190px; >";		
+						   	echo"<img src='".base_url("gambar/".$prop->gambar)."' style=width:300px;height:190px; >";
 							?>
 							</div>
 							<div class="col-7">

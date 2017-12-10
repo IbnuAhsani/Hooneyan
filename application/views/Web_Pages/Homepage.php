@@ -80,15 +80,21 @@
 		</ul>
 	</nav>
    <!-- SlideShow -->
-   <div class="cycle-slideshow">
-     <span class="cycle-pager"></span>
-     <!-- Untuk membuat tanda bulat atau link pada slider -->
-		 <?php
-				foreach ($properti->result() as $prop)
-					{ 
-				   	echo"  <img class='home_page carousel-size-homepage' src='".base_url("gambar/".$prop->gambar)."' >";
-					}
-			?>
+   <div class="row">
+   		<div class="col-1"></div>
+   		<div class="col-10" style="margin-left: 13%">
+			   <div class="cycle-slideshow">
+			     <span class="cycle-pager"></span>
+			     <!-- Untuk membuat tanda bulat atau link pada slider -->
+					 <?php
+							foreach ($properti->result() as $prop)
+								{ 
+							   	echo"  <img class='home_page carousel-size-homepage' src='".base_url("gambar/".$prop->gambar)."' align='center'>";
+								}
+						?>
+			   </div>
+   		</div>
+   		<div class="col-1"></div>
    </div>
    <!-- Spacing -->
    <div class="row spacing"></div>

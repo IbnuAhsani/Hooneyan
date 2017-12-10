@@ -148,10 +148,8 @@
 		?>			
 	</center>
 	<br>
-	<!-- Spacing -->
 	<div class="container" id="body">
 		<div class="content-bordered-box row-centered">
-			<!-- dropdown -->
 			<?php 
 			if($properti->result() != NULL)
 				{
@@ -161,7 +159,7 @@
 							<div class="row" style="margin: 2%;" >
 								<div class="col-12" style="display: flex;">
 									<div class="col-5" style="height: 100%">
-										<?php	echo "<img class='img' src='".base_url("gambar/".$j->gambar)."' alt='properti'>";?>
+										<img src='<?php echo base_url();?>/gambar/<?php echo $j->gambar ?>' style="height: 100%; width: 80%;" align="right" alt='properti'>
 									</div>
 									<div class="col-7">
 										<form id="<?php echo $i; ?>" action='http://localhost/Hooneyan/index.php/Properti_Page/get_data' method='post'>
@@ -211,6 +209,7 @@
 		if($properti->result() != NULL)
 			{
 	 ?>
+	 			<br><br><br>
 			   <!-- Footer -->
 			  <div class="footer font-only" align="center">
 						<br>Copyright &copy; 2017 <br><br>

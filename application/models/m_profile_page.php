@@ -29,10 +29,13 @@
 					return $query;
 				}
 
-			public function tampilByUser($id)
+			public function tampilByUser($id_agen)
 				{
-					$query = $this->db->get_where('properti', array('id_agen' => $id));
-					return $query;
+					$this->db->select('*');
+					$this->db->from('properti');
+					$this->db->where('id_agen', $id_agen);
+					$this->db->order_by('id_properti', 'desc');
+					return $properti = $this->db->get();
 				}
 
 			public function pilih($id_properti)
