@@ -190,10 +190,10 @@
 			}
 		else
 			{
+				$i=1;
 			foreach ($properti->result() as $prop) 
 				{ ?>
 				<!-- Iklan Row 1 -->
-				<form action="<?php echo base_url('index.php/Properti_Page/get_data'); ?>" method="post">
 					<div class="row" style="margin: 2%;">
 						<div class="col-2"></div>
 						<div class="col-8" style="display: flex;">
@@ -204,10 +204,13 @@
 							</div>
 							<div class="col-7">
 								<ul class="navbar-list">
-									 <input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
-									 <input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">
-									<li><h4><input type="submit" value="<?php echo $prop->nama_properti;?>"></h4></li>
-									<li><h5 class="navbar-list" style="margin-bottom: 20px">Rp.<?php echo $prop->harga_properti;?></h5></li>
+									<form id="<?php echo $i; ?>" action="<?php echo base_url('index.php/Properti_Page/get_data'); ?>" method="post">
+									<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+									<input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">
+									<li>
+										<h2><a class="font-color" style="margin: 0" onclick="document.getElementById('<?php echo $i; ?>').submit()"><?php echo $prop->nama_properti;?></a></h2>						
+									</li>
+									<li><h5 class="navbar-list" style="margin-bottom: 5px; margin-top: 5px">Rp.<?php echo $prop->harga_properti;?></h5></li>
 									<li>Tipe Properti: <?php echo $prop->kategori_properti;?></li>
 									<li>Status Jual: <?php echo $prop->status_properti;?></li>
 									<li>Lokasi: <?php echo $prop->lokasi_properti;?></li>
@@ -219,14 +222,17 @@
 									<?php }else{  ?>
 										<li>Status Properti: <font style="color: red">Booked</font></li>
 									<?php }
-											} ?>
+											} 
+									?>
+				</form>
 								</ul>
 							</div>
 							</div>
 						<div class="col-2"></div>
 					</div>
-				</form>
-	<?php } 
+			<?php 
+					$i++;
+				} 
 			}?>
 
 	<!-- Iklan Row 3 -->
