@@ -118,16 +118,16 @@
 			?>
 			</div>
 			<br>
-			 <div style="padding:20px;border: 1px solid black;">
+			 <div class="round1" style="padding:20px;">
 				<div class="row" style="height: 50px">
 					<div class="col-6 font-color" style="font-size: 25px">Nama Properti: <?php echo $prop->nama_properti;?></div>
 					<?php if($prop->isBooked == 0) {?>
-						<div class="col-6 font-color" style="font-size: 25px">Status Properti: <font style="color: green">Available</font></div>
+						<div class="col-6 font-color" style="font-size: 18px">Status Properti: <font style="color: green">Available</font></div>
 					<?php }else{ 
 							if($prop->id_booker != 0 && $prop->konfirmasi == 0) {?>
-								<div class="col-6 font-color" style="font-size: 25px">Status Properti: <font style="color: orange">Waiting For Confirmation</font></div>
+								<div class="col-6 font-color" style="font-size: 18px">Status Properti: <font style="color: orange">Waiting For Confirmation</font></div>
 					<?php }else{  ?>
-								<div class="col-6 font-color" style="font-size: 25px">Status Properti: <font style="color: red">Booked</font></div>
+								<div class="col-6 font-color" style="font-size: 18px">Status Properti: <font style="color: red">Booked</font></div>
 					<?php }
 							} ?>
 				</div>
@@ -169,6 +169,7 @@
 					foreach ($properti->result() as $prop) 
 				{ ?>
 					<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+					<input type="hidden" name="harga_properti" value="<?php echo $prop->harga_properti;?>">
 				<?php } ?>
 					<input type="hidden" name="id_agen" value="<?php echo $ag->id;?>">
 					<input type="hidden" name="id_booker" value="<?php echo $this->session->userdata('id');?>">

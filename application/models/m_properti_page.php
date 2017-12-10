@@ -104,5 +104,22 @@
 					$this->db->where('id_properti', $id_properti);
 					$this->db->update('properti');
 				}
+
+			public function transaction($id_user, $id_properti, $harga_properti)
+				{
+					$data = array(
+						'id_user'=>$id_user,
+						'id_properti'=>$id_properti,
+						'harga_properti'=>$harga_properti
+						);
+					$this->db->insert('transaksi', $data);					
+				}	
+
+			public function cancel_transaction($id_user, $id_properti)
+				{
+					$array = array('id_user' => $id_user, 'id_properti' => $id_properti);
+					$this->db->where($array);
+					$this->db->delete('transaksi');
+				}	
 		}
 ?>

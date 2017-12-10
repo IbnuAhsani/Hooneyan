@@ -18,8 +18,8 @@
 		<form class="form-signin" role="form" method="post" action="<?php echo base_url('index.php/Login/login_user'); ?>">
 			<h1 class="form-signin-heading font-only" style="margin: 0">Selamat Datang di</h1>
 			<h1 class="form-signin-heading font-logo" style="margin-top: 0">Hooneyan</h1>
-			<input type="text" class="form-control" placeholder="Masukkan Email Anda" name="email" required="" autofocus>
-			<input type="password" class="form-control" placeholder="Masukkan Password Anda" name="password" required>
+			<input type="text" class="form-control" placeholder="Masukkan Email Anda" name="email" required="" autofocus><br>
+			<input type="password" class="form-control" placeholder="Masukkan Password Anda" name="password" required><br>
 				<button class="button button-white" type="submit">Sign In</button><br><br>
 				<font class="font-only" style="color: white; font-size: 18px; text-align: center;">
 					Belum punya akun?<br>

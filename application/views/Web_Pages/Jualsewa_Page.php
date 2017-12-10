@@ -100,6 +100,7 @@
 			<?php } ?>
    </ul>
    </nav>
+   <br><br>
 	<center>
 		<?php 
 			if($this->input->post('status_properti') == 'Jual' && $this->input->post('kategori_properti') == 'Rumah' ) 
@@ -146,6 +147,7 @@
 				} 
 		?>			
 	</center>
+	<br>
 	<!-- Spacing -->
 	<div class="container" id="body">
 		<div class="content-bordered-box row-centered">
@@ -209,7 +211,6 @@
 		if($properti->result() != NULL)
 			{
 	 ?>
-				<br><br><br><br><br><br>
 			   <!-- Footer -->
 			  <div class="footer font-only" align="center">
 						<br>Copyright &copy; 2017 <br><br>
