@@ -50,17 +50,45 @@
 				</a>
 			</li>
      <li class="dropdown">
-       <a href="javascript:void(0)" class="dropbtn navbar-button">Menu</a>
+				<a href="javascript:void(0)" class="dropbtn navbar-button">Menu</a>
 				<div class="dropdown-content">
 					<a class="navbar-list" href="#">| Jual</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
+					<form id="jual-rumah" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Jual">
+						<input type="hidden" name="kategori_properti" value="Rumah">
+						<a class="navbar-list" onclick="document.getElementById('jual-rumah').submit()">Rumah</a>
+					</form>
+					<form id="jual-ruko" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Jual">
+						<input type="hidden" name="kategori_properti" value="Ruko">
+						<a class="navbar-list" onclick="document.getElementById('jual-ruko').submit()">Ruko</a>
+					</form>			
+					<form id="jual-apartemen" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Jual">
+						<input type="hidden" name="kategori_properti" value="Apartemen">
+						<a class="navbar-list" onclick="document.getElementById('jual-apartemen').submit()">Apartemen</a>
+					</form>			
 					<a class="navbar-list" href="#">| Sewa</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
+					<form id="sewa-rumah" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Rumah">
+						<a class="navbar-list" onclick="document.getElementById('sewa-rumah').submit()">Rumah</a>
+					</form>			
+					<form id="sewa-apartemen" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Apartemen">
+						<a class="navbar-list" onclick="document.getElementById('sewa-apartemen').submit()">Apartemen</a>
+					</form>			
+					<form id="sewa-ruko" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Ruko">
+						<a class="navbar-list" onclick="document.getElementById('sewa-ruko').submit()">Ruko</a>
+					</form>			
+					<form id="sewa-villa" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Villa">
+						<a class="navbar-list" onclick="document.getElementById('sewa-villa').submit()">Villa</a>
+					</form>			
 				</div>
        </li>
       <li style="margin-top: 16px; margin-bottom: 15px; margin-left: 30px; margin-right: 15px;float: right;">
@@ -175,12 +203,11 @@
 							?>
 							</div>
 							<div class="col-7">
-								<ul class="navbar-list" style="width: 100px">
-									<li></li>
+								<ul class="navbar-list">
 									 <input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
 									 <input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">
 									<li><h4><input type="submit" value="<?php echo $prop->nama_properti;?>"></h4></li>
-									<li><h5 class="navbar-list">Rp.<?php echo $prop->harga_properti;?></h5></li>
+									<li><h5 class="navbar-list" style="margin-bottom: 20px">Rp.<?php echo $prop->harga_properti;?></h5></li>
 									<li>Tipe Properti: <?php echo $prop->kategori_properti;?></li>
 									<li>Status Jual: <?php echo $prop->status_properti;?></li>
 									<li>Lokasi: <?php echo $prop->lokasi_properti;?></li>

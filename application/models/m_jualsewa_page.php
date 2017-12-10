@@ -56,13 +56,21 @@
 					$this->db->update('properti', $data);
 				}
 			public function jualsewa()
-			{
-				$this->db->select('*');
-				$this->db->from('properti');
-				$this->db->order_by('id_properti');
-				return $properti = $this->db->get();
-			}
+				{
+					$this->db->select('*');
+					$this->db->from('properti');
+					$this->db->order_by('id_properti');
+					return $properti = $this->db->get();
+				}
 
+			public function sell_rent($kategori_properti, $status_properti)
+				{
+					$array = array('kategori_properti' => $kategori_properti, 'status_properti' => $status_properti);
+					$this->db->where($array);		
+					$this->db->from('properti');
+					$this->db->order_by('id_properti');		
+					return $properti = $this->db->get();
+				}
 			
 		}
 ?>

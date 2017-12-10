@@ -18,7 +18,8 @@ class Daftar_Properti extends CI_Controller {
 		
 	public function tambah_properti()
 		{
-			$id=$this->session->userdata('id');
+			$id = $this->session->userdata('id');
+			$email = $this->session->userdata('email');
 			$data = array();
 			if($this->input->post('submit'))
 				{ 
@@ -37,6 +38,8 @@ class Daftar_Properti extends CI_Controller {
 							$data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
 						}	
 					$data["properti"] = $this->m_properti_page->tampilByUser($id);
+					$data["user"] = $this->m_properti_page->pilih_agen($id);
+					$data["kontak"] = $this->m_properti_page->get_data_kontak($email);
 					$this->load->view('Web_Pages/Profile_Page', $data);
 				}
 		}

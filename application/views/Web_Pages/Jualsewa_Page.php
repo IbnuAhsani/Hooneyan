@@ -42,17 +42,45 @@
 				</a>
 	    </li>
      <li class="dropdown">
-       <a href="javascript:void(0)" class="dropbtn navbar-button">Menu</a>
+				<a href="javascript:void(0)" class="dropbtn navbar-button">Menu</a>
 				<div class="dropdown-content">
 					<a class="navbar-list" href="#">| Jual</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
+					<form id="jual-rumah" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Jual">
+						<input type="hidden" name="kategori_properti" value="Rumah">
+						<a class="navbar-list" onclick="document.getElementById('jual-rumah').submit()">Rumah</a>
+					</form>
+					<form id="jual-ruko" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Jual">
+						<input type="hidden" name="kategori_properti" value="Ruko">
+						<a class="navbar-list" onclick="document.getElementById('jual-ruko').submit()">Ruko</a>
+					</form>			
+					<form id="jual-apartemen" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Jual">
+						<input type="hidden" name="kategori_properti" value="Apartemen">
+						<a class="navbar-list" onclick="document.getElementById('jual-apartemen').submit()">Apartemen</a>
+					</form>			
 					<a class="navbar-list" href="#">| Sewa</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
+					<form id="sewa-rumah" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Rumah">
+						<a class="navbar-list" onclick="document.getElementById('sewa-rumah').submit()">Rumah</a>
+					</form>			
+					<form id="sewa-apartemen" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Apartemen">
+						<a class="navbar-list" onclick="document.getElementById('sewa-apartemen').submit()">Apartemen</a>
+					</form>			
+					<form id="sewa-ruko" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Ruko">
+						<a class="navbar-list" onclick="document.getElementById('sewa-ruko').submit()">Ruko</a>
+					</form>			
+					<form id="sewa-villa" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Villa">
+						<a class="navbar-list" onclick="document.getElementById('sewa-villa').submit()">Villa</a>
+					</form>			
 				</div>
        </li>
       	<?php
@@ -73,56 +101,136 @@
    </ul>
    </nav>
 	<center>
-		<h1 class="font-color"><u>Sewa Jual Properti</u></h1>
+		<?php 
+			if($this->input->post('status_properti') == 'Jual' && $this->input->post('kategori_properti') == 'Rumah' ) 
+				{
+		?>
+					<h1 class="font-color"><u>Properti Rumah yang dijual</u></h1>
+		<?php 
+				} 
+			if($this->input->post('status_properti') == 'Jual' && $this->input->post('kategori_properti') == 'Ruko' ) 	
+				{		
+		?>
+					<h1 class="font-color"><u>Properti Ruko yang dijual</u></h1>
+		<?php 
+				} 
+			if($this->input->post('status_properti') == 'Jual' && $this->input->post('kategori_properti') == 'Apartemen' ) 			
+				{
+		?>
+					<h1 class="font-color"><u>Properti Apartemen yang dijual</u></h1>
+		<?php 
+				} 
+			if($this->input->post('status_properti') == 'Sewa' && $this->input->post('kategori_properti') == 'Rumah' ) 			
+				{
+		?>
+					<h1 class="font-color"><u>Properti Rumah yang disewa</u></h1>
+		<?php 
+				} 
+			if($this->input->post('status_properti') == 'Sewa' && $this->input->post('kategori_properti') == 'Apartemen' ) 			
+				{
+		?>
+					<h1 class="font-color"><u>Properti Apartemen yang disewa</u></h1>
+		<?php 
+				} 
+			if($this->input->post('status_properti') == 'Sewa' && $this->input->post('kategori_properti') == 'Ruko' ) 			
+				{
+		?>
+					<h1 class="font-color"><u>Properti Ruko yang disewa</u></h1>
+		<?php 
+				} 
+			if($this->input->post('status_properti') == 'Sewa' && $this->input->post('kategori_properti') == 'Villa' ) 			
+				{
+		?>
+					<h1 class="font-color"><u>Properti Villa yang disewa</u></h1>		
+		<?php 	
+				} 
+		?>			
 	</center>
 	<!-- Spacing -->
 	<div class="container" id="body">
 		<div class="content-bordered-box row-centered">
 			<!-- dropdown -->
-				<?php 
-				foreach ($properti->result() as $j)
+			<?php 
+			if($properti->result() != NULL)
 				{
-	 ?>
-			<div class="row" style="margin: 2%;" >
-				<div class="col-12" style="display: flex;">
-					<div class="col-5" style="height: 100%">
-						<?php	echo "<img class='img' src='".base_url("gambar/".$j->gambar)."' alt='properti'>";?>
-					</div>
-					<div class="col-4">
-						<ul class="navbar-list">
-							<li><h4 class="navbar-list">Nama Properti : <?php echo $j->nama_properti;?></h4></li>
-							<li></li><li></li>
-							<li><h5 class="navbar-list">Harga Properti : <?php echo $j->harga_properti;?></h5></li>
-							<li>Kategori Properti : <?php echo $j->kategori_properti;?></li>
-							<li>Status : <?php echo $j->status_properti;?></li>
-							<li>Lokasi : <?php echo $j->lokasi_properti;?></li>
-							<?php if($j->isBooked == 0) {?>
-								<li>Status Properti: <font style="color: green">Available</font></li>
-							<?php }else{ 
-									if($j->id_booker != 0 && $j->konfirmasi == 0) {?>
-								<li>Status Properti: <font style="color: orange">Waiting For Confirmation</font></li>
-							<?php }else{  ?>
-								<li>Status Properti: <font style="color: red">Booked</font></li>
-							<?php }
-									} ?>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<?php } ?> 
-			
+					$i=1;
+					foreach ($properti->result() as $j)
+						{ ?>
+							<div class="row" style="margin: 2%;" >
+								<div class="col-12" style="display: flex;">
+									<div class="col-5" style="height: 100%">
+										<?php	echo "<img class='img' src='".base_url("gambar/".$j->gambar)."' alt='properti'>";?>
+									</div>
+									<div class="col-7">
+										<form id="<?php echo $i; ?>" action='http://localhost/Hooneyan/index.php/Properti_Page/get_data' method='post'>
+										 <input type="hidden" name="id_properti" value="<?php echo $j->id_properti;?>">
+										 <input type="hidden" name="id_agen" value="<?php echo $j->id_agen;?>">
+											<ul class="navbar-list">
+												<li>
+													<h2><a class="font-color" style="margin: 0" onclick="document.getElementById('<?php echo $i; ?>').submit()">Nama Properti : <?php echo $j->nama_properti;?></a></h2>						
+												</li>
+												<li>
+													<h3 class="font-color" style="margin-bottom: 10px">Harga Properti : Rp.<?php echo $j->harga_properti;?>
+													</h3>
+												</li>
+												<li>Kategori Properti : <?php echo $j->kategori_properti;?></li>
+												<li>Status : <?php echo $j->status_properti;?></li>
+												<li>Lokasi : <?php echo $j->lokasi_properti;?></li>
+												<?php if($j->isBooked == 0) {?>
+													<li>Status Properti: <font style="color: green">Available</font></li>
+												<?php }else{ 
+														if($j->id_booker != 0 && $j->konfirmasi == 0) {?>
+													<li>Status Properti: <font style="color: orange">Waiting For Confirmation</font></li>
+												<?php }else{  ?>
+													<li>Status Properti: <font style="color: red">Booked</font></li>
+												<?php }
+														} ?>
+											</ul>
+										</form>
+									</div>
+								</div>
+							</div>
+			<?php $i++;
+					}
+				}
+			else
+				{ ?>
+					<br>
+					<center>
+						<h2 class="font-color">Tidak ada yang mengiklankan properti yang Anda cari</h2>
+					</center>
+			<?php 
+				} ?>
 			<!-- Spacing -->
 			<div class="row spacing"></div>
 		</div>
 	</div>
-
-
-   <!-- Footer -->
-  <div class="footer font-only" align="center">
-			<br>Copyright &copy; 2017 <br><br>
-			140810160054 - Ibnu Ahsani |
-			140810160004 - Ahsan Nurrijal |
-			140810179001 - Muhammad Affandi
-  </div>  
+	<?php 
+		if($properti->result() != NULL)
+			{
+	 ?>
+				<br><br><br><br><br><br>
+			   <!-- Footer -->
+			  <div class="footer font-only" align="center">
+						<br>Copyright &copy; 2017 <br><br>
+						140810160054 - Ibnu Ahsani |
+						140810160004 - Ahsan Nurrijal |
+						140810179001 - Muhammad Affandi
+			  </div>
+  <?php }
+  else
+  	{ ?>
+			<br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br>
+		   <!-- Footer -->
+		  <div class="footer font-only" align="center">
+					<br>Copyright &copy; 2017 <br><br>
+					140810160054 - Ibnu Ahsani |
+					140810160004 - Ahsan Nurrijal |
+					140810179001 - Muhammad Affandi
+		  </div>
+  <?php 
+		} 
+	?>  
 </body>
 </html>

@@ -73,8 +73,14 @@
 				{
 					$query = $this->db->get_where('agen', array('id' => $id_agen));
 					return $query;
-				}	
+				}
 
+			public function get_data_kontak($email)
+				{
+					$query = $this->db->get_where('list_kontak', array('email_agen_user' => $email));
+					return $query;
+				}
+				
 			public function book($id_properti, $id_booker)
 				{
 					$this->db->set('isBooked', 1, FALSE);

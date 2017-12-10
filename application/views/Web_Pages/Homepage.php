@@ -24,14 +24,42 @@
 				<a href="javascript:void(0)" class="dropbtn navbar-button">Menu</a>
 				<div class="dropdown-content">
 					<a class="navbar-list" href="#">| Jual</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
+					<form id="jual-rumah" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Jual">
+						<input type="hidden" name="kategori_properti" value="Rumah">
+						<a class="navbar-list" onclick="document.getElementById('jual-rumah').submit()">Rumah</a>
+					</form>
+					<form id="jual-ruko" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Jual">
+						<input type="hidden" name="kategori_properti" value="Ruko">
+						<a class="navbar-list" onclick="document.getElementById('jual-ruko').submit()">Ruko</a>
+					</form>			
+					<form id="jual-apartemen" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Jual">
+						<input type="hidden" name="kategori_properti" value="Apartemen">
+						<a class="navbar-list" onclick="document.getElementById('jual-apartemen').submit()">Apartemen</a>
+					</form>			
 					<a class="navbar-list" href="#">| Sewa</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Rumah</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Apartemen</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Ruko</a>
-					<a class="navbar-list" href="<?php echo base_url(); ?>index.php/JualSewa_Page">Villa</a>
+					<form id="sewa-rumah" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Rumah">
+						<a class="navbar-list" onclick="document.getElementById('sewa-rumah').submit()">Rumah</a>
+					</form>			
+					<form id="sewa-apartemen" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Apartemen">
+						<a class="navbar-list" onclick="document.getElementById('sewa-apartemen').submit()">Apartemen</a>
+					</form>			
+					<form id="sewa-ruko" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Ruko">
+						<a class="navbar-list" onclick="document.getElementById('sewa-ruko').submit()">Ruko</a>
+					</form>			
+					<form id="sewa-villa" action="<?php echo base_url(); ?>index.php/JualSewa_Page/jual_sewa" method="post">
+						<input type="hidden" name="status_properti" value="Sewa">
+						<input type="hidden" name="kategori_properti" value="Villa">
+						<a class="navbar-list" onclick="document.getElementById('sewa-villa').submit()">Villa</a>
+					</form>			
 				</div>
 			</li>
 			<?php
