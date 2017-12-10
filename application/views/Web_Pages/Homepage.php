@@ -100,46 +100,124 @@
    <div class="row spacing"></div>
   <!-- Iklan Terbaru -->
   <h1 class="font-color" id="kiri"><u>Terbaru</u></h1><br>
-	  <div class="row" style=" margin-left:100px;">
-		  <?php
-				if(!empty($properti))
-					{ 
-						// Jika data pada database tidak sama dengan empty (alias ada datanya)
-						foreach ($properti->result() as $prop)
-							{
-								echo "<form action='http://localhost/Hooneyan/index.php/Properti_Page/get_data' method='post'>"; 
-								echo "<div class='row' style=' margin-left:30px;'>";
-							  echo " 	<div class='col-sm-4'>";
-							  echo "		<img src='".base_url("gambar/".$prop->gambar)."' alt='rumah' style='width: 304px; height: 228px;'>";
-							  echo "   		<br>";
-							  echo "			<input type='hidden' name='id_properti' value='".$prop->id_properti."'>";
-							  echo "			<input type='hidden' name='id_agen' value='".$prop->id_agen."'>";
- 							  echo "   		<input class='linkButton' type='submit' value='".$prop->nama_properti."'>";
-							  echo "   		<h4 class='font-color'>".$prop->lokasi_properti."</h4>";
-							if($prop->isBooked == 0)
-								echo "			<p class='font-color' style='font-size: 15px'>Status Properti: <font style='color: green'>Available</font></p>";
-							else{ 
-										if($prop->id_booker != 0 && $prop->konfirmasi == 0) 
-											{
-												echo "<p class='font-color' style='font-size: 15px'>Status Properti: <font style='color: orange'>Waiting For Confirmation</font></p>";
-											}
-										else
-											{  
-												echo "<p class='font-color' style='font-size: 15px'>Status Properti: <font style='color: red'>Booked</font></p>";
-											}
-									}
-							  echo " 	</div>
-							  			</div>
-  										</form>";
-							}
-					}
-				else
-					{ 
-						// Jika data tidak ada
-						echo "<p>Data tidak ada</p>";
-					}
-			?>
+	  <div class="row">
+	  	<div class="col-1" style="margin-right: 50px"></div>
+		  <?php 
+		  	$i=1;
+		  	if(!empty($properti))
+		  		{
+		  			foreach($properti->result() as $prop)
+		  				{
+		  					if($i<4)
+		  					{ ?>
+			  					<div class="col-3">
+										<form id="<?php echo $i; ?>" action='http://localhost/Hooneyan/index.php/Properti_Page/get_data' method='post'>
+												<img src="<?php echo base_url(); ?>/gambar/<?php echo $prop->gambar;?>" alt='rumah' style='width: 304px; height: 228px;'>
+												<br>
+												<input type='hidden' name='id_properti' value='<?php echo $prop->id_properti;?>'>
+												<input type='hidden' name='id_agen' value='<?php echo $prop->id_agen;?>'>
+												<h2><a class="font-color" style="margin: 0" onclick="document.getElementById('<?php echo $i; ?>').submit()"><?php echo $prop->nama_properti;?></a></h2>
+												<h4 class='font-color' style="margin-bottom: 0"><?php echo $prop->lokasi_properti;?></h4>
+												<?php 
+													if($prop->isBooked == 0) 
+														{ ?>
+															<font class='font-color' style='font-size: 15px'>
+																Status Properti: <font style='color: green'>Available</font>
+															</font>
+	 											<?php 
+	 													}
+	 												else
+	 													{ 
+															if($prop->id_booker != 0 && $prop->konfirmasi == 0) 
+																{	?>
+																	<font class='font-color' style='font-size: 15px'>
+																		Status Properti: <font style='color: orange'>Waiting For Confirmation</font>
+																	</font>						
+	 													<?php 
+	 															}
+	 														else
+	 															{ ?>
+																	<font class='font-color' style='font-size: 15px'>
+																		Status Properti: <font style='color: red'>Booked</font>
+																	</font>
+	 															<?php
+	 															}
+	 													} 
+	 											?>
+										</form>
+			  					</div>
+		  				<?php 
+		  					}
+		  					$i++;
+		  				}
+		  		}
+		  	else
+		  		{ ?>
+						<p>Data tidak ada</p>
+		  		<?php
+		  		}
+		   ?>
+			<div class="col-1"></div>
 	  </div>
+	  <br><br>
+	  <div class="row">
+	  	<div class="col-1"  style="margin-right: 50px"></div>
+		  <?php 
+		  	$j=1;
+		  	if(!empty($properti))
+		  		{
+		  			foreach($properti->result() as $prop)
+		  				{
+		  					if($j<4)
+		  						{
+		  							$j++;
+		  						}
+		  					else
+		  					{ ?>
+			  					<div class="col-3">
+										<form id="<?php echo $j; ?>" action='http://localhost/Hooneyan/index.php/Properti_Page/get_data' method='post'>
+												<img src="<?php echo base_url(); ?>/gambar/<?php echo $prop->gambar;?>" alt='rumah' style='width: 304px; height: 228px;'>
+												<br>
+												<input type='hidden' name='id_properti' value='<?php echo $prop->id_properti;?>'>
+												<input type='hidden' name='id_agen' value='<?php echo $prop->id_agen;?>'>
+												<h2><a class="font-color" style="margin: 0" onclick="document.getElementById('<?php echo $j; ?>').submit()"><?php echo $prop->nama_properti;?></a></h2>
+												<h4 class='font-color' style="margin-bottom: 0"><?php echo $prop->lokasi_properti;?></h4>
+												<?php 
+													if($prop->isBooked == 0) 
+														{ ?>
+															<font class='font-color' style='font-size: 15px'>
+																Status Properti: <font style='color: green'>Available</font>
+															</font>
+	 											<?php 
+	 													}
+	 												else
+	 													{ 
+															if($prop->id_booker != 0 && $prop->konfirmasi == 0) 
+																{	?>
+																	<font class='font-color' style='font-size: 15px'>
+																		Status Properti: <font style='color: orange'>Waiting For Confirmation</font>
+																	</font>						
+	 													<?php 
+	 															}
+	 														else
+	 															{ ?>
+																	<font class='font-color' style='font-size: 15px'>
+																		Status Properti: <font style='color: red'>Booked</font>
+																	</font>
+	 															<?php
+	 															}
+	 													} 
+	 											?>
+										</form>
+			  					</div>
+		  				<?php 
+		  					}
+		  				}
+		  		}
+		   ?>
+			<div class="col-1"></div>
+	  </div>
+		<br><br>
    <!-- Spacing -->
    <div class="row spacing"></div>
    <!-- Footer -->

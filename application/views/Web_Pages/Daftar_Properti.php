@@ -118,7 +118,7 @@
 						<tr>
 							<td valign="top">
 								<label class="font-color">Nama Properti</label><br>
-				  			<input name="nama_properti" type="textarea" placeholder="Nama Properti">
+				  			<input class="textbox" name="nama_properti" type="textarea" placeholder="Nama Properti">
 							</td>
 							<td class="spaced-col"></td>
 							<td>
@@ -130,7 +130,7 @@
 						<tr>
 							<td>
 								<label class="font-color">Kategori Properti</label><br>
-			  				<select name="kategori_properti">
+			  				<select class="textbox" name="kategori_properti">
 									<option value="Rumah">Rumah</option>
 									<option value="Ruko">Ruko</option>
 									<option value="Apartemen">Apartemen</option>
@@ -140,7 +140,7 @@
 							<td class="spaced-col"></td>
 							<td>
 								<label class="font-color">Opsi Jual</label><br>
-								<select name="status_properti">
+								<select class="textbox" name="status_properti">
 									<option value="Jual">Jual</option>
 									<option value="Sewa">Sewa</option>
 								</select>
@@ -150,7 +150,7 @@
 						<tr>
 							<td valign="top">
 								<label class="font-color">Kondisi Properti</label><br>
-				  			<select name="kondisi_properti">
+				  			<select class="textbox" name="kondisi_properti">
 									<option value="Bagus">Bagus</option>
 									<option value="Layak">Layak</option>
 									<option value="Kurang">Kurang</option>
@@ -158,56 +158,56 @@
 							</td>
 							<td class="spaced-col"></td>
 							<td>
-	  					<label class="font-color">Lokasi Properti</label><br>
-							<textarea	 rows="5" cols="35" name="lokasi_properti" form="properti_data"></textarea>								
+		  					<label class="font-color">Lokasi Properti</label><br>
+								<textarea	 rows="5" cols="35" name="lokasi_properti" form="properti_data"></textarea>	
 							</td>
 						</tr>
 						<tr class="spaced-row"></tr>
 						<tr>
 							<td>
 			  				<label class="font-color">Luas Properti</label><br>
-			  				<input name="luas_properti" type="textarea" placeholder="Satuan m2">
+			  				<input class="textbox" name="luas_properti" type="textarea" placeholder="Satuan m2">
 							</td>
 							<td class="spaced-col"></td>
 							<td>
 			  				<label class="font-color">Luas Tanah</label><br>
-			  				<input name="luas_tanah" type="textarea" placeholder="Satuan m2">								
+			  				<input class="textbox" name="luas_tanah" type="textarea" placeholder="Satuan m2">								
 							</td>
 						</tr>
 						<tr class="spaced-row"></tr>
 						<tr>
 							<td>
 			  				<label class="font-color">Jumlah Lantai</label><br>
-			  				<input type="number" name="jumlah_lantai" placeholder="Masukkan dalam Angka">
+			  				<input class="textbox" type="number" name="jumlah_lantai" placeholder="Masukkan dalam Angka">
 							</td>
 							<td class="spaced-col"></td>
 							<td>
 			  				<label class="font-color">Daya Listrik</label><br>
-			  				<input type="textarea" name="daya_listrik" placeholder="Satuan Watt">								
+			  				<input class="textbox" type="textarea" name="daya_listrik" placeholder="Satuan Watt">								
 							</td>
 						</tr>
 						<tr class="spaced-row"></tr>
 						<tr>
 							<td>
 			  				<label class="font-color">Jumlah Kamar</label><br>
-			  				<input type="number" name="jumlah_ktidur" placeholder="Masukkan dalam Angka">								
+			  				<input class="textbox" type="number" name="jumlah_ktidur" placeholder="Masukkan dalam Angka">								
 							</td>
 							<td class="spaced-col"></td>
 							<td>
 			  				<label class="font-color">Jumlah Kamar Mandi</label><br>
-			  				<input type="number" name="jumlah_kmandi" placeholder="Masukkan dalam Angka">								
+			  				<input class="textbox" type="number" name="jumlah_kmandi" placeholder="Masukkan dalam Angka">								
 							</td>
 						</tr>
 						<tr class="spaced-row"></tr>
 						<tr>
 							<td>
 			  				<label class="font-color">Jumlah Garasi</label><br>
-			  				<input type="number" name="jumlah_garasi" placeholder="Masukkan dalam Angka">								
+			  				<input class="textbox" type="number" name="jumlah_garasi" placeholder="Masukkan dalam Angka">								
 							</td>
 							<td class="spaced-col"></td>
 							<td>
 			  				<label class="font-color">Harga Properti</label><br>
-			  				<input type="textarea" name="harga_properti" placeholder="Rp.100000000">								
+			  				<input class="textbox" type="textarea" name="harga_properti" placeholder="Rp.100000000">								
 							</td>
 						</tr>
 						<tr class="spaced-row"></tr>
@@ -232,7 +232,7 @@
 	<br><br><br><br><br><br>
 	<br><br><br><br><br><br>
 	<br><br><br><br><br><br>
-	<br><br><br><br><br>
+	<br><br><br><br><br><br><br>
    <!-- Footer -->
   <div class="footer font-only" align="center">
 			<br>Copyright &copy; 2017 <br><br>
