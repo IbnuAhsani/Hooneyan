@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final4.css"> 
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final5.css"> 
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button, 
@@ -100,10 +100,8 @@
 			<?php } ?>
    </ul>
    </nav>
-
 	<!-- Spacing -->
 	<br>
-
 	<!-- Parent Div -->
 	<div class="row" style="height: 880px; color: #062F4f">
 		<div class="col-1"></div>
@@ -158,18 +156,45 @@
 			</div>			
 		</div>
 		<!-- Right Colomn -->
-		<div class="col-3 round1" style="height: 375px">
-			<?php 
-				foreach ($agen->result() as $ag) 
-					{ ?>
+		<?php 
+			foreach ($agen->result() as $ag) 
+				{ 
+					foreach ($properti->result() as $prop) 
+				{
+					$email=$this->session->userdata('email');
+					if(!$email)
+						{ ?>
+							<div class="col-3 round1" style="height: 310px">
+						<?php
+						}
+					elseif($email && $this->session->userdata('id') != $ag->id)
+						{ ?>
+							<div class="col-3 round1" style="height: 370px">
+						<?php
+						}
+					elseif($this->session->userdata('id') != $ag->id && $prop->isBooked == 1)
+						{?>
+							<div class="col-3 round1" style="height: 310px">
+						<?php
+						}
+					elseif($this->session->userdata('id') == $ag->id && $prop->isBooked == 0)
+						{ ?>
+							<div class="col-3 round1" style="height: 370px">
+						<?php
+						}
+					else
+						{?>
+							<div class="col-3 round1" style="height: 435px">
+						<?php
+						}
+				 ?>
 			<form action="<?php echo base_url('index.php/Properti_Page/book_properti'); ?>" style="text-align: center; margin: 0 auto " method="post">
 				<!-- <img src="Profile_pic.png"> -->
 				<img src="<?php echo base_url(); ?>/assets/pictures/Profile_pic.png" height="144px" width="144px">
-				<?php 
-					foreach ($properti->result() as $prop) 
-				{ ?>
-					<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
-					<input type="hidden" name="harga_properti" value="<?php echo $prop->harga_properti;?>">
+				<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+				<input type="hidden" name="harga_properti" value="<?php echo $prop->harga_properti;?>">
+				<input type="hidden" name="tipe_akun" value="<?php echo $ag->tipe_akun;?>">
+				<input type="hidden" name="email" value="<?php echo $ag->email;?>">
 				<?php } ?>
 					<input type="hidden" name="id_agen" value="<?php echo $ag->id;?>">
 					<input type="hidden" name="id_booker" value="<?php echo $this->session->userdata('id');?>">
@@ -178,26 +203,28 @@
 				<?php 
 				$email=$this->session->userdata('email');
 				if(!$email)
-					{?>
-						<input type="hidden" value="Book">
-					<?php
-					}
+					{}
 				else
 					{
-						if($this->session->userdata('id') != $ag->id)
-							{
-								if($prop->isBooked == 0) {?>
+						if($this->session->userdata('id') != $ag->id && $prop->isBooked == 0)
+							{ ?>
 									<input class="button button-blue" type="submit" name="book" value="Book">
-								<?php }else{ ?>
-									<input type="hidden" value="Book">
-								<?php }
+								<?php 
 							}
 					}	 
-				if($this->session->userdata('id') == $ag->id && $prop->isBooked != 0)
-					{	?>
-						<input class="button button-green" type="submit" name="confirm" value="Confirm">
-						<input class="button button-red" type="submit" name="deny" value="Deny">
+				if($this->session->userdata('id') == $ag->id)
+					{	
+						?>
+						<input class="button button-orange" type="submit" name="edit" value="Edit Properti">
+						<input class="button button-maroon" type="submit" name="delete" value="Hapus Properti"><br>
+						<?php 
+							if($prop->isBooked != 0)
+								{ ?>
+									<font class="font-color">Konfirmasi Booking:</font><br>		
+									<input class="button button-green" type="submit" name="confirm" value="Konfirmasi">
+									<input class="button button-red" type="submit" name="deny" value="Batalkan">
 					<?php
+								}
 					}
 				?>
 			</form>

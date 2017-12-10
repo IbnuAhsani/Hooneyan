@@ -105,6 +105,13 @@
 					$this->db->update('properti');
 				}
 
+			public function delete($id_properti, $id_agen)
+				{
+					$array = array('id_properti' => $id_properti, 'id_agen' => $id_agen);
+					$this->db->where($array);
+					$this->db->delete('properti');
+				}
+
 			public function transaction($id_user, $id_properti, $harga_properti)
 				{
 					$data = array(
