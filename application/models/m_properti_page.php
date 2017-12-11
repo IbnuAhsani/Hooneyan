@@ -84,7 +84,7 @@
 			public function book($id_properti, $id_booker)
 				{
 					$this->db->set('isBooked', 1, FALSE);
-					$this->db->set('id_booker', $id_booker, FALSE);
+					$this->db->set('id_booker', $id_booker);
 					$this->db->where('id_properti', $id_properti);
 					$this->db->update('properti');
 				}
@@ -128,5 +128,28 @@
 					$this->db->where($array);
 					$this->db->delete('transaksi');
 				}	
+
+			public function update($id_properti, $upload)
+				{
+					$data = array(
+						'nama_properti'=>$this->input->post('nama_properti'),
+						'desc_properti'=>$this->input->post('desc_properti'),
+						'kategori_properti'=>$this->input->post('kategori_properti'),
+						'lokasi_properti'=>$this->input->post('lokasi_properti'),
+						'luas_properti'=>$this->input->post('luas_properti'),
+						'luas_tanah'=>$this->input->post('luas_tanah'),
+						'harga_properti'=>$this->input->post('harga_properti'),
+						'status_properti'=>$this->input->post('status_properti'),
+						'kondisi_properti'=>$this->input->post('kondisi_properti'),
+						'jumlah_ktidur'=>$this->input->post('jumlah_ktidur'),
+						'jumlah_kmandi'=>$this->input->post('jumlah_kmandi'),
+						'jumlah_garasi'=>$this->input->post('jumlah_garasi'),
+						'jumlah_lantai'=>$this->input->post('jumlah_lantai'),
+						'daya_listrik'=>$this->input->post('daya_listrik'),
+						'gambar' => $upload['file']['file_name']
+						);
+					$this->db->where('id_properti', $id_properti);
+					$this->db->update('properti', $data);					
+				}			
 		}
 ?>

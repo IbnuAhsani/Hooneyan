@@ -65,13 +65,35 @@
 						$id_properti = $this->input->post('id_properti');						
 						$id_agen = $this->input->post('id_agen');	
 						$tipe_akun = $this->input->post('tipe_akun');	
-						$email = $this->input->post('id_agen');	
+						$email = $this->input->post('email');	
 						$this->m_properti_page->delete($id_properti, $id_agen);
 						$this->load->model('m_profile_page');
 						$data["properti"] = $this->m_profile_page->tampilByUser($id_agen);
 						$data["user"] = $this->m_profile_page->get_data_user($tipe_akun, $id_agen);
 						$data["kontak"] = $this->m_profile_page->get_data_kontak($email);
 						$this->load->view('Web_Pages/Profile_Page', $data);
-					}					
+					}												
 			}
+
+		public function edit_properti()
+			{
+				$id_properti = $this->uri->segment(3);
+				$data["properti"] = $this->m_properti_page->pilih($id_properti);
+				$this->load->view('Web_Pages/Edit_Daftar_Properti', $data);
+			}
+
+		public function update_data()
+			{
+				$id_properti = $this->input->post('id_properti');
+				$id_agen = $this->input->post('id_agen');	
+				$tipe_akun = $this->input->post('tipe_akun');	
+				$email = $this->input->post('email');	
+				$upload = $this->m_properti_page->upload();
+				$this->m_properti_page->update($id_properti, $upload);
+				$this->load->model('m_profile_page');
+				$data["properti"] = $this->m_profile_page->tampilByUser($id_agen);
+				$data["user"] = $this->m_profile_page->get_data_user($tipe_akun, $id_agen);
+				$data["kontak"] = $this->m_profile_page->get_data_kontak($email);
+				$this->load->view('Web_Pages/Profile_Page', $data);				
+			}			
 	}

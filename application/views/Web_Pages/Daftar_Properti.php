@@ -183,7 +183,7 @@
 							<td class="spaced-col"></td>
 							<td>
 			  				<label class="font-color">Daya Listrik</label><br>
-			  				<input class="textbox" type="textarea" name="daya_listrik" placeholder="Satuan Watt">								
+			  				<input class="textbox" type="textarea" name="daya_listrik" placeholder="Satuan KiloWatt">								
 							</td>
 						</tr>
 						<tr class="spaced-row"></tr>

@@ -58,12 +58,6 @@ li.login{
   font-family: 'Lobster', cursive;
 }
 
-/*Logo Img*/
-li img{
-  height: 42px; width: 42px;
-}
-
-
 /*Dropdown Button*/
 li a, .dropbtn {
     display: inline-block;

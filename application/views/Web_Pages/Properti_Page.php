@@ -111,9 +111,7 @@
 			foreach ($properti->result() as $prop) 
 				{ ?>
 			<div class="row">
-			<?php 
-			  	echo"<img src='".base_url("gambar/".$prop->gambar)."' style=width:785px;height:400px; >";		
-			?>
+			  <img src='<?php echo base_url();?>/gambar/<?php echo $prop->gambar;?>' style='width:770px; height:400px; margin-left:15px'>		
 			</div>
 			<br>
 			 <div class="round1" style="padding:20px;">
@@ -141,13 +139,13 @@
 				</div>
 				<div class="row">
 					<div class="col-6 font-color" style="font-size: 18px"><br>
-						<font>Luas Bangunan: <?php echo $prop->luas_properti;?></font><br>
-						<font>Luas Tanah: <?php echo $prop->luas_tanah;?></font><br>
+						<font>Luas Bangunan: <?php echo $prop->luas_properti;?>m2</font><br>
+						<font>Luas Tanah: <?php echo $prop->luas_tanah;?>m2</font><br>
 						<font>Kamar Tidur: <?php echo $prop->jumlah_ktidur;?></font><br>
 						<font>Kamar Mandi: <?php echo $prop->jumlah_kmandi;?></font><br>
 					</div>
 					<div class="col-6 font-color" style="font-size: 18px"><br>
-						<font>Daya Listrik: <?php echo $prop->daya_listrik;?></font><br>
+						<font>Daya Listrik: <?php echo $prop->daya_listrik;?>kW</font><br>
 						<font>Jumlah Lantai: <?php echo $prop->jumlah_lantai;?></font><br>
 						<font>Kondisi: <?php echo $prop->kondisi_properti;?></font><br>
 					</div>
@@ -160,46 +158,56 @@
 			foreach ($agen->result() as $ag) 
 				{ 
 					foreach ($properti->result() as $prop) 
-				{
-					$email=$this->session->userdata('email');
-					if(!$email)
-						{ ?>
-							<div class="col-3 round1" style="height: 310px">
-						<?php
-						}
-					elseif($email && $this->session->userdata('id') != $ag->id)
-						{ ?>
-							<div class="col-3 round1" style="height: 370px">
-						<?php
-						}
-					elseif($this->session->userdata('id') != $ag->id && $prop->isBooked == 1)
-						{?>
-							<div class="col-3 round1" style="height: 310px">
-						<?php
-						}
-					elseif($this->session->userdata('id') == $ag->id && $prop->isBooked == 0)
-						{ ?>
-							<div class="col-3 round1" style="height: 370px">
-						<?php
-						}
-					else
-						{?>
-							<div class="col-3 round1" style="height: 435px">
-						<?php
-						}
-				 ?>
-			<form action="<?php echo base_url('index.php/Properti_Page/book_properti'); ?>" style="text-align: center; margin: 0 auto " method="post">
-				<!-- <img src="Profile_pic.png"> -->
-				<img src="<?php echo base_url(); ?>/assets/pictures/Profile_pic.png" height="144px" width="144px">
-				<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
-				<input type="hidden" name="harga_properti" value="<?php echo $prop->harga_properti;?>">
-				<input type="hidden" name="tipe_akun" value="<?php echo $ag->tipe_akun;?>">
-				<input type="hidden" name="email" value="<?php echo $ag->email;?>">
-				<?php } ?>
-					<input type="hidden" name="id_agen" value="<?php echo $ag->id;?>">
-					<input type="hidden" name="id_booker" value="<?php echo $this->session->userdata('id');?>">
-				<h2 class="font-color">Nama Agen<br><?php echo $ag->nama;?></h2>
-				<h4 class="font-color">No Kontak<br><?php echo $ag->no_kontak;?></h4>
+						{
+							$email=$this->session->userdata('email');
+							if(!$email) //lihat iklan tanpa sign-in terlebih dahulu
+								{ ?>
+									<div class="col-3 round1" style="height: 310px">
+								<?php
+								}
+							//sudah sign-in tpi non-agen dan properti sudah dibook
+							elseif($email && $this->session->userdata('id') != $ag->id && $prop->isBooked == 1) 
+								{ ?>
+									<div class="col-3 round1" style="height: 315px">
+								<?php
+								}
+							//sudah sign-in tpi non-agen dan properti belum dibook
+							elseif($email && $this->session->userdata('id') != $ag->id && $prop->isBooked == 0)
+								{ ?>
+									<div class="col-3 round1" style="height: 370px">
+								<?php
+								}
+							//sudah sign-in sebagai agen dan properti belum dibook
+							elseif($this->session->userdata('id') == $ag->id && $prop->isBooked == 0)
+								{ ?>
+									<div class="col-3 round1" style="height: 370px">
+								<?php
+								}
+							//sudah sign-in sebagai agen dan properti belum dibook
+							elseif($this->session->userdata('id') == $ag->id && $prop->isBooked == 1)
+								{ ?>
+									<div class="col-3 round1" style="height: 435px">
+								<?php
+								}
+							else
+								{?>
+									<div class="col-3 round1" style="height: 435px">
+								<?php
+								}								
+						 ?>
+						<!-- <img src="Profile_pic.png"> -->
+				<div class="row" style="margin-left: 25%">
+					<img src="<?php echo base_url(); ?>/assets/pictures/Profile_pic.png" height="144px" width="144px">
+				</div>
+			<ul>
+				<input type="hidden" name="id_agen" value="<?php echo $ag->id;?>">
+				<input type="hidden" name="id_booker" value="<?php echo $this->session->userdata('id');?>">
+				<li align="center">
+					<h2 class="font-color">Nama Agen<br><?php echo $ag->nama;?></h2>
+				</li>
+				<li align="center">
+					<h4 class="font-color">No Kontak<br><?php echo $ag->no_kontak;?></h4>
+				</li>
 				<?php 
 				$email=$this->session->userdata('email');
 				if(!$email)
@@ -208,28 +216,61 @@
 					{
 						if($this->session->userdata('id') != $ag->id && $prop->isBooked == 0)
 							{ ?>
-									<input class="button button-blue" type="submit" name="book" value="Book">
+								<li align="center">
+									<form action="<?php echo base_url('index.php/Properti_Page/book_properti'); ?>" style="text-align: center; margin: 0 auto " method="post">
+										<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+										<input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">
+										<input type="hidden" name="id_booker" value="<?php echo $this->session->userdata('id');?>">
+										<input type="hidden" name="harga_properti" value="<?php echo $prop->harga_properti;?>">
+										<input class="button button-blue" type="submit" name="book" value="Book">
+									</form>
+								</li>
 								<?php 
 							}
 					}	 
 				if($this->session->userdata('id') == $ag->id)
 					{	
 						?>
-						<input class="button button-orange" type="submit" name="edit" value="Edit Properti">
-						<input class="button button-maroon" type="submit" name="delete" value="Hapus Properti"><br>
+						<li align="center" style="display: flex;">
+							<form action="<?php echo base_url()."index.php/Properti_Page/edit_properti/".$prop->id_properti;?>" style="text-align: center; margin: 0 auto " method="post">
+								<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+								<input type="hidden" name="harga_properti" value="<?php echo $prop->harga_properti;?>">
+								<input type="hidden" name="tipe_akun" value="<?php echo $ag->tipe_akun;?>">
+								<input type="hidden" name="email" value="<?php echo $ag->email;?>">
+								<input class="button button-orange" type="submit" name="edit" value="Edit Properti">
+							</form>
+							<form action="<?php echo base_url('index.php/Properti_Page/book_properti'); ?>" style="text-align: center; margin: 0 auto " method="post">
+								<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+								<input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">
+								<input type="hidden" name="tipe_akun" value="<?php echo $this->session->userdata('tipe_akun');?>">
+								<input type="hidden" name="email" value="<?php echo $this->session->userdata('email');?>">
+								<input class="button button-maroon" type="submit" name="delete" value="Hapus Properti"><br>
+							</form>
+						</li>
 						<?php 
 							if($prop->isBooked != 0)
 								{ ?>
-									<font class="font-color">Konfirmasi Booking:</font><br>		
-									<input class="button button-green" type="submit" name="confirm" value="Konfirmasi">
-									<input class="button button-red" type="submit" name="deny" value="Batalkan">
+									<li align="center">
+										<font class="font-color">Konfirmasi Booking:</font><br>		
+										<form action="<?php echo base_url('index.php/Properti_Page/book_properti'); ?>" style="text-align: center; margin: 0 auto " method="post">
+											<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+											<input type="hidden" name="id_agen" value="<?php echo $this->session->userdata('id');?>">
+											<input type="hidden" name="id_booker" value="<?php echo $prop->id_booker;?>">
+											<input type="hidden" name="harga_properti" value="<?php echo $prop->harga_properti;?>">
+											<input type="hidden" name="tipe_akun" value="<?php echo $ag->tipe_akun;?>">
+											<input type="hidden" name="email" value="<?php echo $ag->email;?>">									
+											<input class="button button-green" type="submit" name="confirm" value="Konfirmasi">
+											<input class="button button-red" type="submit" name="deny" value="Batalkan">
+										</form>
+									</li>
 					<?php
 								}
 					}
 				?>
-			</form>
+		<?php } ?>
 			<?php } ?> 
 		<?php } ?>
+			</ul>
 		</div>
 		<div class="col-1"></div>
 	</div>
