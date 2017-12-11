@@ -12,30 +12,45 @@
 			public function get_data_user($tipe_akun, $id)
 				{
 					if($tipe_akun == 1)
-					{
-						$query = $this->db->get_where('agen', array('id' => $id));
-						return $query;
-					}
+						{
+							$query = $this->db->get_where('agen', array('id' => $id));
+							return $query;
+						}
 					else
-					{
-						$query = $this->db->get_where('user', array('id' => $id));
-						return $query;
-					}
+						{
+							$query = $this->db->get_where('user', array('id' => $id));
+							return $query;
+						}
 				}
 
-			public function get_data_kontak($email)
+			public function get_data_kontak($tipe_akun, $id)
 				{
-					$query = $this->db->get_where('list_kontak', array('email_agen_user' => $email));
-					return $query;
+					if($tipe_akun == 1)
+						{
+							$query = $this->db->get_where('kontak_agen', array('id_agen' => $id));
+							return $query;
+						}
+					else
+						{
+							$query = $this->db->get_where('kontak_user', array('id_user' => $id));
+							return $query;
+						}
 				}
 
-			public function tampilByUser($id_agen)
+			public function tampilByUser($tipe_akun, $id_agen)
 				{
-					$this->db->select('*');
-					$this->db->from('properti');
-					$this->db->where('id_agen', $id_agen);
-					$this->db->order_by('id_properti', 'desc');
-					return $properti = $this->db->get();
+					if($tipe_akun == 1)
+						{
+							$this->db->select('*');
+							$this->db->from('properti');
+							$this->db->where('id_agen', $id_agen);
+							$this->db->order_by('id_properti', 'desc');
+							return $properti = $this->db->get();
+						}
+					else
+						{
+							return NULL;
+						}
 				}
 
 			public function pilih($id_properti)

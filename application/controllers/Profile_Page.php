@@ -24,12 +24,11 @@
 
 		public function tampil_data()
 			{
-				$id_agen = $this->session->userdata('id');
+				$id = $this->session->userdata('id');
 				$tipe_akun = $this->session->userdata('tipe_akun');
-				$email = $this->session->userdata('email');
-				$data["properti"] = $this->m_profile_page->tampilByUser($id_agen);
-				$data["user"] = $this->m_profile_page->get_data_user($tipe_akun, $id_agen);
-				$data["kontak"] = $this->m_profile_page->get_data_kontak($email);
+				$data["properti"] = $this->m_profile_page->tampilByUser($tipe_akun, $id);
+				$data["user"] = $this->m_profile_page->get_data_user($tipe_akun, $id);
+				$data["kontak"] = $this->m_profile_page->get_data_kontak($tipe_akun, $id);
 				$this->load->view('Web_Pages/Profile_Page', $data);
 			}
 

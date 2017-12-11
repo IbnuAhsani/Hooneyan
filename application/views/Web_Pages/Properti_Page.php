@@ -162,36 +162,36 @@
 							$email=$this->session->userdata('email');
 							if(!$email) //lihat iklan tanpa sign-in terlebih dahulu
 								{ ?>
-									<div class="col-3 round1" style="height: 310px">
+									<div class="col-3 round1" style="height: 330px">
 								<?php
 								}
 							//sudah sign-in tpi non-agen dan properti sudah dibook
 							elseif($email && $this->session->userdata('id') != $ag->id && $prop->isBooked == 1) 
 								{ ?>
-									<div class="col-3 round1" style="height: 315px">
+									<div class="col-3 round1" style="height: 335px">
 								<?php
 								}
 							//sudah sign-in tpi non-agen dan properti belum dibook
 							elseif($email && $this->session->userdata('id') != $ag->id && $prop->isBooked == 0)
 								{ ?>
-									<div class="col-3 round1" style="height: 370px">
+									<div class="col-3 round1" style="height: 390px">
 								<?php
 								}
 							//sudah sign-in sebagai agen dan properti belum dibook
 							elseif($this->session->userdata('id') == $ag->id && $prop->isBooked == 0)
 								{ ?>
-									<div class="col-3 round1" style="height: 370px">
+									<div class="col-3 round1" style="height: 390px">
 								<?php
 								}
-							//sudah sign-in sebagai agen dan properti belum dibook
+							//sudah sign-in sebagai agen dan properti sudah dibook
 							elseif($this->session->userdata('id') == $ag->id && $prop->isBooked == 1)
 								{ ?>
-									<div class="col-3 round1" style="height: 435px">
+									<div class="col-3 round1" style="height: 455px">
 								<?php
 								}
 							else
 								{?>
-									<div class="col-3 round1" style="height: 435px">
+									<div class="col-3 round1" style="height: 455px">
 								<?php
 								}								
 						 ?>
@@ -206,7 +206,16 @@
 					<h2 class="font-color">Nama Agen<br><?php echo $ag->nama;?></h2>
 				</li>
 				<li align="center">
-					<h4 class="font-color">No Kontak<br><?php echo $ag->no_kontak;?></h4>
+					<h4 class="font-color">No Kontak<br>
+						<?php 
+							foreach($kontak->result() as $kntk)
+								{
+									echo $kntk->no_kontak;?>
+									<br>
+						<?php
+								}
+						 ?>
+					</h4>
 				</li>
 				<?php 
 				$email=$this->session->userdata('email');

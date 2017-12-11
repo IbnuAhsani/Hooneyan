@@ -3,10 +3,10 @@
 		{
 			 public function __construct()
 				{
-		         parent::__construct();
+		        parent::__construct();
 		   			$this->load->helper('url');
 		   	 		$this->load->model('user_model');
-					$this->load->library('session');
+						$this->load->library('session');
 				}	
 
 			public function get_email()
@@ -21,6 +21,18 @@
 					 // print_r($arr);
 				}
 
+			public function get_id_agen($email)
+				{
+					$query = $this->db->get_where('agen', array('email' => $email));
+					return $query;
+				}
+
+			public function get_id_user($email)
+				{
+					$query = $this->db->get_where('user', array('email' => $email));
+					return $query;
+				}
+
 			public function register_user($user)
 				{
 					$this->db->insert('user', $user);
@@ -31,9 +43,14 @@
 					$this->db->insert('agen', $agen);
 				}
 
-			public function register_kontak($kontak)
+			public function register_kontak_agen($kontak)
 				{
-					$this->db->insert('list_kontak', $kontak);
+					$this->db->insert('kontak_agen', $kontak);
+				}
+
+			public function register_kontak_user($kontak)
+				{
+					$this->db->insert('kontak_user', $kontak);
 				}
 
 			public function login_user($email,$pass)
@@ -68,7 +85,7 @@
 						}
 				}
 
-			public function email_check($email)
+			public function email_check_user($email)
 				{
 					$this->db->select('*');
 					$this->db->from('user');
@@ -85,7 +102,24 @@
 						}
 				}
 
-			public function no_kontak_check($no_kontak)
+			public function email_check_agen($email)
+				{
+					$this->db->select('*');
+					$this->db->from('agen');
+					$this->db->where('email',$email);
+					$query=$this->db->get();
+
+					if($query->num_rows()>0)
+						{
+							return false;
+						}
+					else
+						{
+							return true;
+						}
+				}
+
+			public function kontak_check_user($no_kontak)
 				{
 					if($no_kontak == NULL)
 						{
@@ -94,7 +128,7 @@
 					else
 						{
 							$this->db->select('*');
-							$this->db->from('list_kontak');
+							$this->db->from('kontak_user');
 							$this->db->where('no_kontak',$no_kontak);
 							$query=$this->db->get();
 
@@ -108,5 +142,30 @@
 								}
 						}
 				}
-		}
+
+			public function kontak_check_agen($no_kontak)
+				{
+					if($no_kontak == NULL)
+						{
+							return true;
+						}
+					else
+						{
+							$this->db->select('*');
+							$this->db->from('kontak_agen');
+							$this->db->where('no_kontak',$no_kontak);
+							$query=$this->db->get();
+
+							if($query->num_rows()>0)
+								{
+									return false;
+								}
+							else
+								{
+									return true;
+								}
+						}
+				}
+	}
+
 ?>

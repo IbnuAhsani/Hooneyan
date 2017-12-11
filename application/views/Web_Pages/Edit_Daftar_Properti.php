@@ -40,9 +40,6 @@
 	</script>
 </head>
 <body class="container-fluid" style="margin: 0"px>
-	<pre>
-		<?php var_dump($properti); ?>
-	</pre>
 	<!-- Upper Task Bar -->
    <nav cl>
    <ul style="background-color: #062F4f; width: 100% ; margin: 0px">
@@ -120,7 +117,7 @@
 					foreach($properti->result() as $prop)
 						{?>
 						<input type='hidden' name='id_properti' value='<?php echo $prop->id_properti;?>'>
-						<input type='hidden' name='id_agen' value='<?php echo $this->session->userdata('id');?>'>
+						<input type='hidden' name='id' value='<?php echo $this->session->userdata('id');?>'>
 						<input type='hidden' name='tipe_akun' value='<?php echo $this->session->userdata('tipe_akun');?>'>
 						<input type='hidden' name='email' value='<?php echo $this->session->userdata('email');?>'>
 							<table>

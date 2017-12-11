@@ -75,10 +75,24 @@
 					return $query;
 				}
 
-			public function get_data_kontak($email)
+			public function pilih_kontak($id_agen)
 				{
-					$query = $this->db->get_where('list_kontak', array('email_agen_user' => $email));
+					$query = $this->db->get_where('kontak_agen', array('id_agen' => $id_agen));
 					return $query;
+				}
+
+			public function get_data_kontak($tipe_akun, $id)
+				{
+					if($tipe_akun == 1)
+						{
+							$query = $this->db->get_where('kontak_agen', array('id_agen' => $id));
+							return $query;
+						}
+					else
+						{
+							$query = $this->db->get_where('kontak_agen', array('id_user' => $id));
+							return $query;
+						}
 				}
 				
 			public function book($id_properti, $id_booker)

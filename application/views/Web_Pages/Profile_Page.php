@@ -126,7 +126,7 @@
 		<h1 class="font-color" style="margin-left: 9%"><u>Iklan Tayang</u></h1>
 	</div>
 	<?php  
-		if($properti->result() == NULL)
+		if($properti == NULL)
 			{ 
 				if($this->session->userdata('tipe_akun') == 2)
 					{?>
