@@ -11,7 +11,7 @@
 	<meta charset="UTF-8">
 	<title>Daftar Properti</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/Final.css") ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final4.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final5.css">
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button, 
@@ -111,8 +111,8 @@
 		<div class="col-3"></div>
 		<div class="col-6">
 			<br><br>		
+			<form class="iklan-box" style="padding-left: 8%;" id="properti_data" action="<?php echo base_url('index.php/Daftar_Properti/tambah_properti'); ?>" method="post"  enctype="multipart/form-data">
 			<h1 class="font-color"><u>Daftar Properti</u></h1>	
-			<form id="properti_data" action="<?php echo base_url('index.php/Daftar_Properti/tambah_properti'); ?>" method="post"  enctype="multipart/form-data">
 				<table>
 					<tbody>
 						<tr>

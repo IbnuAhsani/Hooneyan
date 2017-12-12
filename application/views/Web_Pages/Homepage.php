@@ -9,9 +9,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script type="text/javascript" src = "<?php echo base_url(); ?>/assets/js/jquery.cycle2.min.js"></script>
 	  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-	  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final3.css">
+	  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final5.css">
 </head>
-<body class="container-fluid" style="margin: 0"px>   
+<body class="container-fluid" style="margin: 0;">   
    <!-- Upper Task Bar -->
 	<nav cl>
 		<ul style="background-color: #062F4f; width: 100% ; margin: 0px">
@@ -82,7 +82,7 @@
    <!-- SlideShow -->
    <div class="row">
    		<div class="col-1"></div>
-   		<div class="col-10" style="margin-left: 13%">
+   		<div class="col-10" style="margin-left: 13%;">
 			   <div class="cycle-slideshow">
 			     <span class="cycle-pager"></span>
 			     <!-- Untuk membuat tanda bulat atau link pada slider -->
@@ -105,7 +105,9 @@
    <!-- Spacing -->
    <div class="row spacing"></div>
   <!-- Iklan Terbaru -->
-  <h1 class="font-color" id="kiri"><u>Terbaru</u></h1><br>
+  <div class="row">
+		<h1 class="font-color" style="margin-left: 9%"><u>Terbaru</u></h1>
+	</div>
 	  <div class="row">
 	  	<div class="col-1" style="margin-right: 50px"></div>
 		  <?php 
@@ -116,7 +118,7 @@
 		  				{
 		  					if($i<4)
 		  					{ ?>
-			  					<div class="col-3">
+			  					<div class="col-3 iklan-box" style="margin-right: 10px">
 										<form id="<?php echo $i; ?>" action='http://localhost/Hooneyan/index.php/Properti_Page/get_data' method='post'>
 												<img src="<?php echo base_url(); ?>/gambar/<?php echo $prop->gambar;?>" alt='rumah' style='width: 304px; height: 228px;'>
 												<br>
@@ -167,7 +169,7 @@
 	  </div>
 	  <br><br>
 	  <div class="row">
-	  	<div class="col-1"  style="margin-right: 50px"></div>
+	  	<div class="col-1" style="margin-right: 50px"></div>
 		  <?php 
 		  	$j=1;
 		  	if(!empty($properti))
@@ -180,7 +182,7 @@
 		  						}
 		  					else
 		  					{ ?>
-			  					<div class="col-3">
+			  					<div class="col-3 iklan-box" style="margin-right: 10px">
 										<form id="<?php echo $j; ?>" action='http://localhost/Hooneyan/index.php/Properti_Page/get_data' method='post'>
 												<img src="<?php echo base_url(); ?>/gambar/<?php echo $prop->gambar;?>" alt='rumah' style='width: 304px; height: 228px;'>
 												<br>

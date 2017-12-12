@@ -33,6 +33,7 @@
 						$id_properti = $this->input->post('id_properti');
 						$id_booker = $this->input->post('id_booker');
 						$id_agen = $this->input->post('id_agen');
+						$tipe_akun = $this->input->post('tipe_akun');
 						$this->m_properti_page->book($id_properti, $id_booker);
 						$data["properti"] = $this->m_properti_page->pilih($id_properti);
 						$data["agen"] = $this->m_properti_page->pilih_agen($id_agen);

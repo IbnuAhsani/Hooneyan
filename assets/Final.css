@@ -13,31 +13,26 @@
 .text-logo{
   font-family: 'Aref Ruqaa', serif;
 }
+
 ul.nav-bar{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #062F4f; 
-    width: 100% ; 
-    margin: 0px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #062F4f; 
+  width: 100% ; 
+  margin: 0px;
 }
 
 /*Specific Information (Nama Properti, Harga, Tipe, dll.)*/
 ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-/*Logo Div*/
-
-/*Login/Sign-up Button*/
-
-
-
- body.login_page{
+body.login_page{
   padding-top: 30px;
   padding-bottom: 40px;
   background-image: url('pictures/blurred1.jpg');
@@ -60,14 +55,14 @@ li.login{
 
 /*Dropdown Button*/
 li a, .dropbtn {
-    display: inline-block;
-    color: #A9A9A9;
-    text-align: center;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-right: 13px;
-    padding-left: 13px;
-    text-decoration: none;
+  display: inline-block;
+  color: #A9A9A9;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 13px;
+  padding-left: 13px;
+  text-decoration: none;
 }
 
 /*Dropdown Button Elements*/
@@ -75,33 +70,33 @@ li a:hover, .dropdown:hover .dropbtn {
     /*background-color: #D9D9D9;*/
 }
 li.dropdown {
-    display: inline-block;
-    margin-top: 18px; 
-    margin-bottom: 15px; 
-    margin-left: 30px; 
-    margin-right: 80px; 
-    float: left;
+  display: inline-block;
+  margin-top: 18px; 
+  margin-bottom: 15px; 
+  margin-left: 30px; 
+  margin-right: 80px; 
+  float: left;
 }
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 110px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 9999;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9999;
 }
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 .dropdown-content a:hover{
   background-color: #D9D9D9
 }
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 /**/
 
@@ -132,76 +127,76 @@ li.dropdown {
 
 /* Footer */
 .footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #062F4f;
-    color: #A9A9A9;
-    height: 15%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #062F4f;
+  color: #A9A9A9;
+  height: 15%;
 }
 /**/
 /*=================================================*/
 
 /*======= .css untuk Page Daftar dan Login ========*/
+.form-signin {
+  max-width: 1000px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top:50px;
+}
 
-  .form-signin {
-    max-width: 1000px;
-    padding: 15px;
-    margin: 0 auto;
-      margin-top:50px;
-  }
+.form-signin .form-signin-heading, .form-signin {
+  margin-bottom: 10px;
+}
 
-  .form-signin .form-signin-heading, .form-signin {
-    margin-bottom: 10px;
-  }
-  .form-signin .form-control {
-    position: relative;
-    font-size: 16px;
-    height: auto;
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .form-signin .form-control:focus {
-    z-index: 2;
-  }
-  .form-signin input[type="text"] {
-    margin-bottom: -1px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: none;
-    border-left-style: solid;
-    border-color: #000;
-  }
-  .form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-top-style: none;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-color: rgb(0,0,0);
-    border-top:1px solid rgba(0,0,0,0.08);
-  }
-  .form-signin-heading {
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
-  }
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: none;
+  border-left-style: solid;
+  border-color: #000;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-color: rgb(0,0,0);
+  border-top:1px solid rgba(0,0,0,0.08);
+}
+
+.form-signin-heading {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+}
+
 /*==================================================*/
 
 /*============== .css untuk Homepage ===============*/
 /*Homepage*/
 
-.rounded{
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-}
 
 .light{
   border: url('.images/light_grey.jpg');
@@ -259,6 +254,7 @@ li.dropdown {
 #kiri {
   margin-left:30px
 }
+
 /**/
 /*==================================================*/
 
@@ -344,7 +340,6 @@ div.carousel-size {
 }
 /**/
 /*==================================================*/
-
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;

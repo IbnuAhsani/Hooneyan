@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Jual Sewa</title>
    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-	 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final3.css">
+	 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final5.css">
 	<!-- JS Dropdown -->
 	<script>
 	/* When the user clicks on the button,
@@ -149,7 +149,7 @@
 	</center>
 	<br>
 	<div class="container" id="body">
-		<div class="content-bordered-box row-centered">
+		<div>
 			<?php 
 			if($properti->result() != NULL)
 				{
@@ -157,8 +157,8 @@
 					foreach ($properti->result() as $j)
 						{ ?>
 							<div class="row" style="margin: 2%;" >
-								<div class="col-12" style="display: flex;">
-									<div class="col-5" style="height: 100%">
+								<div class="col-12 iklan-box" style="display: flex; padding: 0; height: 215px; ">
+									<div class="col-5" style="height: 93%; margin-top: 7px">
 										<img src='<?php echo base_url();?>/gambar/<?php echo $j->gambar ?>' style="height: 100%; width: 80%;" align="right" alt='properti'>
 									</div>
 									<div class="col-7">

@@ -103,7 +103,7 @@
 	<!-- Spacing -->
 	<br>
 	<!-- Parent Div -->
-	<div class="row" style="height: 880px; color: #062F4f">
+	<div class="row" style="height: 880px;">
 		<div class="col-1"></div>
 		<!-- Left Colomn -->
 		<div class="col-7"> 
@@ -114,7 +114,7 @@
 			  <img src='<?php echo base_url();?>/gambar/<?php echo $prop->gambar;?>' style='width:770px; height:400px; margin-left:15px'>		
 			</div>
 			<br>
-			 <div class="round1" style="padding:20px;">
+			 <div class="iklan-box" style="padding: 20px">
 				<div class="row" style="height: 50px">
 					<div class="col-6 font-color" style="font-size: 25px">Nama Properti: <?php echo $prop->nama_properti;?></div>
 					<?php if($prop->isBooked == 0) {?>
@@ -162,36 +162,36 @@
 							$email=$this->session->userdata('email');
 							if(!$email) //lihat iklan tanpa sign-in terlebih dahulu
 								{ ?>
-									<div class="col-3 round1" style="height: 330px">
+									<div class="col-3 iklan-box" style="height: 330px">
 								<?php
 								}
 							//sudah sign-in tpi non-agen dan properti sudah dibook
 							elseif($email && $this->session->userdata('id') != $ag->id && $prop->isBooked == 1) 
 								{ ?>
-									<div class="col-3 round1" style="height: 335px">
+									<div class="col-3 iklan-box" style="height: 335px">
 								<?php
 								}
 							//sudah sign-in tpi non-agen dan properti belum dibook
 							elseif($email && $this->session->userdata('id') != $ag->id && $prop->isBooked == 0)
 								{ ?>
-									<div class="col-3 round1" style="height: 390px">
+									<div class="col-3 iklan-box" style="height: 390px">
 								<?php
 								}
 							//sudah sign-in sebagai agen dan properti belum dibook
 							elseif($this->session->userdata('id') == $ag->id && $prop->isBooked == 0)
 								{ ?>
-									<div class="col-3 round1" style="height: 390px">
+									<div class="col-3 iklan-box" style="height: 390px">
 								<?php
 								}
 							//sudah sign-in sebagai agen dan properti sudah dibook
 							elseif($this->session->userdata('id') == $ag->id && $prop->isBooked == 1)
 								{ ?>
-									<div class="col-3 round1" style="height: 455px">
+									<div class="col-3 iklan-box" style="height: 455px">
 								<?php
 								}
 							else
 								{?>
-									<div class="col-3 round1" style="height: 455px">
+									<div class="col-3 iklan-box" style="height: 455px">
 								<?php
 								}								
 						 ?>
@@ -229,6 +229,13 @@
 									<form action="<?php echo base_url('index.php/Properti_Page/book_properti'); ?>" style="text-align: center; margin: 0 auto " method="post">
 										<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
 										<input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">
+										<?php 
+											foreach($agen->result() as $ag)
+												{ ?>
+													<input type="hidden" name="tipe_akun" value="<?php echo $ag->tipe_akun;?>">							
+										<?php
+												}
+										 ?>
 										<input type="hidden" name="id_booker" value="<?php echo $this->session->userdata('id');?>">
 										<input type="hidden" name="harga_properti" value="<?php echo $prop->harga_properti;?>">
 										<input class="button button-blue" type="submit" name="book" value="Book">

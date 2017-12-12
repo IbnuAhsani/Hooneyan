@@ -11,7 +11,7 @@
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final4.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/Final5.css">
 </head>
 <body class="container-fluid" style="margin: 0"px>
 	<!-- Upper Task Bar -->
@@ -92,7 +92,7 @@
 				<?php
 					foreach($user->result() as $us){
 				 ?>
-				<li><h2 style="margin-bottom: 0"><?php echo $us->nama; ?></h2></li>
+				<li><h2><?php echo $us->nama; ?></h2></li>
 				<li style="font-size: 18px"><?php echo $us->email; ?></li>
 				<li style="font-size: 18px">
 					<?php echo $us->alamat; ?>
@@ -126,115 +126,79 @@
 		<h1 class="font-color" style="margin-left: 9%"><u>Iklan Tayang</u></h1>
 	</div>
 	<?php  
-		if($properti == NULL)
-			{ 
-				if($this->session->userdata('tipe_akun') == 2)
-					{?>
-						<form action="<?php echo base_url('index.php/Profile_Page/change_account'); ?>" method="post">
-							<center>
-								<h3 class="font-color">Anda tidak punya Properti karena Anda terdaftar sebagai 'User'</h3>
-								<h3 class="font-color">Klik Tombol di Bawah untuk mengganti Akun menjadi 'Agen'</h3>
-								<input type="hidden" name="id" value="<?php echo $this->session->userdata('id');?>">
-								<input type="hidden" name="password" value="<?php echo $this->session->userdata('password');?>">
-								<input type="hidden" name="nama" value="<?php echo $this->session->userdata('nama');?>">
-								<input type="hidden" name="email" value="<?php echo $this->session->userdata('email');?>">
-								<input type="hidden" name="tgl_lahir" value="<?php echo $this->session->userdata('tgl_lahir');?>">
-								<input type="hidden" name="no_kontak" value="<?php echo $this->session->userdata('no_kontak');?>">
-			  				<input class="button button-blue" type="submit" name="submit" value="Ganti Akun">
-							</center>
-						</form>
-					<?php 
-					}
-				else
-					{ ?>
-						<center>
-							<h1 class="font-color">Properti Anda Kosong</h1>
-						</center>
-					<?php
-					}
+		if($this->session->userdata('tipe_akun') == 2)
+			{?>
+				<form action="<?php echo base_url('index.php/Profile_Page/change_account'); ?>" method="post">
+					<center>
+						<h3 class="font-color">Anda tidak punya Properti karena Anda terdaftar sebagai 'User'</h3>
+						<h3 class="font-color">Klik Tombol di Bawah untuk mengganti Akun menjadi 'Agen'</h3>
+						<input type="hidden" name="id" value="<?php echo $this->session->userdata('id');?>">
+						<input type="hidden" name="password" value="<?php echo $this->session->userdata('password');?>">
+						<input type="hidden" name="nama" value="<?php echo $this->session->userdata('nama');?>">
+						<input type="hidden" name="email" value="<?php echo $this->session->userdata('email');?>">
+						<input type="hidden" name="tgl_lahir" value="<?php echo $this->session->userdata('tgl_lahir');?>">
+						<input type="hidden" name="no_kontak" value="<?php echo $this->session->userdata('no_kontak');?>">
+	  				<input class="button button-blue" type="submit" name="submit" value="Ganti Akun">
+					</center>
+				</form>
+			<?php 
 			}
 		else
 			{
-				$i=1;
-			foreach ($properti->result() as $prop) 
-				{ ?>
-				<!-- Iklan Row 1 -->
-					<div class="row" style="margin: 2%;">
-						<div class="col-2"></div>
-						<div class="col-8" style="display: flex;">
-							<div class="col-5" style="height: 100%">
-							<?php 
-						   	echo"<img src='".base_url("gambar/".$prop->gambar)."' style=width:300px;height:190px; >";
-							?>
-							</div>
-							<div class="col-7">
-								<ul class="navbar-list">
-									<form id="<?php echo $i; ?>" action="<?php echo base_url('index.php/Properti_Page/get_data'); ?>" method="post">
-									<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
-									<input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">
-									<li>
-										<h2><a class="font-color" style="margin: 0" onclick="document.getElementById('<?php echo $i; ?>').submit()"><?php echo $prop->nama_properti;?></a></h2>						
-									</li>
-									<li><h5 class="navbar-list" style="margin-bottom: 5px; margin-top: 5px">Rp.<?php echo $prop->harga_properti;?></h5></li>
-									<li>Tipe Properti: <?php echo $prop->kategori_properti;?></li>
-									<li>Status Jual: <?php echo $prop->status_properti;?></li>
-									<li>Lokasi: <?php echo $prop->lokasi_properti;?></li>
-									<?php if($prop->isBooked == 0) {?>
-										<li>Status Properti: <font style="color: green">Available</font></li>
-									<?php }else{ 
-											if($prop->id_booker != 0 && $prop->konfirmasi == 0) {?>
-										<li>Status Properti: <font style="color: orange">Waiting For Confirmation</font></li>
-									<?php }else{  ?>
-										<li>Status Properti: <font style="color: red">Booked</font></li>
-									<?php }
-											} 
+				if($properti->result() == NULL)
+					{  ?>
+						<center>
+							<h1 class="font-color">Properti Anda Kosong</h1>
+						</center>
+			<?php
+					}
+				else
+					{
+						$i=1;
+					foreach ($properti->result() as $prop) 
+						{ ?>
+						<!-- Iklan Row 1 -->
+							<div class="row" style="margin: 2%;">
+								<div class="col-2"></div>
+								<div class="col-8 iklan-box" style="display: flex; height: 214px;">
+									<div class="col-5" style="height: 100%">
+									<?php 
+								   	echo"<img src='".base_url("gambar/".$prop->gambar)."' style=width:300px;height:190px; >";
 									?>
-				</form>
-								</ul>
+									</div>
+									<div class="col-7">
+										<ul class="navbar-list">
+											<form id="<?php echo $i; ?>" action="<?php echo base_url('index.php/Properti_Page/get_data'); ?>" method="post">
+												<input type="hidden" name="id_properti" value="<?php echo $prop->id_properti;?>">
+												<input type="hidden" name="id_agen" value="<?php echo $prop->id_agen;?>">
+												<li>
+													<h2><a class="font-color" style="margin: 0" onclick="document.getElementById('<?php echo $i; ?>').submit()"><?php echo $prop->nama_properti;?></a></h2>						
+												</li>
+												<li><h5 class="navbar-list" style="margin-bottom: 5px; margin-top: 5px">Rp.<?php echo $prop->harga_properti;?></h5></li>
+												<li>Tipe Properti: <?php echo $prop->kategori_properti;?></li>
+												<li>Status Jual: <?php echo $prop->status_properti;?></li>
+												<li>Lokasi: <?php echo $prop->lokasi_properti;?></li>
+												<?php if($prop->isBooked == 0) {?>
+													<li>Status Properti: <font style="color: green">Available</font></li>
+												<?php }else{ 
+														if($prop->id_booker != 0 && $prop->konfirmasi == 0) {?>
+													<li>Status Properti: <font style="color: orange">Waiting For Confirmation</font></li>
+												<?php }else{  ?>
+													<li>Status Properti: <font style="color: red">Booked</font></li>
+												<?php }
+														} 
+												?>
+											</form>
+										</ul>
+									</div>
+									</div>
+								<div class="col-2"></div>
 							</div>
-							</div>
-						<div class="col-2"></div>
-					</div>
-			<?php 
-					$i++;
-				} 
-			}?>
-
-	<!-- Iklan Row 3 -->
-	<!-- <div class="row" style="margin: 2%;">
-		<div class="col-6" style="display: flex;">
-			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah3.jpg" alt="Gambar Properti">
-			</div>
-			<div class="col-7">
-				<ul style="color: #062F4f;">
-					<li><h4>Nama Properti</h4></li>
-					<li></li><li></li>
-					<li><h5>Harga Properti</h5></li>
-					<li>Tipe Properti</li>
-					<li>Status Jual</li>
-					<li>Lokasi Jual</li>
-					<li>Fitur Properti</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-6" style="display: flex;">
-			<div class="col-5" style="height: 100%">
-				<img class="img" src="<?php echo base_url(); ?>/assets/pictures/rumah1.jpg" alt="Gambar Properti">
-			</div>
-			<div class="col-7">
-				<ul style="color: #062F4f;">
-					<li><h4>Nama Properti</h4></li>
-					<li></li><li></li>
-					<li><h5>Harga Properti</h5></li>
-					<li>Tipe Properti</li>
-					<li>Status Jual</li>
-					<li>Lokasi Jual</li>
-					<li>Fitur Properti</li>
-				</ul>
-			</div>
-		</div>
-	</div> -->
+					<?php 
+							$i++;
+						} 
+			}
+					}?>
 	<!-- Spacing -->
 	<div class="row spacing"></div>
    <!-- Footer -->
